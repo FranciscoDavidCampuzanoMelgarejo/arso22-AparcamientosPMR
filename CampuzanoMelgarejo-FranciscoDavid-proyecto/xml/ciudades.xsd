@@ -9,7 +9,7 @@
 				<xs:element name="SitiosTuristicos">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="SitioTuristico">
+							<xs:element name="SitioTuristico" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="titulo" type="xs:string"></xs:element>
@@ -22,7 +22,7 @@
 										<xs:element name="Aparcamientos">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="parking">
+													<xs:element name="parking" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:sequence>
 																<xs:element name="direccion" type="xs:string"></xs:element>
