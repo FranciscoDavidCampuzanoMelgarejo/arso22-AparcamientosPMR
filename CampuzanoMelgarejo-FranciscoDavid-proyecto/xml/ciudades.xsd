@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/ciudades"
+	xmlns="http://www.example.org/ciudades" elementFormDefault="qualified">
+
+	<xs:element name="ciudad">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SitiosTuristicos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SitioTuristico">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="titulo" type="xs:string"></xs:element>
+										<xs:element name="resumen" type="xs:string"></xs:element>
+										<xs:element name="pais" type="xs:string"></xs:element>
+										<xs:element name="CodigoPostal" type="xs:string"></xs:element>
+										<xs:element name="latitud" type="xs:double"></xs:element>
+										<xs:element name="longitud" type="xs:double"></xs:element>
+										<xs:element name="wikipedia" type="xs:anyURI"></xs:element>
+										<xs:element name="Aparcamientos">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="parking">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="direccion" type="xs:string"></xs:element>
+																<xs:element name="latitud" type="xs:double"></xs:element>
+																<xs:element name="longitud" type="xs:double"></xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
