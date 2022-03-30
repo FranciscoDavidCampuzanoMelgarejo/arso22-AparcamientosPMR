@@ -6,42 +6,31 @@
 	<xs:element name="ciudad">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="SitiosTuristicos">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="SitioTuristico" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="titulo" type="xs:string"></xs:element>
-										<xs:element name="resumen" type="xs:string"></xs:element>
-										<xs:element name="pais" type="xs:string"></xs:element>
-										<xs:element name="CodigoPostal" type="xs:string"></xs:element>
-										<xs:element name="latitud" type="xs:double"></xs:element>
-										<xs:element name="longitud" type="xs:double"></xs:element>
-										<xs:element name="wikipedia" type="xs:anyURI"></xs:element>
-										<xs:element name="Aparcamientos">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="parking" maxOccurs="unbounded">
-														<xs:complexType>
-															<xs:sequence>
-																<xs:element name="direccion" type="xs:string"></xs:element>
-																<xs:element name="latitud" type="xs:double"></xs:element>
-																<xs:element name="longitud" type="xs:double"></xs:element>
-															</xs:sequence>
-														</xs:complexType>
-													</xs:element>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="id" type="xs:string"></xs:element>
+				<xs:element name="sitio_turistico" type="sitioTuristico"
+					maxOccurs="unbounded"></xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-
+	
+	<xs:complexType name="sitioTuristico">
+		<xs:sequence>
+			<xs:element name="titulo" type="xs:string"></xs:element>
+			<xs:element name="resumen" type="xs:string"></xs:element>
+			<xs:element name="pais" type="xs:string"></xs:element>
+			<xs:element name="codigoPostal" type="xs:string"></xs:element>
+			<xs:element name="latitud" type="xs:double"></xs:element>
+			<xs:element name="longitud" type="xs:double"></xs:element>
+			<xs:element name="wikipedia" type="xs:anyURI"></xs:element>
+			<xs:element name="aparcamiento" type="aparcamiento" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="aparcamiento">
+		<xs:sequence>
+			<xs:element name="direccion" type ="xs:string"></xs:element>
+			<xs:element name="latitud" type="xs:double"></xs:element>
+			<xs:element name="longitud" type="xs:double"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>

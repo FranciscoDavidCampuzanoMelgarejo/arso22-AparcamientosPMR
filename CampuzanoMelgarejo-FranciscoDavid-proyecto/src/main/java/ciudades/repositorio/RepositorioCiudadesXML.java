@@ -16,11 +16,11 @@ import utils.Utils;
 
 public class RepositorioCiudadesXML implements RepositorioCiudades {
 
-	public final static String DIRECTORIO_ciudadES = "ciudades/";
+	public final static String DIRECTORIO_CIUDADES = "ciudades/";
 
 	static {
 
-		File directorio = new File(DIRECTORIO_ciudadES);
+		File directorio = new File(DIRECTORIO_CIUDADES);
 
 		if (!directorio.exists())
 			directorio.mkdir();
@@ -30,7 +30,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 	protected String getDocumento(String id) {
 
-		return DIRECTORIO_ciudadES + id + ".xml";
+		return DIRECTORIO_CIUDADES + id + ".xml";
 	}
 
 	protected boolean checkDocumento(String id) {
@@ -50,7 +50,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		try {
 
-			JAXBContext contexto = JAXBContext.newInstance("es.um.bookle");
+			JAXBContext contexto = JAXBContext.newInstance("org.example.ciudades");
 			Marshaller marshaller = contexto.createMarshaller();
 
 			marshaller.setProperty("jaxb.formatted.output", true);
@@ -72,7 +72,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		try {
 
-			JAXBContext contexto = JAXBContext.newInstance("es.um.bookle");
+			JAXBContext contexto = JAXBContext.newInstance("org.example.ciudades");
 			Unmarshaller unmarshaller = contexto.createUnmarshaller();
 
 			return (Ciudad) unmarshaller.unmarshal(new File(documento));
@@ -129,7 +129,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		LinkedList<String> resultado = new LinkedList<>();
 
-		File directorio = new File(DIRECTORIO_ciudadES);
+		File directorio = new File(DIRECTORIO_CIUDADES);
 
 		File[] ciudades = directorio.listFiles(f -> f.isFile() && f.getName().endsWith(".xml"));
 
