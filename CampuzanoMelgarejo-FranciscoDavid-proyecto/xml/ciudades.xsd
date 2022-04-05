@@ -3,16 +3,18 @@
 	targetNamespace="http://www.example.org/ciudades"
 	xmlns="http://www.example.org/ciudades" elementFormDefault="qualified">
 
-	<xs:element name="ciudad">
+	<xs:element name="ciudad" >
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="id" type="xs:string"></xs:element>
 				<xs:element name="sitio_turistico" type="sitioTuristico"
 					maxOccurs="unbounded"></xs:element>
+				<xs:element name="fechaInicio" type="xs:string" maxOccurs="unbounded"></xs:element>
 			</xs:sequence>
+			<xs:attribute name="nombre" type="xs:string"></xs:attribute>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:complexType name="sitioTuristico">
 		<xs:sequence>
 			<xs:element name="titulo" type="xs:string"></xs:element>
@@ -22,13 +24,16 @@
 			<xs:element name="latitud" type="xs:double"></xs:element>
 			<xs:element name="longitud" type="xs:double"></xs:element>
 			<xs:element name="wikipedia" type="xs:anyURI"></xs:element>
-			<xs:element name="aparcamiento" type="aparcamiento" maxOccurs="unbounded"></xs:element>
+			<xs:element name="fechaInicio" type="xs:string"
+				minOccurs="0"></xs:element>
+			<xs:element name="fechaFinal" type="xs:string"
+				minOccurs="0"></xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="aparcamiento">
 		<xs:sequence>
-			<xs:element name="direccion" type ="xs:string"></xs:element>
+			<xs:element name="direccion" type="xs:string"></xs:element>
 			<xs:element name="latitud" type="xs:double"></xs:element>
 			<xs:element name="longitud" type="xs:double"></xs:element>
 		</xs:sequence>

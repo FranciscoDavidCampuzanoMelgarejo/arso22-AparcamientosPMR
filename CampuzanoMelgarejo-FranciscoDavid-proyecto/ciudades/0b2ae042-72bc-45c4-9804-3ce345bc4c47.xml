@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ciudad xmlns="http://www.example.org/ciudades">
+<ciudad xmlns="http://www.example.org/ciudades" nombre="Lorca">
 	<id>0b2ae042-72bc-45c4-9804-3ce345bc4c47</id>
 	<sitio_turistico>
 		<titulo>Palacio de los Condes de San Julián</titulo>
