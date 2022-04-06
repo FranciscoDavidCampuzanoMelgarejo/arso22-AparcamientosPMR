@@ -9,7 +9,7 @@
 				<xs:element name="id" type="xs:string"></xs:element>
 				<xs:element name="sitio_turistico" type="sitioTuristico"
 					maxOccurs="unbounded"></xs:element>
-				<xs:element name="fechaInicio" type="xs:string" maxOccurs="unbounded"></xs:element>
+				<xs:element name="aparcamiento" type="aparcamiento" maxOccurs="unbounded"></xs:element>
 			</xs:sequence>
 			<xs:attribute name="nombre" type="xs:string"></xs:attribute>
 		</xs:complexType>

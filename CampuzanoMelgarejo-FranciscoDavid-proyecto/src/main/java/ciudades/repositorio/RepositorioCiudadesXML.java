@@ -9,6 +9,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 import org.example.ciudades.Ciudad;
+import org.example.ciudades.SitioTuristico;
 
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;
@@ -25,6 +26,12 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 		if (!directorio.exists())
 			directorio.mkdir();
 	}
+	
+	/*
+	 * Metodos privados para cargar el Mapa
+	 */
+	
+	
 
 	/*** Métodos de apoyo ***/
 
@@ -160,6 +167,11 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		return resultado;
 	}
-
+	
+	@Override
+	public List<SitioTuristico> getAllSitiosTuristicos(Ciudad ciudad) throws RepositorioException {
+		return ciudad.getSitioTuristico();
+	}
+	
 
 }
