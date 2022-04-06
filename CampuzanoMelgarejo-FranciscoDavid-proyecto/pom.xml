@@ -16,6 +16,23 @@
 
 
 	<dependencies>
+	 <!-- Jersey: implementación JAX-RS -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.19.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
+            <version>1.19.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
 		<!-- JSON-P-->
 		<dependency>
 			<groupId>javax.json</groupId>
@@ -47,6 +64,19 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
+		 <!-- Herramienta Swagger -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jersey-jaxrs</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+        
+        <!-- Para el servidor web Jetty -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.30</version>
+        </dependency>
 		<!-- test lib -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -151,6 +181,11 @@
 					</schemaIncludes>
 				</configuration>
 			</plugin>
+			 <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.26.v20200117</version>
+            </plugin>
 		</plugins>
 	</build>
 </project>
