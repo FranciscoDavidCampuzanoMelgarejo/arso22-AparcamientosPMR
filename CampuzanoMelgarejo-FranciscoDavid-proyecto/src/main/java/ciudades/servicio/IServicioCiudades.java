@@ -2,6 +2,7 @@ package ciudades.servicio;
 
 import java.util.List;
 
+import org.example.ciudades.Aparcamiento;
 import org.example.ciudades.Ciudad;
 import org.example.ciudades.SitioTuristico;
 
@@ -29,7 +30,8 @@ public interface IServicioCiudades {
 	//Obtiene todos los SitiosTuristicos de una Ciudad
 	List<SitioTuristico> getSitiosTuristicos(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada;
 	
-	
+	//Obtener las plazas de aparcamiento mas cercanas a un sitio turistico
+	List<Aparcamiento> getAparcamientosCercanos(SitioTuristico sitioTuristico);
 	
 	
 	

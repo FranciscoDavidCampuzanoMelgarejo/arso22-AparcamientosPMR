@@ -203,5 +203,15 @@ public class ServicioCiudades implements IServicioCiudades {
 	public List<SitioTuristico> getSitiosTuristicos(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada {
 		return repositorio.getAllSitiosTuristicos(ciudad);
 	}
+	
+	@Override
+	public List<Aparcamiento> getAparcamientosCercanos(SitioTuristico sitioTuristico) {
+		
+		//En principio, siempre debe de haber una entrada para cada sitio turistico en el mapa
+		if(aparcamientosCercanos.containsKey(sitioTuristico)) {
+			return aparcamientosCercanos.get(sitioTuristico);
+		}
+		return null;
+	}
 
 }

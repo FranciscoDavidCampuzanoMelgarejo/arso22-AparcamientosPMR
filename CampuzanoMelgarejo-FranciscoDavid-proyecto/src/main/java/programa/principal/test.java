@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -73,9 +74,10 @@ public class test {
 			int count=0;
 			
 			Node nodo = resultado.item(i);
-			for(int n=0;n<nodo.getTextContent().length();n++){
+			for(int n=0; n<nodo.getTextContent().length()-1 ;n++){
+				//if(c == '\n') break;
 				if(count==3) {
-					test=nodo.getTextContent().substring(n, nodo.getTextContent().length());
+					test=nodo.getTextContent().substring(n, nodo.getTextContent().length()).trim();
 				}
 				char c=nodo.getTextContent().charAt(n);
 				if(c=='/') {
@@ -84,13 +86,16 @@ public class test {
 				
 			}
 			rutas.add(base + test + ".json");
+			System.out.println("Base: " + base);
+			System.out.println("Contenido: " + test);
+			System.out.println("Extension: " + ".json");
 		}
 		// es.dbpedia.org/property/inicio
 		// es.dbpedia.org/property/final
 		Ciudad ciudad = new Ciudad();
 		ciudad.setNombre("Lorca");
 		
-		System.out.println(rutas);
+		//System.out.println(rutas);
 		int index = 0;
 		for (String s : rutas) {
 			SitioTuristico sitio= new SitioTuristico();
