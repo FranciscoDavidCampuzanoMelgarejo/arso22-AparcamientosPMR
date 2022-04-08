@@ -11,7 +11,7 @@ public class Validador extends DefaultHandler{
 	private LinkedList<SAXParseException> errores = new LinkedList<>();
 	
 	public LinkedList<SAXParseException> getErrores() {
-		return new List<>(errores);
+		return new LinkedList<>(errores);
 	}
 	
 	@Override
