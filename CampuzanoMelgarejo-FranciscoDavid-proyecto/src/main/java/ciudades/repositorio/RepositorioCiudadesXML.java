@@ -17,8 +17,8 @@ import utils.Utils;
 
 public class RepositorioCiudadesXML implements RepositorioCiudades {
 
-	public final static String DIRECTORIO_CIUDADES = "ciudades/";
-
+	public static final String DIRECTORIO_CIUDADES = "ciudades/";
+	private static final String c="La ciudad no existe, id: ";
 	static {
 
 		File directorio = new File(DIRECTORIO_CIUDADES);
@@ -73,7 +73,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 	protected Ciudad load(String id) throws RepositorioException, EntidadNoEncontrada {
 
 		if (!checkDocumento(id))
-			throw new EntidadNoEncontrada("La ciudad no existe, id: " + id);
+			throw new EntidadNoEncontrada(c + id);
 
 		final String documento = getDocumento(id);
 
@@ -106,7 +106,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 	public void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada {
 
 		if (!checkDocumento(ciudad.getId()))
-			throw new EntidadNoEncontrada("La ciudad no existe, id: " + ciudad.getId());
+			throw new EntidadNoEncontrada(c + ciudad.getId());
 
 		save(ciudad);
 
@@ -116,7 +116,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 	public void delete(Ciudad ciudad) throws EntidadNoEncontrada {
 
 		if (!checkDocumento(ciudad.getId()))
-			throw new EntidadNoEncontrada("La ciudad no existe, id: " + ciudad.getId());
+			throw new EntidadNoEncontrada(c + ciudad.getId());
 
 		final String documento = getDocumento(ciudad.getId());
 
@@ -153,7 +153,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 	@Override
 	public List<Ciudad> getAll() throws RepositorioException {
 
-		LinkedList<Ciudad> resultado = new LinkedList<Ciudad>();
+		LinkedList<Ciudad> resultado = new LinkedList<>();
 
 		for (String id : getIds()) {
 

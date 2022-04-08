@@ -10,6 +10,7 @@ import utils.PropertiesReader;
  */
 
 public class FactoriaRepositorioCiudades {
+	private FactoriaRepositorioCiudades() {}
 
 	private static final String PROPIEDAD_IMPLEMENTACION = "PMR";
 

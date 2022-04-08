@@ -24,13 +24,12 @@ public class Programa {
 		double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) + Math.cos(Math.toRadians(lat1))
 				* Math.cos(Math.toRadians(lat2)) * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
 		double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-		double distance = R * c; //Para pasarlo a kilometros
-		return distance;
+		return R * c; // Para pasarlo a kilometros
 	}
-	
-	private static void printearMatriz(double matriz[][], int n, int m) {
-		for(int i = 0; i < n; i++) {
-			for(int j = 0; j < m; j++) {
+
+	private static void printearMatriz(double[][] matriz, int n, int m) {
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
 				System.out.print(matriz[i][j] + " ");
 			}
 			System.out.println();
@@ -41,7 +40,8 @@ public class Programa {
 
 		final String documentoSAX = "https://datos.lorca.es/catalogo/parking-movilidad-reducida/XML";
 		final String documentoDOM = "http://api.geonames.org/findNearbyWikipedia?lang=es&lat=37.6713&lng=-1.69879&maxRows=500&username=francisco_david&style=full";
-		double matrizDistancias[][] = null; //Matriz que guarda la distancia en km ente cada aparcamiento y cada sitio turistico
+		double[][] matrizDistancias = null; // Matriz que guarda la distancia en km ente cada aparcamiento y cada sitio
+											// turistico
 		Manejador manejador = new Manejador();
 
 		/* PARTE DE SAX */
@@ -65,7 +65,7 @@ public class Programa {
 			System.out.println("No se ha podido abrir el documentoSAX: " + documentoSAX);
 		}
 
-		//manejador.printearLista();
+		// manejador.printearLista();
 
 		/* PARTE DE DOM */
 		DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -73,47 +73,47 @@ public class Programa {
 
 		try {
 			doc = builder.parse(documentoDOM);
-			//Obtenemos todos los nodos <lat> y <lng>
+			// Obtenemos todos los nodos <lat> y <lng>
 			NodeList latitudes = doc.getElementsByTagName("lat");
 			NodeList longitudes = doc.getElementsByTagName("lng");
 
-			
 			if ((latitudes.getLength() == longitudes.getLength()) && (latitudes.getLength() > 0)) {
 				matrizDistancias = new double[manejador.getAparcamientos().size()][latitudes.getLength()];
-				
-				//Calcular la distancia entre cada Aparcamiento con cada Sitio Turistico
+
+				// Calcular la distancia entre cada Aparcamiento con cada Sitio Turistico
 				for (int i = 0; i < latitudes.getLength(); i++) {
-					double lat_entrada = Double.parseDouble(latitudes.item(i).getTextContent());
-					double long_entrada = Double.parseDouble(longitudes.item(i).getTextContent());
-					
-					for(int j = 0; j < manejador.getAparcamientos().size(); j++) {
-						double lat_aparcamiento = manejador.getAparcamientos().get(j).getLatitud();
-						double long_aparcamiento = manejador.getAparcamientos().get(j).getLongitud();
-						matrizDistancias[j][i] = Programa.calcularDistancia(lat_entrada, long_entrada, lat_aparcamiento, long_aparcamiento);
+					double latEntrada = Double.parseDouble(latitudes.item(i).getTextContent());
+					double longEntrada = Double.parseDouble(longitudes.item(i).getTextContent());
+
+					for (int j = 0; j < manejador.getAparcamientos().size(); j++) {
+						double latAparcamiento = manejador.getAparcamientos().get(j).getLatitud();
+						double longAparcamiento = manejador.getAparcamientos().get(j).getLongitud();
+						matrizDistancias[j][i] = Programa.calcularDistancia(latEntrada, longEntrada, latAparcamiento,
+								longAparcamiento);
 					}
 				}
 			}
-			
-			//Array que guarda para cada sitio, cual es su aparcamiento mas cercano
-			int aparcamientoMasCercano[] = new int[latitudes.getLength()];
-			
-			//Calcular el aparcamiento mas cercano para cada Sitio
-			for(int i = 0; i < latitudes.getLength(); i++) {
+
+			// Array que guarda para cada sitio, cual es su aparcamiento mas cercano
+			int[] aparcamientoMasCercano = new int[latitudes.getLength()];
+
+			// Calcular el aparcamiento mas cercano para cada Sitio
+			for (int i = 0; i < latitudes.getLength(); i++) {
 				double minimo = Double.POSITIVE_INFINITY;
 				int pos = 0;
-				for(int j = 0; j < manejador.getAparcamientos().size(); j++) {
-					if(matrizDistancias[j][i] < minimo) {
+				for (int j = 0; j < manejador.getAparcamientos().size(); j++) {
+					if (matrizDistancias[j][i] < minimo) {
 						minimo = matrizDistancias[j][i];
-						pos = j; //Aparcamiento
+						pos = j; // Aparcamiento
 					}
 				}
-				aparcamientoMasCercano[i] = pos;	
+				aparcamientoMasCercano[i] = pos;
 			}
-			
+
 			Programa.printearMatriz(matrizDistancias, manejador.getAparcamientos().size(), latitudes.getLength());
-			
+
 			System.out.println("Aparcamientos Mas Cercanos a cada Sitio");
-			for(int i = 0; i < latitudes.getLength(); i++) {
+			for (int i = 0; i < latitudes.getLength(); i++) {
 				System.out.println("Sitio: " + i + " ---> Aparcamiento: " + aparcamientoMasCercano[i]);
 			}
 

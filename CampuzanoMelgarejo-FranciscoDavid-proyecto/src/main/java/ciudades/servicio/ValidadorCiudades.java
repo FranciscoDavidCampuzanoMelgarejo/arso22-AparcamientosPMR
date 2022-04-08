@@ -1,6 +1,7 @@
 package ciudades.servicio;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
 import javax.xml.XMLConstants;
@@ -16,6 +17,7 @@ import org.xml.sax.SAXParseException;
 import utils.Validador;
 
 public class ValidadorCiudades {
+	private ValidadorCiudades() {}
 
 	// Ruta al XML Schema
 	private static final String ESQUEMA = "xml/ciudades.xsd";
@@ -36,7 +38,7 @@ public class ValidadorCiudades {
 			
 			return ((Validador)(validador.getErrorHandler())).getErrores();
 		} catch (Exception e) {
-			return null; //No se ha realizado la validacion
+			return Collections.emptyList(); //No se ha realizado la validacion
 		}
 
 	}

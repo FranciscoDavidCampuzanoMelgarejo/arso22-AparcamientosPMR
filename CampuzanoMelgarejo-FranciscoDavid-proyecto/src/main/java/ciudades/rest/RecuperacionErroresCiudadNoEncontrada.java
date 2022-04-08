@@ -5,7 +5,6 @@ import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
 import ciudades.repositorio.CiudadNoEncontrada;
-import repositorio.EntidadNoEncontrada;
 
 @Provider
 public class RecuperacionErroresCiudadNoEncontrada implements ExceptionMapper<CiudadNoEncontrada>{
