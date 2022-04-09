@@ -24,10 +24,6 @@
 			<xs:element name="latitud" type="xs:double"></xs:element>
 			<xs:element name="longitud" type="xs:double"></xs:element>
 			<xs:element name="wikipedia" type="xs:anyURI"></xs:element>
-			<xs:element name="fechaInicio" type="xs:string"
-				minOccurs="0"></xs:element>
-			<xs:element name="fechaFinal" type="xs:string"
-				minOccurs="0"></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 

@@ -1,6 +1,5 @@
 package sax;
 
-import java.lang.System.Logger;
 import java.util.LinkedList;
 import java.util.List;
 

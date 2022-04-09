@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
-
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -41,7 +41,7 @@ public class test {
 			throws ParserConfigurationException, SAXException, XPathExpressionException, IOException, JAXBException {
 		final String documentoSAX = "https://datos.lorca.es/catalogo/parking-movilidad-reducida/XML";
 		final String documentoDOM = "http://api.geonames.org/findNearbyWikipedia?lang=es&lat=37.6713&lng=-1.69879&maxRows=500&username=francisco_david&style=full";
-		final String base = "https://es.dbpedia.org/data";
+		final String base = "https://es.dbpedia.org/data/";
 		LinkedList<String> rutas = new LinkedList<>();
 		// Construye un analizador DOM
 
@@ -64,7 +64,10 @@ public class test {
 
 		// Importante: hay que ajustar la evaluacion y el tipo de retorno segun
 		// el dato que se espere
-
+		// es.dbpedia.org/property/inicio
+		// es.dbpedia.org/property/final
+		Ciudad ciudad = new Ciudad();
+		ciudad.setNombre("Lorca");
 		NodeList resultado = (NodeList) consulta.evaluate(doc, XPathConstants.NODESET);
 		String test = null;
 		for (int i = 0; i < resultado.getLength(); i++) {
@@ -73,8 +76,13 @@ public class test {
 			Node nodo = resultado.item(i);
 			for (int n = 0; n < nodo.getTextContent().length() - 1; n++) {
 				// if(c == '\n') break;
-				if (count == 3) {
+				if (count == 4) {
 					test = nodo.getTextContent().substring(n, nodo.getTextContent().length()).trim();
+					SitioTuristico sitio = new SitioTuristico();
+					sitio.setTitulo(test);
+					ciudad.getSitioTuristico().add(sitio);
+					break;
+					
 				}
 				char c = nodo.getTextContent().charAt(n);
 				if (c == '/') {
@@ -83,23 +91,28 @@ public class test {
 
 			}
 			rutas.add(base + test + ".json");
+			System.out.println(rutas.get(i));
 		}
-		// es.dbpedia.org/property/inicio
-		// es.dbpedia.org/property/final
-		Ciudad ciudad = new Ciudad();
-		ciudad.setNombre("Lorca");
 
 		// System.out.println(rutas);
 		int index = 0;
-		for (String s : rutas) {
-			SitioTuristico sitio = new SitioTuristico();
-			InputStream fuente = new URL(rutas.get(index)).openStream();
-			BufferedReader rd = new BufferedReader(new InputStreamReader(fuente, StandardCharsets.UTF_8));
-			JsonReader jsonReader = Json.createReader(rd);
+		for (SitioTuristico s : ciudad.getSitioTuristico()) {
+			URL url = new URL(rutas.get(index));
+			/*
+			 * InputStream fuente = new URL(rutas.get(index)).openStream(); BufferedReader
+			 * rd = new BufferedReader(new InputStreamReader(fuente,
+			 * StandardCharsets.UTF_8));
+			 */
+			JsonReader jsonReader = Json.createReader(url.openStream());
 			JsonObject sitioT = jsonReader.readObject();
-			System.out.println(sitioT.toString());
-			JsonArray inicio = sitioT.getJsonArray("property/inicio");
-			JsonArray fin = sitioT.getJsonArray("property/final");
+			JsonObject resources = sitioT
+					.getJsonObject("http://es.dbpedia.org/resource/" + URLDecoder.decode(s.getTitulo(), StandardCharsets.UTF_8));
+			JsonArray inicio = resources.getJsonArray("http://dbpedia.org/ontology/abstract");
+			for (JsonObject inic : inicio.getValuesAs(JsonObject.class)) {
+				s.setResumen(inic.getJsonString("value").toString());
+
+			}
+			JsonArray fin = resources.getJsonArray("property/final");
 			if (inicio != null) {
 				System.out.println("test");
 				/*

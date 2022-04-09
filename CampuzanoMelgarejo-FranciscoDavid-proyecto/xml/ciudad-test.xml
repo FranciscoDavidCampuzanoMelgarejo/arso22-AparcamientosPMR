@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ciudad xmlns="http://www.example.org/ciudades" nombre="Lorca">
+    <sitio_turistico>
+        <titulo>Palacio_de_los_Condes_de_San_Juli%C3%A1n</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"El palacio de los Condes de San Julián es una casa solariega situada en la ciudad de Lorca (Región de Murcia, España) cuyos orígenes se remontan al siglo XVII, aunque su apariencia externa está alterada por modificaciones realizadas en el siglo XVIII otorgándole aspecto de fortaleza, y neomudéjares realizadas a comienzos del XX."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Estaci%C3%B3n_de_Lorca-Sutullena</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"Lorca-Sutullena es, junto a Lorca-San Diego una de las dos estaciones de ferrocarril de la ciudad española de Lorca, en la Región de Murcia. Está situada junto a la plaza de Carruajes, próxima al centro urbano y junto a la plaza de Toros de Sutullena. Tienen parada los trenes de la línea C-2 de Cercanías Murcia/Alicante. También dispone de servicios de larga distancia."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Iglesia_de_Santiago_%28Lorca%29</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"La iglesia de Santiago de Lorca, es un templo barroco que tiene como origen previo a la iglesia una ermita del siglo XV en honor al mismo santo. Esa ermita fue ubicada donde, según cuenta la tradición, había predicado el apóstol.​ Ya es a mitad del siglo XVIII cuando se comenzó la edificación de la actual iglesia de Santiago.​ Tiene planta de cruz latina, con una nave principal y dos laterales.​"</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Colegiata_de_San_Patricio</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"La antigua colegiata de San Patricio de Lorca (aunque comúnmente sigue siendo llamada colegiata de San Patricio), es un edificio de estilo renacentista declarado Monumento Histórico-Artístico Nacional por decreto del 27 de enero de 1941.​ La Colegiata es la piedra angular del conjunto monumental de la Plaza de España, junto al Ayuntamiento, el Palacio del Corregidor y las Salas Capitulares. Esta Colegiata es la única en España que se encuentra bajo la advocación de San Patricio. La dedicación al santo irlandés, tiene su origen en la batalla de Los Alporchones, librada el 17 de marzo de 1452 (día de San Patricio), y que enfrentó a los habitantes de la ciudad y de otras partes del antiguo reino de Murcia con huestes musulmanas procedentes de Granada que habían asolado la comarca de Cartagena. Las obras comenzaron, por bula del papa Clemente VII, en 1533 sobre la vieja iglesia de San Jorge. La construcción, no exenta de problemas, se dilató hasta 1780 siguiendo el proyecto de Jerónimo Quijano, maestro de las Obras del Obispado de Cartagena. Concebida con aires catedralicios, su interior se articula en tres naves, doce capillas laterales en los contrafuertes, coro y trascoro, girola con capillas radiales y torre-campanario en la cabecera. También es de destacar el elevado crucero."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Tiata</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"Tiata es una pedanía del municipio español de Lorca, en la Región de Murcia. Es la pedanía de menor tamaño del municipio y se encuentra colindante a la capital de éste. Cuenta con 596 habitantes. En su término se sitúa el santuario de la Virgen de las Huertas, cuya construcción se remonta al siglo XVIII.​"</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Museo_Arqueol%C3%B3gico_Municipal_de_Lorca</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"El museo Arqueológico Municipal de Lorca (Murcia), España, fue fundado en marzo de 1992 y se encuentra en la plaza de Juan Moreno. El Ayuntamiento de Lorca es el encargado de la titularidad y gestión del museo.​ El museo nació con el fin de un mejor desarrollo cultural de Lorca y la comarca."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Castillo_de_Lorca</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"El Castillo de Lorca (Murcia, España) es una fortaleza de origen medieval construida entre los siglos IX y XV. Comprende una serie de estructuras defensivas que, durante la Edad Media, convirtieron a la ciudad y a su fortaleza en un punto inexpugnable del sureste peninsular. El castillo de Lorca fue un bastión clave en las contiendas entre cristianos y musulmanes en la frontera de Granada. Se encuentra catalogado como Bien de Interés Cultural​ y dentro de la delimitación del conjunto histórico-artístico de Lorca.​​ Por su extensión, 640 metros de largo por unos 120 metros en su punto más ancho, es uno de los castillos más grandes de España."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Lorca</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"Lorca es una ciudad y municipio español perteneciente a la Región de Murcia, situada en la comarca del Alto Guadalentín, en el sureste de la península ibérica. Es la tercera población en importancia de la Región de Murcia tras Murcia y Cartagena, con 94 404 habitantes (INE 2019); de ellos, 60 914 habitantes corresponden al casco urbano​ y el resto a sus numerosas pedanías, distribuidas a lo largo y ancho de los 1 675 km² de término municipal,​ el segundo más extenso de España tras el de Cáceres. Lorca es conocida por su castillo, su arquitectura barroca y sus procesiones de Semana Santa, declaradas fiesta de interés turístico internacional. Gracias a su denso patrimonio heráldico es también llamada «la ciudad de los cien escudos», nombre que le otorgó el antiguo alcalde José Antonio Gallego,​​ mientras que de su nombre original (Eliocroca) toma el título de ciudad del sol.​​​Su casco antiguo y el recinto del castillo,​ fueron declarados conjunto histórico-artístico el 5 de marzo del 1964,​ siendo el primero de la Región de Murcia con esta distinción. ​​"</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Sutullena</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"Sutullena es una localidad y pedanía española perteneciente al municipio de Lorca, en la parte central de la comarca del Alto Guadalentín, Región de Murcia. Cerca de esta localidad se encuentran los núcleos de Tiata, Campillo y Torrecilla. Es la pedanía más poblada del municipio lorquino."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Terremoto_de_Lorca_de_2011</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"El terremoto de Lorca fue un sismo de magnitud 5.1 Mw (Magnitud de momento) el 11 de mayo de 2011, tuvo una intensidad Mercalli VIII en la zona epicentral y sacudió principalmente a la localidad de Lorca, en la Región de Murcia, España, a las 18:47 hora local (16:47 UTC).​ Su epicentro estaba localizado en la Falla de Alhama de Murcia (FAM) y sus efectos se sintieron en toda la Región de Murcia. Tuvo una magnitud de 5,1 ​​ en la escala de magnitud de momento.​ Fue precedido por un seísmo premonitorio de 4,5 sucedido a las 17:05 hora local de ese mismo día.​​El movimiento sísmico fue sentido también en las provincias de Almería, Albacete, Granada, Jaén, Málaga, Alicante, Ciudad Real y algunas zonas de la ciudad de Madrid, donde el tipo de suelo amplifica los movimientos en ciertos barrios.​ Múltiples réplicas se produjeron​ después del principal de las 18:47, si bien la de las 22:37, hora local, fue la de mayor magnitud, con 3,9 en la escala de magnitud de momento, y que pudo sentirse.​ La Región de Murcia, en la que se encuentra Lorca, es la zona sismológica más activa de España, si bien esta localidad, concretamente, no está entre las de mayor peligrosidad dentro de ella.​"</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Estadio_Francisco_Art%C3%A9s_Carrasco</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"El Estadio Municipal Francisco Artés Carrasco es el estadio municipal del municipio de Lorca. El C. F. Lorca Deportiva y el Lorca F. C. disputan sus partidos como local en este recinto.​ Hasta 2010 fue el estadio del Lorca Deportiva C. F..​ También jugó de 2010 a 2012 el Lorca Atlético C. F..​ Su nombre es en honor al segundo presidente del Patronato del Campo de San José de Lorca, tras ."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Acueducto_de_los_Diecisiete_Arcos</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"El Acueducto de los Diecisiete Arcos es una obra hidráulica ubicada en el término municipal de Lorca (Murcia). El acueducto, que cruza la rambla del mismo nombre o rambla de Romí, forma parte de la Real Acequia de Alcalá, que nace en el Partidor de la Mina y que por un trazado de 7 km lleva el agua al Heredamiento de Sutullena.​ La Real Acequia de Alcalá, de origen árabe, fue renovada entre los años 1785 y 1791 debido a la construcción de los pantanos de Puentes y Valdeinfierno. Es en esta época cuando se construye el acueducto que sustituye a uno precedente de veintinueve arcos, que regularmente experimentaba fuertes deterioros causados por las fuertes avenidas.​ El proyecto y la dirección de la obra corrieron a cargo del arquitecto .​"</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Rambla_de_B%C3%A9jar</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"Rambla de Béjar (Puerto Lumbreras, Murcia) es un cauce de agua de carácter estacional que constituye el límite geográfico entre los municipios de Lorca y Puerto Lumbreras cuyo nacimiento se sitúa en la Sierra de la Torrecilla desaguando en el abanico aluvial sobre la Depresión Prelitoral, en la rambla de Viznaga, afluente del Guadalentín y que también recoge las aguas de otras ramblas como La Torrecilla, Vilerda o Nogalte. Es en esta zona donde se sitúan la mayor parte de los aprovechamientos de esta rambla."</fechaInicio>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Aguaderas</titulo>
+        <latitud>0.0</latitud>
+        <longitud>0.0</longitud>
+        <fechaInicio>"Aguaderas es una pedanía de la ciudad española de Lorca, en la Región de Murcia. Se sitúa a aproximadamente 15 kilómetros al sureste de la capital municipal, y cuenta con una superficie de alrededor de 50 km². Cuenta con 388​ habitantes. El poblamiento se caracteriza por su dispersión, sin que exista un núcleo importante de población. La economía de la localidad se basa fundamentalmente en la agricultura y la ganadería. En este territorio tuvo lugar la batalla de Los Alporchones en 1452, entre las tropas del reino nazarí de Granada y las del reino cristiano de Murcia.​ Las fiestas patronales de la pedanía se celebran el 12 de octubre, en honor a la Virgen del Pilar."</fechaInicio>
+    </sitio_turistico>
+</ciudad>
