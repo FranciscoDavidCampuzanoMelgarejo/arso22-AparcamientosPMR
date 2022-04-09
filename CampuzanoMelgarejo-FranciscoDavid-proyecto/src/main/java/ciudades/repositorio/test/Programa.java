@@ -21,6 +21,7 @@ import sax.Manejador;
 
 public class Programa {
 
+	
 	public static void main(String[] args) throws ParserConfigurationException, SAXException {
 
 		final String documentoSAX = "https://datos.lorca.es/catalogo/parking-movilidad-reducida/XML";
@@ -78,9 +79,11 @@ public class Programa {
 				sitioTur.setLatitud(Double.parseDouble(latitudes.item(i).getTextContent()));
 				sitioTur.setLongitud(Double.parseDouble(longitudes.item(i).getTextContent()));
 				
+				/*
 				for(int j = 0; j < 3; j++) {
 					sitioTur.getAparcamiento().add(manejador.getAparcamientos().get(j));
 				}
+				*/
 				ciudad.getSitioTuristico().add(sitioTur);
 			}
 			
@@ -102,3 +105,4 @@ public class Programa {
 	}
 
 }
+
