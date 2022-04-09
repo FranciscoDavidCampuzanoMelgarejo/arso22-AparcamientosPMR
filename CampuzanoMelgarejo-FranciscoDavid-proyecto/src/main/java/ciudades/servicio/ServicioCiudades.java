@@ -1,6 +1,7 @@
 package ciudades.servicio;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -45,49 +46,48 @@ public class ServicioCiudades implements IServicioCiudades {
 		double x = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) + Math.cos(Math.toRadians(s.getLatitud()))
 				* Math.cos(Math.toRadians(a.getLatitud())) * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
 		double c = 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
-		double distance = R * c; // Para pasarlo a kilometros
-		return distance;
+		return R * c; // Para pasarlo a kilometros
 	}
 
-	//Algoritmo QuickSort
+	// Algoritmo QuickSort
 	private void ordenarAparcamientos(double[] distancias, int[] indicesAparcamientos, int izq, int der) {
 
-		if(izq < der) {
-			
+		if (izq < der) {
+
 			double pivote = distancias[izq];
-			double aux_distancias;
-			int aux_indices;
+			double auxDistancias;
+			int auxIndices;
 			int i = der + 1;
-			for(int j = der ; j > izq ; j--) {
-				if(distancias[j] > pivote) {
+			for (int j = der; j > izq; j--) {
+				if (distancias[j] > pivote) {
 					i++;
-					//Intercambio
-					aux_distancias = distancias[j];
-					aux_indices = indicesAparcamientos[j];
-					
+					// Intercambio
+					auxDistancias = distancias[j];
+					auxIndices = indicesAparcamientos[j];
+
 					distancias[j] = distancias[i];
 					indicesAparcamientos[j] = indicesAparcamientos[i];
-					
-					distancias[i] = aux_distancias;
-					indicesAparcamientos[i] = aux_indices;
+
+					distancias[i] = auxDistancias;
+					indicesAparcamientos[i] = auxIndices;
 				}
 			}
-			//Intercambio
+			// Intercambio
 			i++;
-			aux_distancias = distancias[i];
-			aux_indices = indicesAparcamientos[i];
-			
+			auxDistancias = distancias[i];
+			auxIndices = indicesAparcamientos[i];
+
 			distancias[i] = distancias[izq];
 			indicesAparcamientos[i] = indicesAparcamientos[izq];
-			
-			distancias[izq] = aux_distancias;
-			indicesAparcamientos[izq] = aux_indices;
-			
-			//Llamada recursiva
-			ordenarAparcamientos(distancias, indicesAparcamientos, izq, i-1);
+
+			distancias[izq] = auxDistancias;
+			indicesAparcamientos[izq] = auxIndices;
+
+			// Llamada recursiva
+			ordenarAparcamientos(distancias, indicesAparcamientos, izq, i - 1);
 			ordenarAparcamientos(distancias, indicesAparcamientos, i, der);
 		}
-		
+
 	}
 
 	private void calcularAparcamientosCercanos(Ciudad ciudad) {
@@ -95,8 +95,8 @@ public class ServicioCiudades implements IServicioCiudades {
 		List<Aparcamiento> aparcamientos = ciudad.getAparcamiento();
 
 		// Matriz que guarda la distnacia en km entre un sitio y un aparcamiento
-		double matrizDistancias[][] = new double[sitiosTuristicos.size()][aparcamientos.size()];
-		double distancia = 0.0;
+		double[][] matrizDistancias = new double[sitiosTuristicos.size()][aparcamientos.size()];
+		double distancia;
 
 		// Almacenar las distancias en la matriz
 		for (int i = 0; i < sitiosTuristicos.size(); i++) {
@@ -118,11 +118,12 @@ public class ServicioCiudades implements IServicioCiudades {
 		// Por ultimo, asocio el sitio con los aparcamientos ordenados
 		int[] indicesAparcamientos = new int[aparcamientos.size()];
 		for (int i = 0; i < sitiosTuristicos.size(); i++) {
-			
-			//Inicializar el array
-			for(int k = 0; k < aparcamientos.size(); k++) indicesAparcamientos[k] = k;
-			
-			ordenarAparcamientos(matrizDistancias[i], indicesAparcamientos,  0, aparcamientos.size() - 1);
+
+			// Inicializar el array
+			for (int k = 0; k < aparcamientos.size(); k++)
+				indicesAparcamientos[k] = k;
+
+			ordenarAparcamientos(matrizDistancias[i], indicesAparcamientos, 0, aparcamientos.size() - 1);
 			ArrayList<Aparcamiento> aparcamientosOrdenados = new ArrayList<>(20);
 			int j = 0;
 			while ((j < aparcamientos.size()) && (j < 20)) {
@@ -155,7 +156,6 @@ public class ServicioCiudades implements IServicioCiudades {
 		// TO DO -> la funcion validar lanza la excepcion IllegalArgumentException
 		validar(ciudad);
 
-		
 		// Creamos una entrada en el repositorio con la ciudad
 		String id = repositorio.add(ciudad);
 		calcularAparcamientosCercanos(ciudad);
@@ -182,7 +182,7 @@ public class ServicioCiudades implements IServicioCiudades {
 	public void removeCiudad(String id) throws RepositorioException, EntidadNoEncontrada {
 
 		Ciudad ciudad = repositorio.getById(id);
-		//TO DO -> Deberia de eleminar las entradas en el mapa
+		// TO DO -> Deberia de eleminar las entradas en el mapa
 		repositorio.delete(ciudad);
 	}
 
@@ -192,8 +192,8 @@ public class ServicioCiudades implements IServicioCiudades {
 	@Override
 	public List<Ciudad> getCiudades() throws RepositorioException {
 		List<Ciudad> ciudades = repositorio.getAll();
-		//¿¿Deberia de alamacenar en el mapa los aparcamientos mas cercanos??
-		for(Ciudad c : ciudades) {
+		// ¿¿Deberia de alamacenar en el mapa los aparcamientos mas cercanos??
+		for (Ciudad c : ciudades) {
 			calcularAparcamientosCercanos(c);
 		}
 		return ciudades;
@@ -203,15 +203,16 @@ public class ServicioCiudades implements IServicioCiudades {
 	public List<SitioTuristico> getSitiosTuristicos(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada {
 		return repositorio.getAllSitiosTuristicos(ciudad);
 	}
-	
+
 	@Override
 	public List<Aparcamiento> getAparcamientosCercanos(SitioTuristico sitioTuristico) {
-		
-		//En principio, siempre debe de haber una entrada para cada sitio turistico en el mapa
-		if(aparcamientosCercanos.containsKey(sitioTuristico)) {
+
+		// En principio, siempre debe de haber una entrada para cada sitio turistico en
+		// el mapa
+		if (aparcamientosCercanos.containsKey(sitioTuristico)) {
 			return aparcamientosCercanos.get(sitioTuristico);
 		}
-		return null;
+		return Collections.emptyList();
 	}
 
 }

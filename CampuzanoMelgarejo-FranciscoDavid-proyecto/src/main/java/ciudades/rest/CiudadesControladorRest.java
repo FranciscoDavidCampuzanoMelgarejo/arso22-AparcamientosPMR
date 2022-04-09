@@ -2,8 +2,9 @@ package ciudades.rest;
 
 import ciudades.servicio.IServicioCiudades;
 import ciudades.servicio.ServicioCiudades;
+import repositorio.EntidadNoEncontrada;
+import repositorio.RepositorioException;
 
-import java.net.URI;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -22,35 +23,36 @@ import org.example.ciudades.Ciudad;
 
 public class CiudadesControladorRest {
 	private IServicioCiudades servicio = ServicioCiudades.getServicio();
-	
+
 	@Context
 	private UriInfo uriInfo;
-	
+
+	/*
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response create(Ciudad ciudad) throws Exception {
-		
+	public Response create(Ciudad ciudad) throws RepositorioException {
+
 		String id = servicio.create(ciudad);
-		
+
 		URI uri = uriInfo.getAbsolutePathBuilder().path(id).build();
-		
+
 		return Response.created(uri).build();
 	}
-	
+	*/
+
 	@GET
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getById(@PathParam("id") String id) throws Exception {
-		
-		
+	public Response getById(@PathParam("id") String id) throws RepositorioException, EntidadNoEncontrada {
+
 		Ciudad ciudad = servicio.getCiudad(id);
-		
+
 		return Response.status(Status.OK).entity(ciudad).build();
 	}
-	
+
 	@DELETE
 	@Path("{id}")
-	public Response remove(String id) throws Exception {
+	public Response remove(String id) throws RepositorioException, EntidadNoEncontrada {
 		
 		servicio.removeCiudad(id);
 		
@@ -85,3 +87,4 @@ public class CiudadesControladorRest {
 	 * return Response.ok(resultado).build(); }
 	 */
 }
+
