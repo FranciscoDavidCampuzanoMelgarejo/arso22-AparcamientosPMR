@@ -64,7 +64,8 @@ public class CiudadesControladorRest {
 
 	// void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada
 
-	// curl -i -X PUT
+	// curl -i -X PUT -H "Content-type: application/xml" -d @test-files/1.xml
+	// http://localhost:8080/api/ciudades/4f562997-520b-4b30-9f92-0b842490ed5a
 	@PUT
 	@Path("/{id}")
 	@Consumes(MediaType.APPLICATION_XML)
@@ -80,6 +81,7 @@ public class CiudadesControladorRest {
 	// void delete(String id) throws RepositorioException, EntidadNoEncontrada
 
 	// curl -i -X DELETE
+	// http://localhost:8080/api/ciudades/4f562997-520b-4b30-9f92-0b842490ed5a
 	@DELETE
 	@Path("/{id}")
 	public Response remove(String id) throws Exception {
@@ -91,7 +93,8 @@ public class CiudadesControladorRest {
 
 	// Aparcamiento getInformacion(String id, String idAparcamiento)
 
-	// curl -i -X GET
+	// curl -i -X GET -H "Accept: application/xml"
+	// http:localhost:8080/api/ciudades/4f562997-520b-4b30-9f92-0b842490ed5a/aparcamiento/b73e01d2-fba6-4034-bf31-6e14674021ec
 	@GET
 	@Path("/{id}/aparcamiento/{idAparcamiento}")
 	@Produces(MediaType.APPLICATION_XML)
@@ -114,7 +117,7 @@ public class CiudadesControladorRest {
 
 	}
 
-	
+	// curl -i -X GET -H "Accept: application/xml" http:localhost:8080/api/ciudades
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public Response getResumenCiudades() throws Exception {
@@ -152,6 +155,8 @@ public class CiudadesControladorRest {
 
 	}
 
+	// curl -i -X GET -H "Accept: application/xml"
+	// http:localhost:8080/api/ciudades/4f562997-520b-4b30-9f92-0b842490ed5a/sitios_turisticos
 	@GET
 	@Path("/{id}/sitios_turisticos/")
 	@Produces(MediaType.APPLICATION_XML)
@@ -189,6 +194,8 @@ public class CiudadesControladorRest {
 		return Response.ok(listado).build();
 	}
 
+	// curl -i -X GET -H "Accept: application/xml"
+	// http:localhost:8080/api/ciudades/Castillo_de_Lorca/aparcamientos_cercanos
 	@GET
 	@Path("/{nombre}/aparcamientos_cercanos/")
 	@Produces(MediaType.APPLICATION_XML)
@@ -225,31 +232,4 @@ public class CiudadesControladorRest {
 		return Response.ok(listado).build();
 	}
 
-	/*
-	 * @GET
-	 * 
-	 * @Produces(MediaType.APPLICATION_JSON) public Response getListadoResumen()
-	 * throws Exception {
-	 * 
-	 * ListadoEncuestas listado = servicio.getListadoResumen();
-	 * 
-	 * LinkedList<ResumenExtendido> resumenesExtendidos = new LinkedList<>();
-	 * 
-	 * for (EncuestaResumen resumen : listado.getEncuestas()) {
-	 * 
-	 * ResumenExtendido resumenExtendido = new ResumenExtendido();
-	 * resumenExtendido.setResumen(resumen);
-	 * 
-	 * String url =
-	 * uriInfo.getAbsolutePathBuilder().path(resumen.getId()).build().toString();
-	 * 
-	 * resumenExtendido.setUrl(url);
-	 * 
-	 * resumenesExtendidos.add(resumenExtendido); }
-	 * 
-	 * Listado resultado = new Listado();
-	 * resultado.setEncuestas(resumenesExtendidos);
-	 * 
-	 * return Response.ok(resultado).build(); }
-	 */
 }
