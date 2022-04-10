@@ -2,14 +2,14 @@ package ciudades.rest;
 
 import ciudades.servicio.IServicioCiudades;
 import ciudades.servicio.ServicioCiudades;
-import repositorio.EntidadNoEncontrada;
-import repositorio.RepositorioException;
 
+import java.net.URI;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -27,38 +27,69 @@ public class CiudadesControladorRest {
 	@Context
 	private UriInfo uriInfo;
 
-	/*
+	// Ciudad getCiudad(String id) throws RepositorioException, EntidadNoEncontrada
+
+	// curl -i -X GET -H "Accept: application/xml"
+	// http://localhost:8080/api/ciudades/1
+	@GET
+	@Path("/{id}")
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getCiudad(@PathParam("id") String id) throws Exception {
+		return Response.status(Response.Status.OK).entity(servicio.getCiudad(id)).build();
+	}
+
+	// String create(Ciudad ciudad) throws RepositorioException
+
+	// curl -i -X POST -H "Accept: application/xml" -d @ruta_fichero/fichero.xml
+	// http://localhost:8080/api/ciudades
 	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Response create(Ciudad ciudad) throws RepositorioException {
-
+	@Consumes(MediaType.APPLICATION_XML)
+	public Response create(Ciudad ciudad) throws Exception {
 		String id = servicio.create(ciudad);
-
 		URI uri = uriInfo.getAbsolutePathBuilder().path(id).build();
-
 		return Response.created(uri).build();
 	}
-	*/
 
-	@GET
-	@Path("{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response getById(@PathParam("id") String id) throws RepositorioException, EntidadNoEncontrada {
+	// void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada
 
-		Ciudad ciudad = servicio.getCiudad(id);
+	// curl -i -X PUT
+	@PUT
+	@Path("/{id}")
+	@Consumes(MediaType.APPLICATION_XML)
+	public Response update(@PathParam("id") String id, Ciudad ciudad) throws Exception {
+		if (!id.equals(ciudad.getId())) {
+			throw new IllegalArgumentException("El identificador: '" + id + "' no coincide con el de la ciudad");
+		}
 
-		return Response.status(Status.OK).entity(ciudad).build();
+		servicio.update(ciudad);
+		return Response.status(Status.NO_CONTENT).build();
 	}
 
+	// void delete(String id) throws RepositorioException, EntidadNoEncontrada
+
+	// curl -i -X DELETE
 	@DELETE
 	@Path("{id}")
-	public Response remove(String id) throws RepositorioException, EntidadNoEncontrada {
-		
+	public Response remove(String id) throws Exception {
+
 		servicio.removeCiudad(id);
-		
-		return Response.noContent().build();
+
+		return Response.status(Response.Status.NO_CONTENT).build();
 	}
+
+	//Aparcamiento getInformacion(String id, String nombreAparcamiento)
 	
+	//curl -i -X GET
+	@GET
+	@Path("/{id}/aparcamiento/{nombre}")
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getInformacion(@PathParam("id") String id, @PathParam("nombre") String nombreAparcamiento)
+			throws Exception {
+
+		return Response.status(Response.Status.OK).entity(servicio.getInformacion(id, nombreAparcamiento)).build();
+
+	}
+
 	/*
 	 * @GET
 	 * 
@@ -87,4 +118,3 @@ public class CiudadesControladorRest {
 	 * return Response.ok(resultado).build(); }
 	 */
 }
-

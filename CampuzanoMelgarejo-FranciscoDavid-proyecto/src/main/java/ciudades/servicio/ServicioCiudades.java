@@ -1,7 +1,6 @@
 package ciudades.servicio;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +11,9 @@ import org.xml.sax.SAXParseException;
 
 import ciudades.repositorio.FactoriaRepositorioCiudades;
 import ciudades.repositorio.RepositorioCiudades;
+import ciudades.servicio.ListadoAparcamiento.AparcamientoResumen;
+import ciudades.servicio.ListadoCiudades.CiudadResumen;
+import ciudades.servicio.ListadoSitioTuristico.SitioTuristicoResumen;
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;
 
@@ -20,9 +22,10 @@ public class ServicioCiudades implements IServicioCiudades {
 	// Obtenemos el repositorio (singleton)
 	RepositorioCiudades repositorio = FactoriaRepositorioCiudades.getRepositorio();
 
-	// Diccionario para asociar a cada sitio turistico una lista de aparcamientos
+	// Diccionario para asociar a cada sitio turistico (nombre) una lista de
+	// aparcamientos
 	// mas cercanos
-	private HashMap<SitioTuristico, List<Aparcamiento>> aparcamientosCercanos = new HashMap<>();
+	private HashMap<String, List<Aparcamiento>> aparcamientosCercanos = new HashMap<>();
 
 	// Patron Singleton para crear el servicio
 	private static ServicioCiudades servicio;
@@ -131,7 +134,7 @@ public class ServicioCiudades implements IServicioCiudades {
 				j++;
 			}
 
-			aparcamientosCercanos.put(sitiosTuristicos.get(i), aparcamientosOrdenados);
+			aparcamientosCercanos.put(sitiosTuristicos.get(i).getTitulo(), aparcamientosOrdenados);
 		}
 
 	}
@@ -186,33 +189,60 @@ public class ServicioCiudades implements IServicioCiudades {
 		repositorio.delete(ciudad);
 	}
 
-	// Este metodo es ineficiente. Para cada identificador, carga la ciudad y la
-	// añade a una lista
-	// Si el documento de una ciudad es muy grande, esto resulta muy ineficiente
 	@Override
-	public List<Ciudad> getCiudades() throws RepositorioException {
-		List<Ciudad> ciudades = repositorio.getAll();
-		// ¿¿Deberia de alamacenar en el mapa los aparcamientos mas cercanos??
-		for (Ciudad c : ciudades) {
-			calcularAparcamientosCercanos(c);
+	public ListadoCiudades getResumenCiudades() throws RepositorioException {
+
+		ListadoCiudades listado = new ListadoCiudades();
+
+		for (Ciudad c : repositorio.getAll()) {
+			CiudadResumen resumen = new CiudadResumen();
+			resumen.setId(c.getId());
+			resumen.setNombre(c.getNombre());
+			listado.getResumenCiudades().add(resumen);
 		}
-		return ciudades;
+
+		return listado;
 	}
 
 	@Override
-	public List<SitioTuristico> getSitiosTuristicos(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada {
-		return repositorio.getAllSitiosTuristicos(ciudad);
+	public ListadoSitioTuristico getResumenSitiosTuristicos(String id)
+			throws RepositorioException, EntidadNoEncontrada {
+
+		ListadoSitioTuristico listado = new ListadoSitioTuristico();
+
+		for (SitioTuristico st : repositorio.getById(id).getSitioTuristico()) {
+			SitioTuristicoResumen resumen = new SitioTuristicoResumen();
+			resumen.setNombre(st.getTitulo());
+			resumen.setResumen(st.getResumen());
+			listado.getResumenSitiosTuristicos().add(resumen);
+		}
+
+		return listado;
 	}
 
 	@Override
-	public List<Aparcamiento> getAparcamientosCercanos(SitioTuristico sitioTuristico) {
+	public ListadoAparcamiento getAparcamientosCercanos(String nombreSitio) {
+		if (aparcamientosCercanos.containsKey(nombreSitio)) {
+			ListadoAparcamiento listado = new ListadoAparcamiento();
 
-		// En principio, siempre debe de haber una entrada para cada sitio turistico en
-		// el mapa
-		if (aparcamientosCercanos.containsKey(sitioTuristico)) {
-			return aparcamientosCercanos.get(sitioTuristico);
+			for (Aparcamiento a : aparcamientosCercanos.get(nombreSitio)) {
+				AparcamientoResumen resumen = new AparcamientoResumen();
+				resumen.setNombre(a.getDireccion());
+				listado.getResumenAparcamientos().add(resumen);
+			}
+			return listado;
 		}
-		return Collections.emptyList();
+		return null;
+	}
+
+	@Override
+	public Aparcamiento getInformacion(String idCiudad, String nombreAparcamiento)
+			throws EntidadNoEncontrada, RepositorioException {
+		for (Aparcamiento a : repositorio.getById(idCiudad).getAparcamiento()) {
+			if (a.getDireccion().equals(nombreAparcamiento))
+				return a;
+		}
+		return null;
 	}
 
 }

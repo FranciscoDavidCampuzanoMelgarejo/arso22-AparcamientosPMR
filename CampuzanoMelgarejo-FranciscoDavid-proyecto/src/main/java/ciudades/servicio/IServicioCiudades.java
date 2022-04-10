@@ -1,39 +1,40 @@
 package ciudades.servicio;
 
-import java.util.List;
 
 import org.example.ciudades.Aparcamiento;
 import org.example.ciudades.Ciudad;
-import org.example.ciudades.SitioTuristico;
 
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;
 
 public interface IServicioCiudades {
-	
-	
-	//Crear una ciudad en el repositorio
+
+	// Crear una ciudad en el repositorio
 	String create(Ciudad ciudad) throws RepositorioException;
-	
-	//Actualizar una ciudad ya existente en el repositorio
+
+	// Actualizar una ciudad ya existente en el repositorio
 	void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada;
-	
-	//Recupera una ciudad a partir del identificador
+
+	// Recupera una ciudad a partir del identificador
 	Ciudad getCiudad(String id) throws RepositorioException, EntidadNoEncontrada;
-	
-	//Elimina la ciudad a partir de su identificador
+
+	// Elimina la ciudad a partir de su identificador
 	void removeCiudad(String id) throws RepositorioException, EntidadNoEncontrada;
-	
-	//Obtiene todas las ciudades guardadas
-	List<Ciudad> getCiudades() throws RepositorioException;
-	
-	//Obtiene todos los SitiosTuristicos de una Ciudad
-	List<SitioTuristico> getSitiosTuristicos(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada;
-	
-	//Obtener las plazas de aparcamiento mas cercanas a un sitio turistico
-	List<Aparcamiento> getAparcamientosCercanos(SitioTuristico sitioTuristico);
-	
-	
-	
+
+	/* Metodos a realizar */
+
+	// Obtiene un resumen de todas las ciudades del repositorio
+	ListadoCiudades getResumenCiudades() throws RepositorioException;
+
+	// Obtiene un resumen de los sitios turisticos de una ciudad
+	ListadoSitioTuristico getResumenSitiosTuristicos(String id) throws RepositorioException, EntidadNoEncontrada;
+
+	// Obtener un resumen de las plazas de aparcamiento mas cercanas a un sitio
+	// turistico
+	ListadoAparcamiento getAparcamientosCercanos(String nombreSitio);
+
+	// Obtener informacion de un aparcamiento
+	Aparcamiento getInformacion(String idCiudad, String nombreAparcamiento)
+			throws EntidadNoEncontrada, RepositorioException;
 
 }
