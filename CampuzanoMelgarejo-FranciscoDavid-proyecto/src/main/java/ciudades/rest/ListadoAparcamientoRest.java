@@ -2,8 +2,11 @@ package ciudades.rest;
 
 import java.util.LinkedList;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import ciudades.servicio.ListadoAparcamiento.AparcamientoResumen;
 
+@XmlRootElement
 public class ListadoAparcamientoRest {
 
 	public static class AparcamientoResumenExtendido {

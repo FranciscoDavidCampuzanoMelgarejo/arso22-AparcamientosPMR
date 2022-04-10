@@ -1,9 +1,19 @@
 package ciudades.rest;
 
+import ciudades.rest.ListadoAparcamientoRest.AparcamientoResumenExtendido;
+import ciudades.rest.ListadoCiudadRest.CiudadResumenExtendido;
+import ciudades.rest.ListadoSitioTuristicoRest.SitioTuristicoResumenExtendido;
 import ciudades.servicio.IServicioCiudades;
+import ciudades.servicio.ListadoAparcamiento;
+import ciudades.servicio.ListadoAparcamiento.AparcamientoResumen;
+import ciudades.servicio.ListadoCiudades;
+import ciudades.servicio.ListadoCiudades.CiudadResumen;
+import ciudades.servicio.ListadoSitioTuristico;
+import ciudades.servicio.ListadoSitioTuristico.SitioTuristicoResumen;
 import ciudades.servicio.ServicioCiudades;
 
 import java.net.URI;
+import java.util.LinkedList;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -71,7 +81,7 @@ public class CiudadesControladorRest {
 
 	// curl -i -X DELETE
 	@DELETE
-	@Path("{id}")
+	@Path("/{id}")
 	public Response remove(String id) throws Exception {
 
 		servicio.removeCiudad(id);
@@ -79,20 +89,139 @@ public class CiudadesControladorRest {
 		return Response.status(Response.Status.NO_CONTENT).build();
 	}
 
-	//Aparcamiento getInformacion(String id, String idAparcamiento)
-	
-	//curl -i -X GET
+	// Aparcamiento getInformacion(String id, String idAparcamiento)
+
+	// curl -i -X GET
 	@GET
 	@Path("/{id}/aparcamiento/{idAparcamiento}")
 	@Produces(MediaType.APPLICATION_XML)
 	public Response getInformacion(@PathParam("id") String id, @PathParam("idAparcamiento") String idAparcamiento)
 			throws Exception {
-		
+
 		System.out.println("VA");
 		Aparcamiento a = servicio.getInformacion(id, idAparcamiento);
-		System.out.println(a.getId());
-		return Response.status(Response.Status.OK).entity(a).build();
+		AparcamientoResumen resumen = new AparcamientoResumen();
+		resumen.setId(a.getId());
+		resumen.setDireccion(a.getDireccion());
 
+		AparcamientoResumenExtendido resumenAparcamiento = new AparcamientoResumenExtendido();
+		resumenAparcamiento.setUrl(uriInfo.getAbsolutePath().getPath());
+		resumenAparcamiento.setResumen(resumen);
+
+		ListadoAparcamientoRest listado = new ListadoAparcamientoRest();
+		listado.getResumen().add(resumenAparcamiento);
+		return Response.status(Response.Status.OK).entity(listado).build();
+
+	}
+
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getResumenCiudades() throws Exception {
+
+		ListadoCiudades resultado = servicio.getResumenCiudades();
+
+		LinkedList<CiudadResumenExtendido> extendido = new LinkedList<>();
+
+		for (CiudadResumen ciudadResumen : resultado.getResumenCiudades()) {
+
+			CiudadResumenExtendido resumen = new CiudadResumenExtendido();
+
+			resumen.setResumen(ciudadResumen);
+
+			// URL
+
+			String id = ciudadResumen.getId();
+			URI nuevaURL = uriInfo.getAbsolutePathBuilder().path(id).build();
+
+			resumen.setUrl(nuevaURL.toString()); // string
+
+			extendido.add(resumen);
+
+		}
+
+		// Una lista no es un documento XML
+
+		// Creamos un documento XML con un envoltorio
+
+		ListadoCiudadRest listado = new ListadoCiudadRest();
+
+		listado.setResumen(extendido);
+
+		return Response.ok(listado).build();
+
+	}
+
+	@GET
+	@Path("/{id}/sitios_turisticos/")
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getResumenSitiosTuristicos(@PathParam("id") String id) throws Exception {
+
+		ListadoSitioTuristico resultado = servicio.getResumenSitiosTuristicos(id);
+
+		LinkedList<SitioTuristicoResumenExtendido> extendido = new LinkedList<>();
+
+		for (SitioTuristicoResumen sitioResumen : resultado.getResumenSitiosTuristicos()) {
+
+			SitioTuristicoResumenExtendido resumen = new SitioTuristicoResumenExtendido();
+
+			resumen.setResumen(sitioResumen);
+
+			// URL
+
+			String nombre = sitioResumen.getNombre();
+			URI nuevaURL = uriInfo.getAbsolutePathBuilder().path(nombre).build();
+
+			resumen.setUrl(nuevaURL.toString()); // string
+
+			extendido.add(resumen);
+
+		}
+
+		// Una lista no es un documento XML
+
+		// Creamos un documento XML con un envoltorio
+
+		ListadoSitioTuristicoRest listado = new ListadoSitioTuristicoRest();
+
+		listado.setResumen(extendido);
+
+		return Response.ok(listado).build();
+	}
+
+	@GET
+	@Path("/{nombre}/aparcamientos_cercanos/")
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getAparcamientosCercanos(@PathParam("nombre") String nombreSitio) throws Exception {
+		ListadoAparcamiento resultado = servicio.getAparcamientosCercanos(nombreSitio);
+
+		LinkedList<AparcamientoResumenExtendido> extendido = new LinkedList<>();
+
+		for (AparcamientoResumen aparcamientoResumen : resultado.getResumenAparcamientos()) {
+
+			AparcamientoResumenExtendido resumen = new AparcamientoResumenExtendido();
+
+			resumen.setResumen(aparcamientoResumen);
+
+			// URL
+
+			String id = aparcamientoResumen.getId();
+			URI nuevaURL = uriInfo.getAbsolutePathBuilder().path(id).build();
+
+			resumen.setUrl(nuevaURL.toString()); // string
+
+			extendido.add(resumen);
+
+		}
+
+		// Una lista no es un documento XML
+
+		// Creamos un documento XML con un envoltorio
+
+		ListadoAparcamientoRest listado = new ListadoAparcamientoRest();
+
+		listado.setResumen(extendido);
+
+		return Response.ok(listado).build();
 	}
 
 	/*

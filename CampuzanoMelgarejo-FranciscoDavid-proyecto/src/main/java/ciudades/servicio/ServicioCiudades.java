@@ -228,6 +228,7 @@ public class ServicioCiudades implements IServicioCiudades {
 			for (Aparcamiento a : aparcamientosCercanos.get(nombreSitio)) {
 				AparcamientoResumen resumen = new AparcamientoResumen();
 				resumen.setId(a.getId());
+				resumen.setDireccion(a.getDireccion());
 				listado.getResumenAparcamientos().add(resumen);
 			}
 			return listado;
@@ -239,7 +240,6 @@ public class ServicioCiudades implements IServicioCiudades {
 	public Aparcamiento getInformacion(String idCiudad, String idAparcamiento)
 			throws EntidadNoEncontrada, RepositorioException {
 		for (Aparcamiento a : repositorio.getById(idCiudad).getAparcamiento()) {
-			System.out.println(a);
 			if (a.getId().equals(idAparcamiento))
 				return a;
 		}
