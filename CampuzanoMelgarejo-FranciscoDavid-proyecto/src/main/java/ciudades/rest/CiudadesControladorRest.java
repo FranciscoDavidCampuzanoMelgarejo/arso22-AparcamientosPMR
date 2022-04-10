@@ -19,8 +19,10 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
 
+import org.example.ciudades.Aparcamiento;
 import org.example.ciudades.Ciudad;
 
+@Path("ciudades")
 public class CiudadesControladorRest {
 	private IServicioCiudades servicio = ServicioCiudades.getServicio();
 
@@ -77,16 +79,19 @@ public class CiudadesControladorRest {
 		return Response.status(Response.Status.NO_CONTENT).build();
 	}
 
-	//Aparcamiento getInformacion(String id, String nombreAparcamiento)
+	//Aparcamiento getInformacion(String id, String idAparcamiento)
 	
 	//curl -i -X GET
 	@GET
-	@Path("/{id}/aparcamiento/{nombre}")
+	@Path("/{id}/{idAparcamiento}")
 	@Produces(MediaType.APPLICATION_XML)
-	public Response getInformacion(@PathParam("id") String id, @PathParam("nombre") String nombreAparcamiento)
+	public Response getInformacion(@PathParam("id") String id, @PathParam("idAparcamiento") String idAparcamiento)
 			throws Exception {
-
-		return Response.status(Response.Status.OK).entity(servicio.getInformacion(id, nombreAparcamiento)).build();
+		
+		System.out.println("VA");
+		Aparcamiento a = servicio.getInformacion(id, idAparcamiento);
+		System.out.println(a.getId());
+		return Response.status(Response.Status.OK).entity(a).build();
 
 	}
 

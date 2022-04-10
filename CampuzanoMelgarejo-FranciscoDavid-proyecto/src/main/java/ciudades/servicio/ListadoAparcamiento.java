@@ -6,19 +6,19 @@ public class ListadoAparcamiento {
 
 	public static class AparcamientoResumen {
 
-		private String nombre;
+		private String id;
 
-		public String getNombre() {
-			return nombre;
+		public String getId() {
+			return id;
 		}
 
-		public void setNombre(String nombre) {
-			this.nombre = nombre;
+		public void setId(String id) {
+			this.id = id;
 		}
 
 		@Override
 		public String toString() {
-			return "AparcamientoResumen [nombre=" + nombre + "]";
+			return "AparcamientoResumen [id=" + id + "]";
 		}
 
 	}

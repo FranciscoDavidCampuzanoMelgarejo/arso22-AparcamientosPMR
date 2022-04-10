@@ -57,12 +57,12 @@ public class ServicioCiudades implements IServicioCiudades {
 
 		if (izq < der) {
 
-			double pivote = distancias[izq];
+			double pivote = distancias[der];
 			double auxDistancias;
 			int auxIndices;
-			int i = der + 1;
-			for (int j = der; j > izq; j--) {
-				if (distancias[j] > pivote) {
+			int i = izq - 1;
+			for (int j = izq; j <= der; j++) {
+				if (distancias[j] < pivote) {
 					i++;
 					// Intercambio
 					auxDistancias = distancias[j];
@@ -88,7 +88,7 @@ public class ServicioCiudades implements IServicioCiudades {
 
 			// Llamada recursiva
 			ordenarAparcamientos(distancias, indicesAparcamientos, izq, i - 1);
-			ordenarAparcamientos(distancias, indicesAparcamientos, i, der);
+			ordenarAparcamientos(distancias, indicesAparcamientos, i + 1, der);
 		}
 
 	}
@@ -227,7 +227,7 @@ public class ServicioCiudades implements IServicioCiudades {
 
 			for (Aparcamiento a : aparcamientosCercanos.get(nombreSitio)) {
 				AparcamientoResumen resumen = new AparcamientoResumen();
-				resumen.setNombre(a.getDireccion());
+				resumen.setId(a.getId());
 				listado.getResumenAparcamientos().add(resumen);
 			}
 			return listado;
@@ -236,10 +236,11 @@ public class ServicioCiudades implements IServicioCiudades {
 	}
 
 	@Override
-	public Aparcamiento getInformacion(String idCiudad, String nombreAparcamiento)
+	public Aparcamiento getInformacion(String idCiudad, String idAparcamiento)
 			throws EntidadNoEncontrada, RepositorioException {
 		for (Aparcamiento a : repositorio.getById(idCiudad).getAparcamiento()) {
-			if (a.getDireccion().equals(nombreAparcamiento))
+			System.out.println(a);
+			if (a.getId().equals(idAparcamiento))
 				return a;
 		}
 		return null;

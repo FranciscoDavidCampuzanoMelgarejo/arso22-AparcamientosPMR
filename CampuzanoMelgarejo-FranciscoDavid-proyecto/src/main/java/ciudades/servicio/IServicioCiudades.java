@@ -34,7 +34,7 @@ public interface IServicioCiudades {
 	ListadoAparcamiento getAparcamientosCercanos(String nombreSitio);
 
 	// Obtener informacion de un aparcamiento
-	Aparcamiento getInformacion(String idCiudad, String nombreAparcamiento)
+	Aparcamiento getInformacion(String idCiudad, String idAparcamiento)
 			throws EntidadNoEncontrada, RepositorioException;
 
 }
