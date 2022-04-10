@@ -83,7 +83,7 @@ public class CiudadesControladorRest {
 	
 	//curl -i -X GET
 	@GET
-	@Path("/{id}/{idAparcamiento}")
+	@Path("/{id}/aparcamiento/{idAparcamiento}")
 	@Produces(MediaType.APPLICATION_XML)
 	public Response getInformacion(@PathParam("id") String id, @PathParam("idAparcamiento") String idAparcamiento)
 			throws Exception {
