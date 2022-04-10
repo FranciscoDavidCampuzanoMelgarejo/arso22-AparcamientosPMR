@@ -3,7 +3,6 @@ package ciudades.rest;
 import java.util.LinkedList;
 
 import ciudades.servicio.ListadoAparcamiento.AparcamientoResumen;
-import ciudades.servicio.ListadoCiudades.CiudadResumen;
 
 public class ListadoAparcamientoRest {
 
@@ -20,23 +19,23 @@ public class ListadoAparcamientoRest {
 			this.url = url;
 		}
 
-		public CiudadResumen getResumen() {
+		public AparcamientoResumen getResumen() {
 			return resumen;
 		}
 
-		public void setResumen(CiudadResumen resumen) {
+		public void setResumen(AparcamientoResumen resumen) {
 			this.resumen = resumen;
 		}
 
 	}
 
-	private LinkedList<CiudadResumenExtendido> resumen = new LinkedList<>();
+	private LinkedList<AparcamientoResumenExtendido> resumen = new LinkedList<>();
 
-	public LinkedList<CiudadResumenExtendido> getResumen() {
+	public LinkedList<AparcamientoResumenExtendido> getResumen() {
 		return resumen;
 	}
 
-	public void setResumen(LinkedList<CiudadResumenExtendido> resumen) {
+	public void setResumen(LinkedList<AparcamientoResumenExtendido> resumen) {
 		this.resumen = resumen;
 	}
 
