@@ -114,6 +114,7 @@ public class CiudadesControladorRest {
 
 	}
 
+	
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public Response getResumenCiudades() throws Exception {
