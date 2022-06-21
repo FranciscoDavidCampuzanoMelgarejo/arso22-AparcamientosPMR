@@ -1,31 +1,46 @@
 package ciudades.servicio;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.IntStream;
 
-import org.example.ciudades.Aparcamiento;
+import javax.json.bind.Jsonb;
+import javax.json.bind.spi.JsonbProvider;
+
 import org.example.ciudades.Ciudad;
+import org.example.ciudades.Opinion;
+import org.example.ciudades.Parking;
 import org.example.ciudades.SitioTuristico;
 import org.xml.sax.SAXParseException;
 
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.DefaultConsumer;
+import com.rabbitmq.client.Envelope;
+import com.rabbitmq.client.AMQP;
+import com.rabbitmq.client.AMQP.BasicProperties;
+
 import ciudades.repositorio.FactoriaRepositorioCiudades;
 import ciudades.repositorio.RepositorioCiudades;
-import ciudades.servicio.ListadoAparcamiento.AparcamientoResumen;
-import ciudades.servicio.ListadoCiudades.CiudadResumen;
-import ciudades.servicio.ListadoSitioTuristico.SitioTuristicoResumen;
+import opiniones.eventos.EventoValoracionCreada;
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;
+import utils.Utils;
 
 public class ServicioCiudades implements IServicioCiudades {
+
+	private static final double RADIO_POR_DEFECTO = 10; // 10 km de radio
 
 	// Obtenemos el repositorio (singleton)
 	RepositorioCiudades repositorio = FactoriaRepositorioCiudades.getRepositorio();
 
-	// Diccionario para asociar a cada sitio turistico (nombre) una lista de
-	// aparcamientos
-	// mas cercanos
-	private HashMap<String, List<Aparcamiento>> aparcamientosCercanos = new HashMap<>();
+	private Map<String, List<DistanciaParkingSitio>> parkingsCercanos = new HashMap<>();
 
 	// Patron Singleton para crear el servicio
 	private static ServicioCiudades servicio;
@@ -37,105 +52,139 @@ public class ServicioCiudades implements IServicioCiudades {
 		return servicio;
 	}
 
-	// Metodos privados
+	private ServicioCiudades() {
 
-	// Metodo para calcular la distancia en km entre dos puntos geograficos (lat,
-	// lng)
-	private double calcularDistancia(SitioTuristico s, Aparcamiento a) {
-		final int R = 6371; // Radio de la tierra en kilometros
+		try {
 
-		double latDistance = Math.toRadians(a.getLatitud() - s.getLatitud());
-		double lonDistance = Math.toRadians(a.getLongitud() - s.getLongitud());
-		double x = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) + Math.cos(Math.toRadians(s.getLatitud()))
-				* Math.cos(Math.toRadians(a.getLatitud())) * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
-		double c = 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
-		return R * c; // Para pasarlo a kilometros
-	}
+			ConnectionFactory factoria = new ConnectionFactory();
+			factoria.setUri("amqps://jsbkllto:1u9IreNKv84X7571xO4Rx1jiGQmlcymS@stingray.rmq.cloudamqp.com/jsbkllto");
 
-	// Algoritmo QuickSort
-	private void ordenarAparcamientos(double[] distancias, int[] indicesAparcamientos, int izq, int der) {
+			Connection conexion = factoria.newConnection();
+			Channel canal = conexion.createChannel();
 
-		if (izq < der) {
+			// Declaracion de la cola y enlazarla con el exchange
+			final String nombreExchange = "opiniones-exchange";
+			final String nombreCola = "opiniones-queue";
+			final String bindingkey = "arso";
 
-			double pivote = distancias[der];
-			double auxDistancias;
-			int auxIndices;
-			int i = izq - 1;
-			for (int j = izq; j <= der; j++) {
-				if (distancias[j] < pivote) {
-					i++;
-					// Intercambio
-					auxDistancias = distancias[j];
-					auxIndices = indicesAparcamientos[j];
+			boolean durable = true;
+			boolean exclusive = false;
+			boolean autodelete = false;
+			Map<String, Object> propiedades = null; // sin propiedades
 
-					distancias[j] = distancias[i];
-					indicesAparcamientos[j] = indicesAparcamientos[i];
+			System.out.println("Declararla cola");
+			canal.queueDeclare(nombreCola, durable, exclusive, autodelete, propiedades);
 
-					distancias[i] = auxDistancias;
-					indicesAparcamientos[i] = auxIndices;
+			System.out.println("Atar la cola");
+			canal.queueBind(nombreCola, nombreExchange, bindingkey);
+			System.out.println("Cola atada");
+			// Configuracion del consumidor
+
+			boolean autoAck = false;
+			String cola = "opiniones-queue";
+			String etiquetaConsumidor = "arso-consumidor";
+
+			// Consumidor push
+
+			System.out.println("Antes de consumir");
+			canal.basicConsume(cola, autoAck, etiquetaConsumidor, new DefaultConsumer(canal) {
+
+				@Override
+				public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties,
+						byte[] body) throws IOException {
+
+					System.out.println("CONSUMIENDO");
+					String routingKey = envelope.getRoutingKey();
+					String contentType = properties.getContentType();
+					long deliveryTag = envelope.getDeliveryTag();
+
+					String contenido = new String(body);
+					System.out.println(contenido);
+
+					Jsonb contexto = JsonbProvider.provider().create().build();
+
+					EventoValoracionCreada evento = contexto.fromJson(contenido, EventoValoracionCreada.class);
+
+					String url = evento.getUrl();
+					String nombreCiudad = null;
+					double lat, lng;
+					lat = lng = 0.0;
+
+					// TO DO -> Obtener la ciudad de la URL
+					Pattern patron_ciudad = Pattern.compile("ciudades[/][A-Z][a-z]*[/]");
+					Pattern patron_parking = Pattern.compile("([-]?[0-9]+[.][0-9]+)");
+					Matcher match_ciudad = patron_ciudad.matcher(url);
+					Matcher match_parking = patron_parking.matcher(url);
+
+					if (match_ciudad.find())
+						nombreCiudad = match_ciudad.group().substring(match_ciudad.group().indexOf('/') + 1,
+								match_ciudad.group().lastIndexOf('/'));
+
+					double[] coordenadas = new double[2];
+					int i = 0;
+					while (match_parking.find())
+						coordenadas[i++] = Double.parseDouble(match_parking.group());
+
+					lat = coordenadas[0];
+					lng = coordenadas[1];
+
+					try {
+						Ciudad ciudad = repositorio.getByNombre(nombreCiudad);
+						for (Parking p : ciudad.getParking()) {
+							if (p.getLatitud() == lat && p.getLongitud() == lng) {
+
+								Opinion opinion = new Opinion();
+								opinion.setUrlOpinion("http://localhost:8081/api/opiniones/" + url);
+								opinion.setCalificacionMedia(evento.getCalificacionMedia());
+								opinion.setNumeroValoraciones(evento.getValoraciones());
+								p.setOpinion(opinion);
+								ciudad.getParking().add(p);
+								break;
+							}
+						}
+
+						repositorio.update(ciudad);
+					} catch (RepositorioException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (EntidadNoEncontrada e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+					// Confirma el procesamiento
+					canal.basicAck(deliveryTag, false);
 				}
-			}
-			// Intercambio
-			i++;
-			auxDistancias = distancias[i];
-			auxIndices = indicesAparcamientos[i];
+			});
 
-			distancias[i] = distancias[izq];
-			indicesAparcamientos[i] = indicesAparcamientos[izq];
-
-			distancias[izq] = auxDistancias;
-			indicesAparcamientos[izq] = auxIndices;
-
-			// Llamada recursiva
-			ordenarAparcamientos(distancias, indicesAparcamientos, izq, i - 1);
-			ordenarAparcamientos(distancias, indicesAparcamientos, i + 1, der);
+			System.out.println("Final consumidor");
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
-
 	}
 
-	private void calcularAparcamientosCercanos(Ciudad ciudad) {
-		List<SitioTuristico> sitiosTuristicos = ciudad.getSitioTuristico();
-		List<Aparcamiento> aparcamientos = ciudad.getAparcamiento();
+	// Metodo para calcular los parkings mas cercanos a un sitio
+	private void calcularAparcamientosCercanos(Ciudad ciudad, SitioTuristico sitio) {
 
-		// Matriz que guarda la distnacia en km entre un sitio y un aparcamiento
-		double[][] matrizDistancias = new double[sitiosTuristicos.size()][aparcamientos.size()];
-		double distancia;
-
-		// Almacenar las distancias en la matriz
-		for (int i = 0; i < sitiosTuristicos.size(); i++) {
-			for (int j = 0; j < aparcamientos.size(); j++) {
-				distancia = calcularDistancia(sitiosTuristicos.get(i), aparcamientos.get(j));
-				// Si la distnacia entre el sitio y el aparcamiento es mayor que 5km, entonces
-				// marcarla la distancia como INFINITO (demasiado lejos)
-				if (distancia > 5)
-					matrizDistancias[i][j] = Double.POSITIVE_INFINITY;
-				else
-					matrizDistancias[i][j] = distancia;
-			}
+		// Array que guarda las distancias (km) entre un sitio y un parking
+		double[] distancias = new double[ciudad.getParking().size()];
+		for (int i = 0; i < ciudad.getParking().size(); i++) {
+			Parking parking = ciudad.getParking().get(i);
+			distancias[i] = Utils.calcularDistancia(sitio.getLatitud(), sitio.getLongitud(), parking.getLatitud(),
+					parking.getLongitud());
 		}
 
-		// Por cada sitio, obtengo las distancias con cada aparcamientos y las ordeno de
-		// menor a mayor
-		// A la vez, ordeno los indices de los aparcamientos del mas cercano al mas
-		// lejano
-		// Por ultimo, asocio el sitio con los aparcamientos ordenados
-		int[] indicesAparcamientos = new int[aparcamientos.size()];
-		for (int i = 0; i < sitiosTuristicos.size(); i++) {
+		// Array que contiene los indices de los parkings
+		int[] indicesParkings = IntStream.range(0, ciudad.getParking().size()).toArray();
+		Utils.ordenarParkings(distancias, indicesParkings, 0, ciudad.getParking().size() - 1);
 
-			// Inicializar el array
-			for (int k = 0; k < aparcamientos.size(); k++)
-				indicesAparcamientos[k] = k;
-
-			ordenarAparcamientos(matrizDistancias[i], indicesAparcamientos, 0, aparcamientos.size() - 1);
-			ArrayList<Aparcamiento> aparcamientosOrdenados = new ArrayList<>(20);
-			int j = 0;
-			while ((j < aparcamientos.size()) && (j < 20)) {
-				aparcamientosOrdenados.add(aparcamientos.get(indicesAparcamientos[j]));
-				j++;
-			}
-
-			aparcamientosCercanos.put(sitiosTuristicos.get(i).getTitulo(), aparcamientosOrdenados);
+		List<DistanciaParkingSitio> parkingsDistancia = new LinkedList<>();
+		for (int i = 0; i < ciudad.getParking().size(); i++) {
+			Parking p = ciudad.getParking().get(indicesParkings[i]);
+			parkingsDistancia.add(new DistanciaParkingSitio(p, distancias[i]));
 		}
+
+		parkingsCercanos.put(sitio.getTitulo(), parkingsDistancia);
 
 	}
 
@@ -152,98 +201,106 @@ public class ServicioCiudades implements IServicioCiudades {
 	@Override
 	public String create(Ciudad ciudad) throws RepositorioException {
 
-		// Según el esquema, el id es obligatorio
-		// Se establece uno provisional, el repositorio aportará el definitivo
-		ciudad.setId(" ");
-
-		// TO DO -> la funcion validar lanza la excepcion IllegalArgumentException
-		validar(ciudad);
+		try {
+			validar(ciudad);
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		}
 
 		// Creamos una entrada en el repositorio con la ciudad
-		String id = repositorio.add(ciudad);
-		calcularAparcamientosCercanos(ciudad);
-		return id;
+		String nombre = repositorio.add(ciudad);
+		return nombre;
 	}
 
 	@Override
 	public void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada {
 
-		// TO DO -> la funcion validar lanza la excepcion IllegalArgumentException
-		validar(ciudad);
+		try {
+			validar(ciudad);
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		}
 		repositorio.update(ciudad);
 	}
 
 	@Override
-	public Ciudad getCiudad(String id) throws RepositorioException, EntidadNoEncontrada {
+	public Ciudad getCiudad(String nombre) throws RepositorioException, EntidadNoEncontrada {
 
-		Ciudad ciudad = repositorio.getById(id);
-		calcularAparcamientosCercanos(ciudad);
-		return ciudad;
+		return repositorio.getByNombre(nombre);
 	}
 
 	@Override
-	public void removeCiudad(String id) throws RepositorioException, EntidadNoEncontrada {
+	public void removeCiudad(String nombre) throws RepositorioException, EntidadNoEncontrada {
 
-		Ciudad ciudad = repositorio.getById(id);
-		// TO DO -> Deberia de eleminar las entradas en el mapa
+		Ciudad ciudad = repositorio.getByNombre(nombre);
 		repositorio.delete(ciudad);
 	}
 
 	@Override
-	public ListadoCiudades getResumenCiudades() throws RepositorioException {
+	public List<CiudadResumen> getCiudades() throws RepositorioException {
+		List<CiudadResumen> ciudades = new LinkedList<>();
 
-		ListadoCiudades listado = new ListadoCiudades();
-
-		for (Ciudad c : repositorio.getAll()) {
+		for (Ciudad ciudad : repositorio.getAll()) {
 			CiudadResumen resumen = new CiudadResumen();
-			resumen.setId(c.getId());
-			resumen.setNombre(c.getNombre());
-			listado.getResumenCiudades().add(resumen);
+			resumen.setNombre(ciudad.getNombre());
+			resumen.setSitios(ciudad.getSitioTuristico().size());
+			resumen.setAparcamientos(ciudad.getParking().size());
+			ciudades.add(resumen);
 		}
-
-		return listado;
+		return ciudades;
 	}
 
 	@Override
-	public ListadoSitioTuristico getResumenSitiosTuristicos(String id)
+	public List<SitioTuristico> getSitiosTuristicos(String nombre) throws RepositorioException, EntidadNoEncontrada {
+		Ciudad ciudad = repositorio.getByNombre(nombre);
+		return ciudad.getSitioTuristico();
+	}
+
+	@Override
+	public List<DistanciaParkingSitio> getAparcamientosCercanos(String nombre, String sitio, Double radio)
 			throws RepositorioException, EntidadNoEncontrada {
 
-		ListadoSitioTuristico listado = new ListadoSitioTuristico();
-
-		for (SitioTuristico st : repositorio.getById(id).getSitioTuristico()) {
-			SitioTuristicoResumen resumen = new SitioTuristicoResumen();
-			resumen.setNombre(st.getTitulo());
-			resumen.setResumen(st.getResumen());
-			listado.getResumenSitiosTuristicos().add(resumen);
+		if (radio == null)
+			radio = RADIO_POR_DEFECTO;
+		else if (radio <= 0 || radio > 50) {
+			throw new IllegalArgumentException("El radio debe estar en el rango (0-50]");
 		}
 
-		return listado;
+		Ciudad ciudad = repositorio.getByNombre(nombre);
+		int i = 0;
+		while ((i < ciudad.getSitioTuristico().size())
+				&& (!ciudad.getSitioTuristico().get(i).getTitulo().equals(sitio)))
+			i++;
+
+		if (i >= ciudad.getSitioTuristico().size()) {
+			throw new EntidadNoEncontrada("El sitio turistico: " + sitio + "no esta registrado");
+		}
+
+		if (!parkingsCercanos.containsKey(sitio)) {
+			System.out.println("DENTRO");
+			calcularAparcamientosCercanos(ciudad, ciudad.getSitioTuristico().get(i));
+		}
+
+		List<DistanciaParkingSitio> parkingsDistancias = new LinkedList<>();
+		List<DistanciaParkingSitio> distanciasCalculadas = parkingsCercanos.get(sitio);
+
+		i = 0;
+		while (i < ciudad.getParking().size() && distanciasCalculadas.get(i).getDistancia() <= radio) {
+			parkingsDistancias.add(distanciasCalculadas.get(i));
+			i++;
+		}
+		return parkingsDistancias;
 	}
 
 	@Override
-	public ListadoAparcamiento getAparcamientosCercanos(String nombreSitio) {
-		if (aparcamientosCercanos.containsKey(nombreSitio)) {
-			ListadoAparcamiento listado = new ListadoAparcamiento();
-
-			for (Aparcamiento a : aparcamientosCercanos.get(nombreSitio)) {
-				AparcamientoResumen resumen = new AparcamientoResumen();
-				resumen.setId(a.getId());
-				resumen.setDireccion(a.getDireccion());
-				listado.getResumenAparcamientos().add(resumen);
+	public Parking getParking(String nombre, double lat, double lng) throws RepositorioException, EntidadNoEncontrada {
+		Ciudad ciudad = repositorio.getByNombre(nombre);
+		for (Parking p : ciudad.getParking()) {
+			if (p.getLatitud() == lat && p.getLongitud() == lng) {
+				return p;
 			}
-			return listado;
 		}
-		return null;
-	}
-
-	@Override
-	public Aparcamiento getInformacion(String idCiudad, String idAparcamiento)
-			throws EntidadNoEncontrada, RepositorioException {
-		for (Aparcamiento a : repositorio.getById(idCiudad).getAparcamiento()) {
-			if (a.getId().equals(idAparcamiento))
-				return a;
-		}
-		return null;
+		throw new EntidadNoEncontrada("No existe ningun aparcamiento en esas coordenadas");
 	}
 
 }

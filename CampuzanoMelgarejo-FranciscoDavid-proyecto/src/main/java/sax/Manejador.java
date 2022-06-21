@@ -7,9 +7,6 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import utils.Utils;
-
-import org.example.ciudades.Aparcamiento;
 
 public class Manejador extends DefaultHandler {
 
@@ -68,11 +65,7 @@ public class Manejador extends DefaultHandler {
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		if(qName.equals("parking")) {
-			Aparcamiento parking = new Aparcamiento();
-			parking.setId(Utils.createId());
-			parking.setDireccion(direccion);
-			parking.setLatitud(latitud);
-			parking.setLongitud(longitud);
+			Aparcamiento parking = new Aparcamiento(direccion, latitud, longitud);
 			this.aparcamientos.add(parking);
 		}
 	}

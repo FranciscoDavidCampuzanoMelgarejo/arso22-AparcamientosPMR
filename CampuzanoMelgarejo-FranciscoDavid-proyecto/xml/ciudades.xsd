@@ -6,13 +6,12 @@
 	<xs:element name="ciudad">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="id" type="xs:string"></xs:element>
 				<xs:element name="sitio_turistico" type="sitioTuristico"
 					maxOccurs="unbounded"></xs:element>
-				<xs:element name="aparcamiento" type="aparcamiento"
+				<xs:element name="parking" type="parking"
 					maxOccurs="unbounded"></xs:element>
 			</xs:sequence>
-			<xs:attribute name="nombre" type="xs:string"></xs:attribute>
+			<xs:attribute name="nombre" type="xs:string" use="required"></xs:attribute>	
 		</xs:complexType>
 	</xs:element>
 
@@ -26,12 +25,20 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name="aparcamiento">
+	<xs:complexType name="parking">
 		<xs:sequence>
-			<xs:element name="id" type="xs:string"></xs:element>
 			<xs:element name="direccion" type="xs:string"></xs:element>
 			<xs:element name="latitud" type="xs:double"></xs:element>
 			<xs:element name="longitud" type="xs:double"></xs:element>
+			<xs:element name="opinion" type="opinion"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="opinion">
+		<xs:sequence>
+			<xs:element name="numero_valoraciones" type="xs:int"/>
+			<xs:element name="calificacion_media" type="xs:double"/>
+			<xs:element name="url_opinion" type="xs:anyURI"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

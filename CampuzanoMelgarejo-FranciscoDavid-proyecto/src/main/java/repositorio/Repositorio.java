@@ -18,9 +18,9 @@ public interface Repositorio <T, K> {
     
     void delete(T entity) throws RepositorioException, EntidadNoEncontrada;
 
-    T getById(K id) throws RepositorioException, EntidadNoEncontrada;
+    T getByNombre(K nombre) throws RepositorioException, EntidadNoEncontrada;
     
 	List<T> getAll() throws RepositorioException;
 
-	List<K> getIds();
+	List<K> getNombres();
 }

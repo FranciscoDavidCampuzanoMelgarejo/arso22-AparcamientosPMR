@@ -1,40 +1,39 @@
 package ciudades.servicio;
 
-
-import org.example.ciudades.Aparcamiento;
+import java.util.List;
 import org.example.ciudades.Ciudad;
+import org.example.ciudades.Parking;
+import org.example.ciudades.SitioTuristico;
 
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;
 
 public interface IServicioCiudades {
 
-	// Crear una ciudad en el repositorio
+	// CRUD
+
 	String create(Ciudad ciudad) throws RepositorioException;
 
-	// Actualizar una ciudad ya existente en el repositorio
 	void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada;
 
-	// Recupera una ciudad a partir del identificador
-	Ciudad getCiudad(String id) throws RepositorioException, EntidadNoEncontrada;
+	Ciudad getCiudad(String nombre) throws RepositorioException, EntidadNoEncontrada;
 
-	// Elimina la ciudad a partir de su identificador
-	void removeCiudad(String id) throws RepositorioException, EntidadNoEncontrada;
+	void removeCiudad(String nombre) throws RepositorioException, EntidadNoEncontrada;
 
 	/* Metodos a realizar */
 
-	// Obtiene un resumen de todas las ciudades del repositorio
-	ListadoCiudades getResumenCiudades() throws RepositorioException;
+	// Devuelve todas las ciudades
+	List<CiudadResumen> getCiudades() throws RepositorioException;
 
-	// Obtiene un resumen de los sitios turisticos de una ciudad
-	ListadoSitioTuristico getResumenSitiosTuristicos(String id) throws RepositorioException, EntidadNoEncontrada;
+	// Devuelve todos los sitios turisticos de una ciudad
+	List<SitioTuristico> getSitiosTuristicos(String nombre) throws RepositorioException, EntidadNoEncontrada;
 
-	// Obtener un resumen de las plazas de aparcamiento mas cercanas a un sitio
-	// turistico
-	ListadoAparcamiento getAparcamientosCercanos(String nombreSitio);
+	// Devuelve todos los aparcamientos cercanos a un sitio turistico de una ciudad.
+	// Se le puede indicar el radio (km)
+	List<DistanciaParkingSitio> getAparcamientosCercanos(String nombre, String sitio, Double radio)
+			throws RepositorioException, EntidadNoEncontrada;
 
-	// Obtener informacion de un aparcamiento
-	Aparcamiento getInformacion(String idCiudad, String idAparcamiento)
-			throws EntidadNoEncontrada, RepositorioException;
+	// Devuelve un parking de una ciudad
+	Parking getParking(String nombre, double lat, double lng) throws RepositorioException, EntidadNoEncontrada;
 
 }

@@ -13,6 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<dep.slf4j.version>1.7.30</dep.slf4j.version>
+		<jetty.http.port>8082</jetty.http.port>
 	</properties>
 
 
@@ -50,6 +51,18 @@
 			<artifactId>geronimo-json_1.1_spec</artifactId>
 			<version>1.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>javax.json.bind</groupId>
+			<artifactId>javax.json.bind-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse</groupId>
+			<artifactId>yasson</artifactId>
+			<version>1.0</version>
+		</dependency>
+
 		<!-- JAXB-->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
@@ -70,6 +83,14 @@
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-jersey-jaxrs</artifactId>
 			<version>1.5.0</version>
+		</dependency>
+
+		<!-- RabbitMQ -->
+
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>5.8.0</version>
 		</dependency>
 
 		<!-- Para el servidor web Jetty -->
@@ -186,6 +207,12 @@
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.4.26.v20200117</version>
+				<configuration>
+					<httpConnector>
+						<host>localhost</host>
+						<port>8082</port>
+					</httpConnector>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -12,12 +12,11 @@ import org.example.ciudades.Ciudad;
 
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;
-import utils.Utils;
 
 public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 	public static final String DIRECTORIO_CIUDADES = "ciudades/";
-	private static final String c="La ciudad no existe, id: ";
+	//private static final String c="La ciudad no existe, id: ";
 	static {
 
 		File directorio = new File(DIRECTORIO_CIUDADES);
@@ -26,22 +25,18 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 			directorio.mkdir();
 	}
 	
-	/*
-	 * Metodos privados para cargar el Mapa
-	 */
-	
 	
 
 	/*** Métodos de apoyo ***/
 
-	protected String getDocumento(String id) {
+	protected String getDocumento(String nombre) {
 
-		return DIRECTORIO_CIUDADES + id + ".xml";
+		return DIRECTORIO_CIUDADES + nombre + ".xml";
 	}
 
-	protected boolean checkDocumento(String id) {
+	protected boolean checkDocumento(String nombre) {
 
-		final String documento = getDocumento(id);
+		final String documento = getDocumento(nombre);
 
 		File fichero = new File(documento);
 
@@ -50,7 +45,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 	protected void save(Ciudad ciudad) throws RepositorioException {
 
-		final String documento = getDocumento(ciudad.getId());
+		final String documento = getDocumento(ciudad.getNombre());
 
 		final File fichero = new File(documento);
 
@@ -65,16 +60,16 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		} catch (Exception e) {
 
-			throw new RepositorioException("Error al guardar la ciudad con id: " + ciudad.getId(), e);
+			throw new RepositorioException("Error al guardar la ciudad: " + ciudad.getNombre(), e);
 		}
 	}
 
-	protected Ciudad load(String id) throws RepositorioException, EntidadNoEncontrada {
+	protected Ciudad load(String nombre) throws RepositorioException, EntidadNoEncontrada {
 
-		if (!checkDocumento(id))
-			throw new EntidadNoEncontrada(c + id);
+		if (!checkDocumento(nombre))
+			throw new EntidadNoEncontrada("La ciudad: " + nombre + "no existe en el repositorio");
 
-		final String documento = getDocumento(id);
+		final String documento = getDocumento(nombre);
 
 		try {
 
@@ -84,7 +79,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 			return (Ciudad) unmarshaller.unmarshal(new File(documento));
 
 		} catch (Exception e) {
-			throw new RepositorioException("Error al cargar la ciudad con id: " + id, e);
+			throw new RepositorioException("Error al cargar la ciudad: " + nombre, e);
 		}
 	}
 
@@ -93,19 +88,16 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 	@Override
 	public String add(Ciudad ciudad) throws RepositorioException {
 
-		String id = Utils.createId();
-
-		ciudad.setId(id);
 		save(ciudad);
 
-		return id;
+		return ciudad.getNombre();
 	}
 
 	@Override
 	public void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada {
 
-		if (!checkDocumento(ciudad.getId()))
-			throw new EntidadNoEncontrada(c + ciudad.getId());
+		if (!checkDocumento(ciudad.getNombre()))
+			throw new EntidadNoEncontrada("La ciudad " + ciudad.getNombre() + "no existe en el repositorio");
 
 		save(ciudad);
 
@@ -114,10 +106,10 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 	@Override
 	public void delete(Ciudad ciudad) throws EntidadNoEncontrada {
 
-		if (!checkDocumento(ciudad.getId()))
-			throw new EntidadNoEncontrada(c + ciudad.getId());
+		if (!checkDocumento(ciudad.getNombre()))
+			throw new EntidadNoEncontrada("La ciudad: " + ciudad.getNombre() + "no existe en el repositorio");
 
-		final String documento = getDocumento(ciudad.getId());
+		final String documento = getDocumento(ciudad.getNombre());
 
 		File fichero = new File(documento);
 
@@ -125,13 +117,13 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 	}
 
 	@Override
-	public Ciudad getById(String id) throws RepositorioException, EntidadNoEncontrada {
+	public Ciudad getByNombre(String nombre) throws RepositorioException, EntidadNoEncontrada {
 
-		return load(id);
+		return load(nombre);
 	}
 
 	@Override
-	public List<String> getIds() {
+	public List<String> getNombres() {
 
 		LinkedList<String> resultado = new LinkedList<>();
 
@@ -141,9 +133,9 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		for (File file : ciudades) {
 
-			String id = file.getName().substring(0, file.getName().length() - 4);
+			String nombre = file.getName().substring(0, file.getName().length() - 4);
 
-			resultado.add(id);
+			resultado.add(nombre);
 		}
 
 		return resultado;
@@ -154,13 +146,13 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		LinkedList<Ciudad> resultado = new LinkedList<>();
 
-		for (String id : getIds()) {
+		for (String nombre : getNombres()) {
 
 			try {
-				resultado.add(load(id));
+				resultado.add(load(nombre));
 			} catch (EntidadNoEncontrada e) {
 
-				throw new RepositorioException("Error al cargar la ciudad: " + id, e);
+				throw new RepositorioException("Error al cargar la ciudad: " + nombre, e);
 			}
 		}
 

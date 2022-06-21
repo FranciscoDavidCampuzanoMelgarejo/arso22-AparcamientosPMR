@@ -1,1556 +1,1309 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ciudad xmlns="http://www.example.org/ciudades" nombre="Lorca">
-    <id>4f562997-520b-4b30-9f92-0b842490ed5a</id>
     <sitio_turistico>
-        <titulo>Palacio_de_los_Condes_de_San_Juli%C3%A1n</titulo>
-        <resumen>"El palacio de los Condes de San Julián es una casa solariega situada en la ciudad de Lorca (Región de Murcia, España) cuyos orígenes se remontan al siglo XVII, aunque su apariencia externa está alterada por modificaciones realizadas en el siglo XVIII otorgándole aspecto de fortaleza, y neomudéjares realizadas a comienzos del XX."</resumen>
-        <latitud>37.6713</latitud>
-        <longitud>-1.6988</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Palacio_de_los_Condes_de_San_Juli%C3%A1n</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Estaci%C3%B3n_de_Lorca-Sutullena</titulo>
-        <resumen>"Lorca-Sutullena es, junto a Lorca-San Diego una de las dos estaciones de ferrocarril de la ciudad española de Lorca, en la Región de Murcia. Está situada junto a la plaza de Carruajes, próxima al centro urbano y junto a la plaza de Toros de Sutullena. Tienen parada los trenes de la línea C-2 de Cercanías Murcia/Alicante. También dispone de servicios de larga distancia."</resumen>
-        <latitud>37.6719</latitud>
-        <longitud>-1.6961</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_Lorca-Sutullena</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Iglesia_de_Santiago_%28Lorca%29</titulo>
-        <resumen>"La iglesia de Santiago de Lorca, es un templo barroco que tiene como origen previo a la iglesia una ermita del siglo XV en honor al mismo santo. Esa ermita fue ubicada donde, según cuenta la tradición, había predicado el apóstol.​ Ya es a mitad del siglo XVIII cuando se comenzó la edificación de la actual iglesia de Santiago.​ Tiene planta de cruz latina, con una nave principal y dos laterales.​"</resumen>
-        <latitud>37.6772</latitud>
-        <longitud>-1.6981</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Iglesia_de_Santiago_%28Lorca%29</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Colegiata_de_San_Patricio</titulo>
-        <resumen>"La antigua colegiata de San Patricio de Lorca (aunque comúnmente sigue siendo llamada colegiata de San Patricio), es un edificio de estilo renacentista declarado Monumento Histórico-Artístico Nacional por decreto del 27 de enero de 1941.​ La Colegiata es la piedra angular del conjunto monumental de la Plaza de España, junto al Ayuntamiento, el Palacio del Corregidor y las Salas Capitulares. Esta Colegiata es la única en España que se encuentra bajo la advocación de San Patricio. La dedicación al santo irlandés, tiene su origen en la batalla de Los Alporchones, librada el 17 de marzo de 1452 (día de San Patricio), y que enfrentó a los habitantes de la ciudad y de otras partes del antiguo reino de Murcia con huestes musulmanas procedentes de Granada que habían asolado la comarca de Cartagena. Las obras comenzaron, por bula del papa Clemente VII, en 1533 sobre la vieja iglesia de San Jorge. La construcción, no exenta de problemas, se dilató hasta 1780 siguiendo el proyecto de Jerónimo Quijano, maestro de las Obras del Obispado de Cartagena. Concebida con aires catedralicios, su interior se articula en tres naves, doce capillas laterales en los contrafuertes, coro y trascoro, girola con capillas radiales y torre-campanario en la cabecera. También es de destacar el elevado crucero."</resumen>
-        <latitud>37.6775</latitud>
-        <longitud>-1.6994</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Colegiata_de_San_Patricio</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Museo_Arqueol%C3%B3gico_Municipal_de_Lorca</titulo>
+        <titulo>Museo Arqueológico Municipal de Lorca</titulo>
         <resumen>"El museo Arqueológico Municipal de Lorca (Murcia), España, fue fundado en marzo de 1992 y se encuentra en la plaza de Juan Moreno. El Ayuntamiento de Lorca es el encargado de la titularidad y gestión del museo.​ El museo nació con el fin de un mejor desarrollo cultural de Lorca y la comarca."</resumen>
         <latitud>37.6785</latitud>
         <longitud>-1.6966</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Museo_Arqueol%C3%B3gico_Municipal_de_Lorca</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Castillo_de_Lorca</titulo>
+        <titulo>Estación de Lorca-Sutullena</titulo>
+        <resumen>"Lorca-Sutullena es, junto a Lorca-San Diego una de las dos estaciones de ferrocarril de la ciudad española de Lorca, en la Región de Murcia. Está situada junto a la plaza de Carruajes, próxima al centro urbano y junto a la plaza de Toros de Sutullena. Tienen parada los trenes de la línea C-2 de Cercanías Murcia/Alicante. También dispone de servicios de larga distancia."</resumen>
+        <latitud>37.6719</latitud>
+        <longitud>-1.6961</longitud>
+        <wikipedia>https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_Lorca-Sutullena</wikipedia>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Iglesia de Santiago (Lorca)</titulo>
+        <resumen>"La iglesia de Santiago de Lorca, es un templo barroco que tiene como origen previo a la iglesia una ermita del siglo XV en honor al mismo santo. Esa ermita fue ubicada donde, según cuenta la tradición, había predicado el apóstol.​ Ya es a mitad del siglo XVIII cuando se comenzó la edificación de la actual iglesia de Santiago.​ Tiene planta de cruz latina, con una nave principal y dos laterales.​"</resumen>
+        <latitud>37.6772</latitud>
+        <longitud>-1.6981</longitud>
+        <wikipedia>https://es.wikipedia.org/wiki/Iglesia_de_Santiago_%28Lorca%29</wikipedia>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Colegiata de San Patricio</titulo>
+        <resumen>"La antigua colegiata de San Patricio de Lorca (aunque comúnmente sigue siendo llamada colegiata de San Patricio), es un edificio de estilo renacentista declarado Monumento Histórico-Artístico Nacional por decreto del 27 de enero de 1941.​ La Colegiata es la piedra angular del conjunto monumental de la Plaza de España, junto al Ayuntamiento, el Palacio del Corregidor y las Salas Capitulares. Esta Colegiata es la única en España que se encuentra bajo la advocación de San Patricio. La dedicación al santo irlandés, tiene su origen en la batalla de Los Alporchones, librada el 17 de marzo de 1452 (día de San Patricio), y que enfrentó a los habitantes de la ciudad y de otras partes del antiguo reino de Murcia con huestes musulmanas procedentes de Granada que habían asolado la comarca de Cartagena. Las obras comenzaron, por bula del papa Clemente VII, en 1533 sobre la vieja iglesia de San Jorge. La construcción, no exenta de problemas, se dilató hasta 1780 siguiendo el proyecto de Jerónimo Quijano, maestro de las Obras del Obispado de Cartagena. Concebida con aires catedralicios, su interior se articula en tres naves, doce capillas laterales en los contrafuertes, coro y trascoro, girola con capillas radiales y torre-campanario en la cabecera. También es de destacar el elevado crucero."</resumen>
+        <latitud>37.6775</latitud>
+        <longitud>-1.6994</longitud>
+        <wikipedia>https://es.wikipedia.org/wiki/Colegiata_de_San_Patricio</wikipedia>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Palacio de los Condes de San Julián</titulo>
+        <resumen>"El palacio de los Condes de San Julián es una casa solariega situada en la ciudad de Lorca (Región de Murcia, España) cuyos orígenes se remontan al siglo XVII, aunque su apariencia externa está alterada por modificaciones realizadas en el siglo XVIII otorgándole aspecto de fortaleza, y neomudéjares realizadas a comienzos del XX."</resumen>
+        <latitud>37.6713</latitud>
+        <longitud>-1.6988</longitud>
+        <wikipedia>https://es.wikipedia.org/wiki/Palacio_de_los_Condes_de_San_Juli%C3%A1n</wikipedia>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Castillo de Lorca</titulo>
         <resumen>"El Castillo de Lorca (Murcia, España) es una fortaleza de origen medieval construida entre los siglos IX y XV. Comprende una serie de estructuras defensivas que, durante la Edad Media, convirtieron a la ciudad y a su fortaleza en un punto inexpugnable del sureste peninsular. El castillo de Lorca fue un bastión clave en las contiendas entre cristianos y musulmanes en la frontera de Granada. Se encuentra catalogado como Bien de Interés Cultural​ y dentro de la delimitación del conjunto histórico-artístico de Lorca.​​ Por su extensión, 640 metros de largo por unos 120 metros en su punto más ancho, es uno de los castillos más grandes de España."</resumen>
         <latitud>37.6775</latitud>
         <longitud>-1.7058</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Castillo_de_Lorca</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Lorca</titulo>
-        <resumen>"Lorca es una ciudad y municipio español perteneciente a la Región de Murcia, situada en la comarca del Alto Guadalentín, en el sureste de la península ibérica. Es la tercera población en importancia de la Región de Murcia tras Murcia y Cartagena, con 94 404 habitantes (INE 2019); de ellos, 60 914 habitantes corresponden al casco urbano​ y el resto a sus numerosas pedanías, distribuidas a lo largo y ancho de los 1 675 km² de término municipal,​ el segundo más extenso de España tras el de Cáceres. Lorca es conocida por su castillo, su arquitectura barroca y sus procesiones de Semana Santa, declaradas fiesta de interés turístico internacional. Gracias a su denso patrimonio heráldico es también llamada «la ciudad de los cien escudos», nombre que le otorgó el antiguo alcalde José Antonio Gallego,​​ mientras que de su nombre original (Eliocroca) toma el título de ciudad del sol.​​​Su casco antiguo y el recinto del castillo,​ fueron declarados conjunto histórico-artístico el 5 de marzo del 1964,​ siendo el primero de la Región de Murcia con esta distinción. ​​"</resumen>
-        <latitud>37.6798</latitud>
-        <longitud>-1.6944</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Lorca</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Terremoto_de_Lorca_de_2011</titulo>
-        <resumen>"El terremoto de Lorca fue un sismo de magnitud 5.1 Mw (Magnitud de momento) el 11 de mayo de 2011, tuvo una intensidad Mercalli VIII en la zona epicentral y sacudió principalmente a la localidad de Lorca, en la Región de Murcia, España, a las 18:47 hora local (16:47 UTC).​ Su epicentro estaba localizado en la Falla de Alhama de Murcia (FAM) y sus efectos se sintieron en toda la Región de Murcia. Tuvo una magnitud de 5,1 ​​ en la escala de magnitud de momento.​ Fue precedido por un seísmo premonitorio de 4,5 sucedido a las 17:05 hora local de ese mismo día.​​El movimiento sísmico fue sentido también en las provincias de Almería, Albacete, Granada, Jaén, Málaga, Alicante, Ciudad Real y algunas zonas de la ciudad de Madrid, donde el tipo de suelo amplifica los movimientos en ciertos barrios.​ Múltiples réplicas se produjeron​ después del principal de las 18:47, si bien la de las 22:37, hora local, fue la de mayor magnitud, con 3,9 en la escala de magnitud de momento, y que pudo sentirse.​ La Región de Murcia, en la que se encuentra Lorca, es la zona sismológica más activa de España, si bien esta localidad, concretamente, no está entre las de mayor peligrosidad dentro de ella.​"</resumen>
-        <latitud>37.699</latitud>
-        <longitud>-1.673</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Terremoto_de_Lorca_de_2011</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Estadio_Francisco_Art%C3%A9s_Carrasco</titulo>
+        <titulo>Estadio Francisco Artés Carrasco</titulo>
         <resumen>"El Estadio Municipal Francisco Artés Carrasco es el estadio municipal del municipio de Lorca. El C. F. Lorca Deportiva y el Lorca F. C. disputan sus partidos como local en este recinto.​ Hasta 2010 fue el estadio del Lorca Deportiva C. F..​ También jugó de 2010 a 2012 el Lorca Atlético C. F..​ Su nombre es en honor al segundo presidente del Patronato del Campo de San José de Lorca, tras ."</resumen>
         <latitud>37.6388</latitud>
         <longitud>-1.7351</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Estadio_Francisco_Art%C3%A9s_Carrasco</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Acueducto_de_los_Diecisiete_Arcos</titulo>
+        <titulo>Acueducto de los Diecisiete Arcos</titulo>
         <resumen>"El Acueducto de los Diecisiete Arcos es una obra hidráulica ubicada en el término municipal de Lorca (Murcia). El acueducto, que cruza la rambla del mismo nombre o rambla de Romí, forma parte de la Real Acequia de Alcalá, que nace en el Partidor de la Mina y que por un trazado de 7 km lleva el agua al Heredamiento de Sutullena.​ La Real Acequia de Alcalá, de origen árabe, fue renovada entre los años 1785 y 1791 debido a la construcción de los pantanos de Puentes y Valdeinfierno. Es en esta época cuando se construye el acueducto que sustituye a uno precedente de veintinueve arcos, que regularmente experimentaba fuertes deterioros causados por las fuertes avenidas.​ El proyecto y la dirección de la obra corrieron a cargo del arquitecto .​"</resumen>
         <latitud>37.6925</latitud>
         <longitud>-1.7641</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Acueducto_de_los_Diecisiete_Arcos</wikipedia>
     </sitio_turistico>
-    <aparcamiento>
-        <id>26c60025-c580-4373-afeb-ac27334db10a</id>
+    <parking>
         <direccion>C/Amaltea Hotel del Polígono de los Peñones</direccion>
         <latitud>37.65498859455905</latitud>
         <longitud>-1.7114953133709605</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>53ba7a6c-5eae-4837-b8e3-a7708d0f0050</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo (C/Pilones)</direccion>
         <latitud>37.677213510134884</latitud>
         <longitud>-1.711238856340401</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>02963918-f33d-487f-8bb3-f1f276f4df77</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo(C/Pilones)</direccion>
         <latitud>37.67719546566079</latitud>
         <longitud>-1.7110095274696278</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f60f5749-ba74-4f6c-adc5-ae0b3061a8ae</id>
+    </parking>
+    <parking>
         <direccion>C/ Francisco de Goya altura Rotonda Instituto San Juan Bosco y Piscinas B  San Antonio</direccion>
         <latitud>37.65958798517459</latitud>
         <longitud>-1.7109548482544596</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9310b415-630e-4ccb-bbe5-756456d6b622</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo (C/Pilones)</direccion>
         <latitud>37.67719758854033</latitud>
         <longitud>-1.7109464955577778</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e4b03a5e-a5e5-4b3f-9489-4f25a6d4adc3</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo(C/Pilones)</direccion>
         <latitud>37.67721581345096</latitud>
         <longitud>-1.7109321802854538</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b30904f5-42fb-4129-8dae-7fb94732a2b0</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo (C/Pilones)</direccion>
         <latitud>37.6772145715744</latitud>
         <longitud>-1.7107989740619587</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>8870a502-5bd8-4c35-950f-5e1ca361b4cf</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo (C/Pilones)</direccion>
         <latitud>37.67723580036158</latitud>
         <longitud>-1.710778857494347</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c21442bb-1ba7-4091-93e3-392923e52c69</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo (C/Pilones)</direccion>
         <latitud>37.677215633013894</latitud>
         <longitud>-1.7107654464492725</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>1af747a9-f002-426d-8bf9-ad090909bcf3</id>
+    </parking>
+    <parking>
         <direccion>Aparcamiento Lorca Taller del Tiempo Castillo (C/Pilones)</direccion>
         <latitud>37.67721987877176</latitud>
         <longitud>-1.7107386243591236</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5ef973b5-979e-43b1-b3c5-903ece7c9306</id>
+    </parking>
+    <parking>
         <direccion>C/Diego Pallarés Cacha, frente a Colegios La Viña</direccion>
         <latitud>37.66228887955666</latitud>
         <longitud>-1.7101394567139323</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>26fbaf68-051a-40a1-86c5-ad420ec3d698</id>
+    </parking>
+    <parking>
         <direccion>C/Diego Pallarés Cachá, frente Colegios La Viña</direccion>
         <latitud>37.66237752880791</latitud>
         <longitud>-1.7100906372070312</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f9856142-4b52-4816-93aa-ec44d29ed7c4</id>
+    </parking>
+    <parking>
         <direccion>C/Paralela y junto Ctra. Granada,altura Concesionario Renault</direccion>
         <latitud>37.65752668225392</latitud>
         <longitud>-1.7097807112581904</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d3c8bb6d-fc87-434d-8016-10c5efa1d17e</id>
+    </parking>
+    <parking>
         <direccion>C/Tejedores con C/ Alfareria</direccion>
         <latitud>37.661570138269596</latitud>
         <longitud>-1.7096292972564697</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0de81a9a-5f6c-4ec2-9a16-dd7876d8ad97</id>
+    </parking>
+    <parking>
         <direccion>CALLE AGRICULTORES, JUNTO AL SALÓN DE LA JUVENTUD</direccion>
         <latitud>37.66105735313145</latitud>
         <longitud>-1.7091036904320858</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b7abf92c-8211-4c8b-b990-f6e466fbe0e3</id>
+    </parking>
+    <parking>
         <direccion>C/Pintores n  5, La Viña</direccion>
         <latitud>37.662004091869335</latitud>
         <longitud>-1.7090150713920593</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5c9284a7-380d-4084-84c1-b584771d8225</id>
+    </parking>
+    <parking>
         <direccion>CALLE ALFARERIA, 18, INTERSECCIÓN CON C/. MODISTERIA</direccion>
         <latitud>37.66282182873106</latitud>
         <longitud>-1.7086636231345436</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b73e01d2-fba6-4034-bf31-6e14674021ec</id>
+    </parking>
+    <parking>
         <direccion>Calle Sastrería n  4</direccion>
         <latitud>37.66246060301002</latitud>
         <longitud>-1.7085912823677063</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c800ac10-c2d1-44b6-a205-f1bc8c2fb851</id>
+    </parking>
+    <parking>
         <direccion>C/Tejedores altura de C/Herrerias</direccion>
         <latitud>37.66059499285875</latitud>
         <longitud>-1.707994360054272</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>111b1320-2932-4fa3-b738-4d26c4cca1ab</id>
+    </parking>
+    <parking>
         <direccion>C/Sierra de Tercia, Polígono Los Peñones</direccion>
         <latitud>37.65721135041452</latitud>
         <longitud>-1.7078944477684672</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5d9ca753-1481-4cce-8a1e-bffdacb0f549</id>
+    </parking>
+    <parking>
         <direccion>C/Sierra del Caño,Polígono Los Peñones (junto a Mercadona)</direccion>
         <latitud>37.65843020142125</latitud>
         <longitud>-1.7078401330359156</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d49786c9-750d-43f0-805f-a2bc446b99b2</id>
+    </parking>
+    <parking>
         <direccion> Avda. La Vendimia esquina C/ Jardineros</direccion>
         <latitud>37.66169982013002</latitud>
         <longitud>-1.7077856999999312</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f5049596-e973-4bf1-b286-648cf2dd12ac</id>
+    </parking>
+    <parking>
         <direccion>C/Guillermo Oliver, altura AA.VV. La Viña</direccion>
         <latitud>37.66340148356989</latitud>
         <longitud>-1.7076450023300822</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0b59b724-164e-4459-b22f-92534daa1272</id>
+    </parking>
+    <parking>
         <direccion>Avenida de la Vendimia N 6</direccion>
         <latitud>37.66173833322063</latitud>
         <longitud>-1.7076374509261996</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>35db5de5-fe72-4ae0-a1fc-ec301ba7fc57</id>
+    </parking>
+    <parking>
         <direccion>Avda. La Vendimia altura Plaza del Trabajo</direccion>
         <latitud>37.66131662833141</latitud>
         <longitud>-1.7070174343585904</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>48a2b470-bcfe-4124-908f-bb8a1513907d</id>
+    </parking>
+    <parking>
         <direccion>C/Albañilería esquina Plaza Los Aprendices</direccion>
         <latitud>37.66232941867618</latitud>
         <longitud>-1.706905388152336</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>178196da-8da5-444b-9c36-3f87992ce3a4</id>
+    </parking>
+    <parking>
         <direccion>GUILLERMO OLIVER, FRENTE N  4</direccion>
         <latitud>37.66295127987368</latitud>
         <longitud>-1.706864797677781</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>64accf5b-179c-4b1d-8461-563fc37dac2c</id>
+    </parking>
+    <parking>
         <direccion>C/Carpintería 7,altura Plaza Iglesia Cristo Rey</direccion>
         <latitud>37.66266470376973</latitud>
         <longitud>-1.7066203984863932</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>2a0008ee-611f-47f1-bd16-46320e4e4345</id>
+    </parking>
+    <parking>
         <direccion>C/ RAMBLAS LAS CHATAS, 12</direccion>
         <latitud>37.66365840058026</latitud>
         <longitud>-1.7065689189790925</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>bf02ec8c-21d8-4abd-873d-9e670a57d6ec</id>
+    </parking>
+    <parking>
         <direccion>Avda.La Salud n  6</direccion>
         <latitud>37.66331644591744</latitud>
         <longitud>-1.7064693632294166</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>ca31b057-23be-43fd-983b-8176f2978fd8</id>
+    </parking>
+    <parking>
         <direccion>CALLE JUNTA Y PARALELA A RONDA SUR, RM-11 DE ACCESO A SUPERMERCADO ALDI</direccion>
         <latitud>37.658066440005605</latitud>
         <longitud>-1.7063633509483225</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f619b6ca-67c1-4170-9da5-174c1ed6e824</id>
+    </parking>
+    <parking>
         <direccion>C/ ANDRES PICHICHI, 4</direccion>
         <latitud>37.663537374271684</latitud>
         <longitud>-1.7062601906006707</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>8cc39af5-cc81-4901-b8d5-723385e65643</id>
+    </parking>
+    <parking>
         <direccion>Carretera Granada, 119, 30800 Lorca, Murcia, España</direccion>
         <latitud>37.661735832439724</latitud>
         <longitud>-1.7062219959091127</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e3e060e8-7265-4212-8bb9-0794abc0bce8</id>
+    </parking>
+    <parking>
         <direccion>C/Torrecilla (explanada)</direccion>
         <latitud>37.665588423768234</latitud>
         <longitud>-1.7061483296997721</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4fd77401-edf4-4f44-ac1c-88e377a796e2</id>
+    </parking>
+    <parking>
         <direccion>SAN AGUSTIN, esquina C/. Rambla Las Señoritas</direccion>
         <latitud>37.66315624314537</latitud>
         <longitud>-1.7058872582204003</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c0695266-2e7f-432e-94f0-3ae6dae7f372</id>
+    </parking>
+    <parking>
         <direccion>C/Cánovas Cobeño, N  36</direccion>
         <latitud>37.664134225114935</latitud>
         <longitud>-1.7058163638063206</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5032ac70-626f-40c3-9d2a-f3737eb70bcc</id>
+    </parking>
+    <parking>
         <direccion>C/. MÚSICO PÉREZ DE TUDELA, FRENTE N  19, DOS PLAZAS MINUSVALIDOS</direccion>
         <latitud>37.66405685814811</latitud>
         <longitud>-1.7056114951064956</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>97fe672c-8d9e-451d-9245-4f5835dab373</id>
+    </parking>
+    <parking>
         <direccion>Músico Pérez de Tudela, nº 19</direccion>
         <latitud>37.66406400666208</latitud>
         <longitud>-1.7055775888077278</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e3b27fb6-a284-4c02-aef8-eaaf57da998a</id>
+    </parking>
+    <parking>
         <direccion>RM-11, altura caalle acceso Suoermercado ALDI</direccion>
         <latitud>37.65839045185954</latitud>
         <longitud>-1.7055614955536385</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f8da256c-40a8-4b58-a0a3-131f5f08e699</id>
+    </parking>
+    <parking>
         <direccion>C/ Talleres altura del Centro de Salud la Viña</direccion>
         <latitud>37.66119324556822</latitud>
         <longitud>-1.7054724130280192</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>631571cb-e395-453e-bf55-6cf7de9b8c04</id>
+    </parking>
+    <parking>
         <direccion>Ctra. Granada esquina C/. Las Palomas</direccion>
         <latitud>37.662678772725585</latitud>
         <longitud>-1.7054572337295895</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0dbea010-cd7d-4cd0-8a9c-5b4ed9147648</id>
+    </parking>
+    <parking>
         <direccion>C/Ramblilla San Lázaro proximidad al n  103</direccion>
         <latitud>37.67356914718718</latitud>
         <longitud>-1.7054522964604075</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>942898eb-ef71-473e-94da-d08d3d8c6ad7</id>
+    </parking>
+    <parking>
         <direccion>Ctra. Granada esquina C/. Las Palomas</direccion>
         <latitud>37.66268938919913</latitud>
         <longitud>-1.7054518693115597</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0478ad32-2632-401c-8874-f532c681f7b0</id>
+    </parking>
+    <parking>
         <direccion>Músico Pérez de Tudela, nº 20</direccion>
         <latitud>37.664263592386156</latitud>
         <longitud>-1.7054381139389534</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4c97c4d4-b7f1-4955-800f-b752950ef06e</id>
+    </parking>
+    <parking>
         <direccion>C/Proximidad al acceso Parador de Lorca</direccion>
         <latitud>37.677381937417934</latitud>
         <longitud>-1.7053470604319045</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4460cce3-af2e-4b55-a2ac-2b164bafab67</id>
+    </parking>
+    <parking>
         <direccion>C/Proximidad al acceso Parador de Lorca</direccion>
         <latitud>37.677385652447754</latitud>
         <longitud>-1.7053383432526061</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>6a8114e9-9063-4b56-941a-fbe972c25308</id>
+    </parking>
+    <parking>
         <direccion>C/ Talleres altura del Centro de Salud la Viña</direccion>
         <latitud>37.66152873211182</latitud>
         <longitud>-1.7053114804871257</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>467a7614-c2f3-4de1-b421-213cdf15d499</id>
+    </parking>
+    <parking>
         <direccion>C/ Talleres altura del Centro de Salud la Viña</direccion>
         <latitud>37.661532978767205</latitud>
         <longitud>-1.7053061160690959</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>69bd17a5-252b-4454-b551-95163066adb1</id>
+    </parking>
+    <parking>
         <direccion>C/ Talleres altura del Centro de Salud La Viña </direccion>
         <latitud>37.66154571873187</latitud>
         <longitud>-1.7053061160690959</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9dbf16f8-7a7a-4573-819f-731005574f3b</id>
+    </parking>
+    <parking>
         <direccion>Travesía C/ Benemérita, altura AA.VV. Alfonso X El Sabio</direccion>
         <latitud>37.665935568058345</latitud>
         <longitud>-1.7049587700016673</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7b488af2-c818-4456-bd65-c824f1effd39</id>
+    </parking>
+    <parking>
         <direccion>C/ Benemérita altura Cuartel Guardia Civil (BAJA POR MOTIVOS DE SEGURIDAD DESDE JUNIO 2017)</direccion>
         <latitud>37.66576455411969</latitud>
         <longitud>-1.7047963183853199</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>dcf194e0-ad67-4d8b-b12c-501c43555304</id>
+    </parking>
+    <parking>
         <direccion>CALLE GUITARRISTA CANO, FRENTE N  13</direccion>
         <latitud>37.66460749479029</latitud>
         <longitud>-1.7045706291442289</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>fa034aa4-cb77-463c-b898-c19c9ed9dcdc</id>
+    </parking>
+    <parking>
         <direccion>Ctra. de Granada, frente a n  42</direccion>
         <latitud>37.663826137193034</latitud>
         <longitud>-1.7045604619629557</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>63b2e080-c847-4712-a2a5-3b50883b76f2</id>
+    </parking>
+    <parking>
         <direccion>Ctra. de Granada, frente a n  42</direccion>
         <latitud>37.66384736981044</latitud>
         <longitud>-1.7045497331268962</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>076a7119-c4b9-45eb-83c4-aa31e78035b6</id>
+    </parking>
+    <parking>
         <direccion>C/ Tenor J. Romeu con C/Mateo Aleman B   Alfonso X </direccion>
         <latitud>37.664981182757366</latitud>
         <longitud>-1.7044183048851664</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>202d49fa-b099-4026-8c3e-47965ee10acd</id>
+    </parking>
+    <parking>
         <direccion>C/Ramblilla San Lázaro proximidad al n  87</direccion>
         <latitud>37.673348887340744</latitud>
         <longitud>-1.7043519202120478</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>70d66878-705d-460b-a0d0-b0185876c5b5</id>
+    </parking>
+    <parking>
         <direccion>Travesía Segunda Caída, junto al muro del Recinto Monte Calvario</direccion>
         <latitud>37.67007682194063</latitud>
         <longitud>-1.7041694290749092</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>50d566f9-d2b5-420a-8ef2-b66a974ba090</id>
+    </parking>
+    <parking>
         <direccion>C  Viejo del Puerto n  60</direccion>
         <latitud>37.66279141124736</latitud>
         <longitud>-1.7041020404755045</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7036815d-ecf7-40c1-89c3-e31d651107a7</id>
+    </parking>
+    <parking>
         <direccion>TRAVESÍA SEGUNDA CAÍDA, JUNTO AL MURO RECINTO CALVARIO</direccion>
         <latitud>37.67032915494777</latitud>
         <longitud>-1.7039776718277153</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5b5e7215-2bed-4f7f-a545-012315a9030f</id>
+    </parking>
+    <parking>
         <direccion>C/Perez Casas, altura Travesía Virgen de las Huertas(farmacia)</direccion>
         <latitud>37.6663103122128</latitud>
         <longitud>-1.703830901110905</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>8dc8301f-5e3d-4c5a-a9fe-83aca4c3cbcd</id>
+    </parking>
+    <parking>
         <direccion>Cañada Sepulcro</direccion>
         <latitud>37.67078698988429</latitud>
         <longitud>-1.7038033075443764</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>36054178-3d4b-46b4-a292-4ba83245a001</id>
+    </parking>
+    <parking>
         <direccion>Cañada Sepulcro</direccion>
         <latitud>37.67076045159309</latitud>
         <longitud>-1.7037590510956306</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5c88bc4c-5303-44bc-a014-cd8e17e3bf39</id>
+    </parking>
+    <parking>
         <direccion>C/ Rambla Alta n 23</direccion>
         <latitud>37.66816335532886</latitud>
         <longitud>-1.7037404809509553</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>19488b1c-b813-4e15-aa55-86a5c9d1e693</id>
+    </parking>
+    <parking>
         <direccion>C/ Benemérita altura Cuartel Guardia Civil (BAJA POR MOTIVOS DE SEGURIDAD, DESDE JUNIO 2017)</direccion>
         <latitud>37.665252859566685</latitud>
         <longitud>-1.7037368458244373</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>423f51ee-c8b3-41e0-9300-8b6d43c25fcf</id>
+    </parking>
+    <parking>
         <direccion>CAÑADA SEPULCRO, PROXIMIDAD A ESPOLON Y ROMI, DOS PLAZAS MINUSVALIDOS</direccion>
         <latitud>37.670658038680024</latitud>
         <longitud>-1.7035104110450447</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9ae5338b-68f2-4658-8e99-6aa0b46d034c</id>
+    </parking>
+    <parking>
         <direccion>C/ Juan Bayonas n 12</direccion>
         <latitud>37.669168792437375</latitud>
         <longitud>-1.703495755819631</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0d7670c9-c92b-4d27-804a-9527725df22a</id>
+    </parking>
+    <parking>
         <direccion>C/Segunda Caída con esquina C/ Baeza</direccion>
         <latitud>37.66981473100533</latitud>
         <longitud>-1.7033561398811798</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>84d5c9f0-736f-4bf7-b3e1-3d42ea261146</id>
+    </parking>
+    <parking>
         <direccion>C/Joaquin Sorolla  N  14</direccion>
         <latitud>37.66369108816479</latitud>
         <longitud>-1.7032847687171397</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>65707c0b-3c6b-411f-92d1-0e0b42d3bc53</id>
+    </parking>
+    <parking>
         <direccion>C/Jose María Zarauz,esquina con C/Soledad</direccion>
         <latitud>37.67351639880793</latitud>
         <longitud>-1.7030807263893166</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>a330ab5f-360d-495e-8b32-171b5330a102</id>
+    </parking>
+    <parking>
         <direccion>C/José María Zarauz,esquina con C/Soledad</direccion>
         <latitud>37.67350259940525</latitud>
         <longitud>-1.7030431754631081</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c8abb825-9545-411b-8fa3-daac469dde7c</id>
+    </parking>
+    <parking>
         <direccion>Cañada  Sepulcro frente a C/ La Horca</direccion>
         <latitud>37.670270488537085</latitud>
         <longitud>-1.702975946987408</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>ead2f399-22dd-422d-b0e7-a3ee4ac447d2</id>
+    </parking>
+    <parking>
         <direccion>C/ Rambla Alta n  2</direccion>
         <latitud>37.66802159832779</latitud>
         <longitud>-1.7026188509262283</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5abf360f-b6f6-4d8c-bcb7-8fb4d63fd1d1</id>
+    </parking>
+    <parking>
         <direccion>SEBASTIAN CLAVIJO</direccion>
         <latitud>37.66911573737902</latitud>
         <longitud>-1.7025272539672187</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>8ed63b7d-ee01-470a-bae5-1b46425c4a22</id>
+    </parking>
+    <parking>
         <direccion>C/. CABEZO VELEZ, FRENTE N  4</direccion>
         <latitud>37.67252770836562</latitud>
         <longitud>-1.702497521495843</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7217aca2-4ec8-4dc7-bc4a-bb418ecd7ff1</id>
+    </parking>
+    <parking>
         <direccion>C/ Cabezo de Vélez, frente nº 4</direccion>
         <latitud>37.67247586721631</latitud>
         <longitud>-1.7023830778709907</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>11f25dc5-531e-4df7-88cc-6ecca74264e7</id>
+    </parking>
+    <parking>
         <direccion>Camino Viejo del Puerto, 5, 30800 Lorca, Murcia, España</direccion>
         <latitud>37.662782653752636</latitud>
         <longitud>-1.7023264498730046</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9fbd9a32-dcb1-4828-890f-12f9a131044b</id>
+    </parking>
+    <parking>
         <direccion>C/Pérez Casas, frente a plaza San José</direccion>
         <latitud>37.6685156280576</latitud>
         <longitud>-1.7022938189102206</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b0d0ddb5-9d26-4238-8ece-1aabda84f9a0</id>
+    </parking>
+    <parking>
         <direccion>C/Francisco Escobar Barberan (Colegio Ana Caicedo,proximidad Ong´s)</direccion>
         <latitud>37.66285155351783</latitud>
         <longitud>-1.7022034707911189</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>47bff922-d87e-4b40-b1fe-178c4da95883</id>
+    </parking>
+    <parking>
         <direccion>C/Francisco Escobar Barberan (Colegio Ana Caicedo,proximidad Ong´s)</direccion>
         <latitud>37.66286242006775</latitud>
         <longitud>-1.7021995782852173</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7247ac7a-8025-4378-a16e-6f5aef0e7748</id>
+    </parking>
+    <parking>
         <direccion>C/Jeronimo Santa Fe, n  37</direccion>
         <latitud>37.667102041584776</latitud>
         <longitud>-1.701969271163989</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>50c2a648-8a47-4b51-8417-378f3cf7226f</id>
+    </parking>
+    <parking>
         <direccion>C/Ramblilla San Lázaro proximidad con C/Herradura</direccion>
         <latitud>37.67295321951776</latitud>
         <longitud>-1.701917874868741</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7c59c082-50f8-4ff3-961a-a0b20aab7312</id>
+    </parking>
+    <parking>
         <direccion>C/. PEREZ CASAS, 26</direccion>
         <latitud>37.66954844605803</latitud>
         <longitud>-1.7019155766864742</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5f592459-11ab-46e7-8e84-8a855d92424f</id>
+    </parking>
+    <parking>
         <direccion>C/Ramblilla San Lázaro proximidad con C/ Herradura</direccion>
         <latitud>37.67289536771954</latitud>
         <longitud>-1.701866912897458</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0138cab1-8749-4295-84e0-93ea897ab3a7</id>
+    </parking>
+    <parking>
         <direccion>C/La Seda, junto a vado n 2294</direccion>
         <latitud>37.66603628864882</latitud>
         <longitud>-1.7018428444862366</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>abc46eef-ac8c-4247-b210-89146284ce5c</id>
+    </parking>
+    <parking>
         <direccion>C/Redón n 40</direccion>
         <latitud>37.67045570806724</latitud>
         <longitud>-1.7017904613421706</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>259b8811-aa98-42df-bd4c-8f7a0186eb97</id>
+    </parking>
+    <parking>
         <direccion>C/. JERONIMO SANTA FE, 33</direccion>
         <latitud>37.66737244549624</latitud>
         <longitud>-1.7017563558197253</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>588f74c1-d1e0-490e-9a73-fe9ee6ed8bff</id>
+    </parking>
+    <parking>
         <direccion>C/La Seda, junto a vado n  2294</direccion>
         <latitud>37.6661277175637</latitud>
         <longitud>-1.7017146381981547</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0683e0da-a6c2-43f0-b0d6-871ac61dadc1</id>
+    </parking>
+    <parking>
         <direccion>C/Palmera Uceta con C/Vieja de San Pedro</direccion>
         <latitud>37.676370862582125</latitud>
         <longitud>-1.7015792392520552</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>1a83a90a-da30-4bb4-867e-eb44e3419d0c</id>
+    </parking>
+    <parking>
         <direccion>C/Redón n  11</direccion>
         <latitud>37.67128488457308</latitud>
         <longitud>-1.7015746963298852</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5f758940-ad18-4664-a210-a203b734283c</id>
+    </parking>
+    <parking>
         <direccion>C/. ESPIN ALTA, PROXIMIDAD 24</direccion>
         <latitud>37.673430124156816</latitud>
         <longitud>-1.70131918406139</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>72b3c5fa-2de2-4505-972d-3d7ab3bdbb30</id>
+    </parking>
+    <parking>
         <direccion>C/José Mouliaá,esquina C/Jerónimo Santa Fe</direccion>
         <latitud>37.66831023096861</latitud>
         <longitud>-1.7013072711986297</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>6bd66588-9739-4714-9ba9-f8379d7b92fa</id>
+    </parking>
+    <parking>
         <direccion>C/Nogalte,proximidad con C/Campoamor</direccion>
         <latitud>37.67238854661934</latitud>
         <longitud>-1.7005035006117168</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9c705e3f-f12b-46bb-93df-de14767bcba2</id>
+    </parking>
+    <parking>
         <direccion>CTRA. CARAVACA, esquina con C/. Los Limoneros.</direccion>
         <latitud>37.68720169477863</latitud>
         <longitud>-1.7004696995383297</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>ec0641c7-1f8f-4b42-87f6-15bbf96e91b4</id>
+    </parking>
+    <parking>
         <direccion>C/. CORREGIDOR CON C/. MOYA Y C/. LABERINTO</direccion>
         <latitud>37.67715562205293</latitud>
         <longitud>-1.70029148032188</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>2c55315c-0dca-47be-a162-24e968666be0</id>
+    </parking>
+    <parking>
         <direccion>Camino Marín esquina C/Arquitecto Ortiz de la Jara</direccion>
         <latitud>37.66620702395623</latitud>
         <longitud>-1.700174787731612</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>968ecf4a-8c47-4fb1-a4ef-aa4ba30199b2</id>
+    </parking>
+    <parking>
         <direccion>C/Abenhalaj con Plaza del Negrito</direccion>
         <latitud>37.672286339611716</latitud>
         <longitud>-1.6998955877315893</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>fd02d605-c684-44a9-a6cf-74d1ea9b14a8</id>
+    </parking>
+    <parking>
         <direccion>C/ Ministro Perez de Meca edif. Nuevo Ensanchez n 1 con C/Fray Diego de Cadiz</direccion>
         <latitud>37.66763910305794</latitud>
         <longitud>-1.6998665422584054</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f2da106b-f833-43a0-8536-896e78118d89</id>
+    </parking>
+    <parking>
         <direccion>CTRA. CARAVACA,NÚMERO 21, RM-711</direccion>
         <latitud>37.68573921362744</latitud>
         <longitud>-1.699866276517619</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9fe50301-b9b9-4745-9aca-501236b0c332</id>
+    </parking>
+    <parking>
         <direccion>CTRA. CARAVACA, NÚMERO 42, RM-711 (UNA PLAZA DE RESERVA EN CADA BANDA DE LA CALLE)</direccion>
         <latitud>37.68462694450581</latitud>
         <longitud>-1.6998555515767035</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d51078ea-1a7a-4f36-af32-24c401d6b842</id>
+    </parking>
+    <parking>
         <direccion>C/ Ministro Perez de Meca edif. Nuevo Ensanchez n 1 con C/Fray Diego de Cadiz</direccion>
         <latitud>37.66763804148145</latitud>
         <longitud>-1.699850449004316</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c8032084-a212-4734-a687-51562c2e7cd8</id>
+    </parking>
+    <parking>
         <direccion>CTRA. CARAVACA, 36, RM-711</direccion>
         <latitud>37.68399014169898</latitud>
         <longitud>-1.6996410089379688</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>30f6cbaf-0e0c-4341-9a8b-8bf875bb837c</id>
+    </parking>
+    <parking>
         <direccion>C/Álamo,proximidad al Excmo Ayuntamiento</direccion>
         <latitud>37.67632578982131</latitud>
         <longitud>-1.6995983752854045</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>1787b092-fc98-4fab-9f1e-5b8ba7ae286b</id>
+    </parking>
+    <parking>
         <direccion>Ronda Sur, Centro Integral de Emergencias y Seguridad</direccion>
         <latitud>37.65817167502685</latitud>
         <longitud>-1.6995903286583598</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>32d420bc-fbe9-4372-aa99-d4d80dff8007</id>
+    </parking>
+    <parking>
         <direccion>CTRA. CARAVACA, NÚMERO 15, RM-711</direccion>
         <latitud>37.683081626897575</latitud>
         <longitud>-1.6995496356288498</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>53917465-83ae-43ad-886f-c12930695c6a</id>
+    </parking>
+    <parking>
         <direccion>C/Arquitecto Ortiz de la Jara n 1</direccion>
         <latitud>37.66754152312989</latitud>
         <longitud>-1.6993892023426724</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4d8fcdc8-3717-469b-9adb-998552e82ee1</id>
+    </parking>
+    <parking>
         <direccion>PERIODISTA ANGELA RUIZ, FRENTE A SOLAR APARCAMIENTO Y VÍA FÉRREA.</direccion>
         <latitud>37.66664577690795</latitud>
         <longitud>-1.6992544003147338</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f2bb5610-5d01-4c83-ae1d-0eca3ac73406</id>
+    </parking>
+    <parking>
         <direccion>C/ Poeta Carlos Mellado altura Teatro Guerra</direccion>
         <latitud>37.67286962088587</latitud>
         <longitud>-1.6984919640667613</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>59d1c4be-cdf9-427e-8dc4-ac6df9c5dca3</id>
+    </parking>
+    <parking>
         <direccion>Cabezo Marines, altura del parque</direccion>
         <latitud>37.68503714747435</latitud>
         <longitud>-1.698347124779957</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>21ef681b-0c2f-4b88-b0e3-3d4d49570753</id>
+    </parking>
+    <parking>
         <direccion>Plaza Santiago (C/Don Juan II)</direccion>
         <latitud>37.67706753015501</latitud>
         <longitud>-1.6983201767559422</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>adc75ecd-1f2a-4caa-adcb-8bffffc25b49</id>
+    </parking>
+    <parking>
         <direccion>Plaza Camacho</direccion>
         <latitud>37.6823016149367</latitud>
         <longitud>-1.6982121128801282</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>310a824a-37f2-44ff-b218-6cdf3b7f413e</id>
+    </parking>
+    <parking>
         <direccion>Plaza Camacho</direccion>
         <latitud>37.682288347851426</latitud>
         <longitud>-1.698200713491815</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>416b0179-a432-4206-84ce-588dbd4ae3ca</id>
+    </parking>
+    <parking>
         <direccion>CAMINO MARIN, FRENTE N  22</direccion>
         <latitud>37.66493447298267</latitud>
         <longitud>-1.6981813662590244</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e619d8e8-208b-45e0-b7e0-ea6ff2720c8c</id>
+    </parking>
+    <parking>
         <direccion>Alameda de Cervantes n 7, (dos plazas)</direccion>
         <latitud>37.67029662318577</latitud>
         <longitud>-1.698156522413342</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f09c2049-0c87-48df-a181-09ae33cbbea9</id>
+    </parking>
+    <parking>
         <direccion>C/. CARLOS MARIA BARBERAN, FRENTE CENTRO DESARROLLO LOCAL</direccion>
         <latitud>37.668429835993706</latitud>
         <longitud>-1.698062781753606</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>88c14e65-3ecb-4c5c-883f-238b6c6003bc</id>
+    </parking>
+    <parking>
         <direccion>C/Actor Antonio Tudela con Plaza Artes Escénicas</direccion>
         <latitud>37.66613777084813</latitud>
         <longitud>-1.6979999095201492</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f330a463-1752-44e2-86c7-4467437b2611</id>
+    </parking>
+    <parking>
         <direccion>C/. JOSE ESPINOSA POMARES, esquina Alameda Cervantes.</direccion>
         <latitud>37.66987330967336</latitud>
         <longitud>-1.6978967878357025</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>6d4015d7-ab4d-47d5-a5d4-db85d09964b7</id>
+    </parking>
+    <parking>
         <direccion>C/Actor Ramón Meca</direccion>
         <latitud>37.66621678055127</latitud>
         <longitud>-1.6978743074964768</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5b18a1e6-1bd1-40b1-aa6e-632a3762fcd9</id>
+    </parking>
+    <parking>
         <direccion>C/Lope Gisbert,frente a Palacio Guevara</direccion>
         <latitud>37.674958096024746</latitud>
         <longitud>-1.697802636349934</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>3899058f-ae19-4503-b4f8-52436d647142</id>
+    </parking>
+    <parking>
         <direccion>Carril de Paco Reverte, 1</direccion>
         <latitud>37.68162563385115</latitud>
         <longitud>-1.6977046920133034</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>1be89ffd-c9dc-4a4d-9539-679d1e4aae9f</id>
+    </parking>
+    <parking>
         <direccion>C/. Carlos Maria  Barberan, junto n  9.</direccion>
         <latitud>37.667564650464</latitud>
         <longitud>-1.6975458601189075</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9b46f4e4-8119-4aff-bcfa-af17e66dbf68</id>
+    </parking>
+    <parking>
         <direccion>C/Marsilla,frente  a Plaza Ibreño</direccion>
         <latitud>37.67812895104775</latitud>
         <longitud>-1.6975332637716747</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4e7d856e-6669-4da3-8a40-7a13a7eca7ab</id>
+    </parking>
+    <parking>
         <direccion>C/Portijico, 31 con C/Mulero</direccion>
         <latitud>37.6837716251983</latitud>
         <longitud>-1.697393740492771</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>902608f3-42ee-4e1b-b378-e56f9739b705</id>
+    </parking>
+    <parking>
         <direccion>Alameda Cervantes,  frente al n  15.</direccion>
         <latitud>37.66832411350035</latitud>
         <longitud>-1.6972372123032073</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>223e6b18-990e-4203-ad4d-6ab09f0da95f</id>
+    </parking>
+    <parking>
         <direccion> Alameda Rafael Méndez, 2, altura bloque H de urbanización La Isla, (dos plazas, tiempo max 2 horas)</direccion>
         <latitud>37.669492722805</latitud>
         <longitud>-1.69716943743435</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4fd157bf-fa0b-474b-88af-eb2b45d190a8</id>
+    </parking>
+    <parking>
         <direccion>C/La Rambla, junto al Centro de Visitantes Lorca Taller del Tiempo</direccion>
         <latitud>37.67969953900812</latitud>
         <longitud>-1.697158235634106</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f1928571-d347-421c-af6d-3787d0cbc53e</id>
+    </parking>
+    <parking>
         <direccion>C/La Rambla, junto al Centro Visitantes Lorca Taller del Tiempo</direccion>
         <latitud>37.6797414644525</latitud>
         <longitud>-1.6971280607826884</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>555be861-bd3b-40c6-9597-834d6eb94d81</id>
+    </parking>
+    <parking>
         <direccion>Camino Marín con esquina Camino del Gato</direccion>
         <latitud>37.66412885579094</latitud>
         <longitud>-1.697030352149568</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>bd145d83-a360-4a02-8001-9ad3a2448474</id>
+    </parking>
+    <parking>
         <direccion>Avenida Juan Carlos I, 31(promiximidad con C/Emilio García Navarro-Centro cultural)</direccion>
         <latitud>37.67355428630244</latitud>
         <longitud>-1.6970167491085704</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>2cf0e55d-5d48-4a86-bbcf-376792e4de79</id>
+    </parking>
+    <parking>
         <direccion>C/Tener Mario Gabarrón</direccion>
         <latitud>37.664033154953565</latitud>
         <longitud>-1.696957069957989</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c4baa66b-1508-42d9-b9fc-3e08c96f29e8</id>
+    </parking>
+    <parking>
         <direccion>C/Santo Domingo,junto a Delegación de Hacienda</direccion>
         <latitud>37.67801347966294</latitud>
         <longitud>-1.6969470116741832</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>8fbe3bee-d9b0-49c4-9fc5-76ad53561798</id>
+        <opinion>
+            <numero_valoraciones>1</numero_valoraciones>
+            <calificacion_media>4.0</calificacion_media>
+            <url_opinion>http://localhost:8081/api/opiniones/api/ciudades/Lorca/parkings/37.67801347966294/-1.6969470116741832</url_opinion>
+        </opinion>
+    </parking>
+    <parking>
         <direccion>C/Tenor Mario Gabarrón</direccion>
         <latitud>37.66401457646013</latitud>
         <longitud>-1.696937623942631</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>a3ae4de0-1a7d-4ac3-a20f-4479169fad3c</id>
+    </parking>
+    <parking>
         <direccion>Plaza Juan Moreno, callejón La Merced junto a sede de Urbanismo (Calle Puente Alberca, 9)</direccion>
         <latitud>37.67926518387289</latitud>
         <longitud>-1.6968796055572284</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>99e75193-5a53-4b51-b1c8-deb0a4c092f5</id>
+    </parking>
+    <parking>
         <direccion>Plaza Juan Moreno, callejón La Merced junot a Sede de Urbanismo (Calle Puente Alberca, 9)</direccion>
         <latitud>37.679267837398264</latitud>
         <longitud>-1.6968494307058108</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>38e3102c-7504-480f-b63f-576a7620233c</id>
+    </parking>
+    <parking>
         <direccion>C/, LOPE GISBERT, FRENTE A ANTIGUA COMISARIA (DOS RESERVAS)</direccion>
         <latitud>37.67650093050946</latitud>
         <longitud>-1.6967653741318123</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e453193d-ca72-4c36-9f89-e263dfe1e037</id>
+    </parking>
+    <parking>
         <direccion>Alameda Cervantes, frente n  21.</direccion>
         <latitud>37.6673204545814</latitud>
         <longitud>-1.6966594099258145</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9a374412-956b-4153-b747-851a2ec956ba</id>
+    </parking>
+    <parking>
         <direccion>Plaza Real junto a Biblioteca Municipal (Travesía Eugenio Úbeda, 4)</direccion>
         <latitud>37.67705995518672</latitud>
         <longitud>-1.6963364877315144</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>8d7be3d8-dbbc-43bd-968d-71c55d4f041b</id>
+    </parking>
+    <parking>
         <direccion>Plaza Real junto a Biblioteca Municipal (Travesía Eugenio Úbeda, 4)</direccion>
         <latitud>37.6770636702326</latitud>
         <longitud>-1.6963331349702457</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>2c7bf699-51b7-4a31-ab3b-d0a684b611fd</id>
+    </parking>
+    <parking>
         <direccion>Plaza Real junto a Biblioteca Municipal (Travesía Eugenio Úbeda, 3)</direccion>
         <latitud>37.67706799686022</latitud>
         <longitud>-1.6963060294824572</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>fb4d1f17-c73a-485f-9377-c68b5cdde3ee</id>
+    </parking>
+    <parking>
         <direccion>C/Muso Valiente altura del Hotel Alameda</direccion>
         <latitud>37.67496177928279</latitud>
         <longitud>-1.6962980479002</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>79e9b59a-64fa-4734-82d2-749b7192dbaa</id>
+    </parking>
+    <parking>
         <direccion>Plaza de Carruajes,frente a servicios sociales(Renfe)</direccion>
         <latitud>37.67220193333354</latitud>
         <longitud>-1.6962824943907435</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>dc339acd-507d-4205-91eb-962455fcdfe1</id>
+    </parking>
+    <parking>
         <direccion>PINTOR EMILIANO ROJO, FRENTE AL CENTRO SALUD MENTAL</direccion>
         <latitud>37.663205941179385</latitud>
         <longitud>-1.696226905267622</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e49cdbd2-9799-4e55-bd8c-61e510af8ca4</id>
+    </parking>
+    <parking>
         <direccion>C/Actor Ramón Meca</direccion>
         <latitud>37.6654189862467</latitud>
         <longitud>-1.6960577814411408</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4576f4e9-2749-4f31-b5fc-b03a24f3cd7e</id>
+    </parking>
+    <parking>
         <direccion>C/Grecia</direccion>
         <latitud>37.66523356405514</latitud>
         <longitud>-1.695959726983574</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>bcb85932-6478-4f06-939e-2e329725ca53</id>
+    </parking>
+    <parking>
         <direccion>CALLEJON DE LOS FRAILES, frente al vado permanente 9040</direccion>
         <latitud>37.67875116978846</latitud>
         <longitud>-1.6955799857220424</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>04ef295f-be7d-4601-a869-d9e8c0496985</id>
+    </parking>
+    <parking>
         <direccion>Alameda de Cervantes, frente al n  44, junto y frente  al LILD. (dos reservas)</direccion>
         <latitud>37.6659488792007</latitud>
         <longitud>-1.69557043306577</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4602dac8-b261-4941-9295-db55a6a8fa8b</id>
+    </parking>
+    <parking>
         <direccion>C/Poeta Para Vico y Alameda de Cervantes (junto a lid´l)</direccion>
         <latitud>37.66578906699628</latitud>
         <longitud>-1.6955582979567225</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f393f703-420f-44a1-8fd8-ba3c58ffcd1c</id>
+    </parking>
+    <parking>
         <direccion>Alameda de Cervantes, frente edif. Columbia.</direccion>
         <latitud>37.66539302126519</latitud>
         <longitud>-1.6955087507873259</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>819124a1-04e0-46b2-b3eb-4f697ddb532c</id>
+    </parking>
+    <parking>
         <direccion>C/Grecia y Travesía Alam. Cervantes (C/Azahar)</direccion>
         <latitud>37.66443505845046</latitud>
         <longitud>-1.6953999063425726</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>990b650d-032f-4747-aa8e-90051fd10eb1</id>
+    </parking>
+    <parking>
         <direccion>RAFAEL SANCHEZ CAMPOY, FRENTE N  1</direccion>
         <latitud>37.66322292741572</latitud>
         <longitud>-1.6953203186205883</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>ca70dba5-13e1-410f-b902-f1f8d6948330</id>
+    </parking>
+    <parking>
         <direccion>Travesía Ramón y Cajal, 5,frente a pasaje</direccion>
         <latitud>37.67522346349787</latitud>
         <longitud>-1.6951747420675929</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0891c4e5-840a-4b1d-8b2d-bd77c75721b9</id>
+    </parking>
+    <parking>
         <direccion>Alameda de Cervantes ,junto N  61</direccion>
         <latitud>37.66501919996648</latitud>
         <longitud>-1.6951164707354565</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>bbe20523-bdfc-408e-837a-d3c0141663a5</id>
+    </parking>
+    <parking>
         <direccion>RAFAEL SANCHEZ CAMPOY, 4</direccion>
         <latitud>37.662814460437204</latitud>
         <longitud>-1.6950881399027367</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>142384d3-1ffb-4880-a75f-eae7b9698e9b</id>
+    </parking>
+    <parking>
         <direccion>RAFAEL SANCHEZ CAMPOY, N  3</direccion>
         <latitud>37.66287868996157</latitud>
         <longitud>-1.6949872217885513</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c79ed693-f5c7-486e-8033-d9129edcff24</id>
+    </parking>
+    <parking>
         <direccion>C/Abellaneda,frente a rotonda con C/Prolongación C/Abellaneda</direccion>
         <latitud>37.68475683474146</latitud>
         <longitud>-1.694905674343886</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>52f353b6-6339-4fc1-85c7-c774d1c2eb8d</id>
+    </parking>
+    <parking>
         <direccion>ROTONDA B  SAN FERNANDO CON AVDA. SUTULLENA</direccion>
         <latitud>37.662160483934514</latitud>
         <longitud>-1.6948199190012474</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>713a8060-a24f-481d-a1b5-8843748fb298</id>
+    </parking>
+    <parking>
         <direccion>Alameda de Cervantes  N  60, urbanización Las Palmeras</direccion>
         <latitud>37.66408417758412</latitud>
         <longitud>-1.6946697152964134</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4f7d376b-7711-403b-9580-d8fbf09d1e10</id>
+    </parking>
+    <parking>
         <direccion>C/Turbinto, 6,esquina C/Mayor</direccion>
         <latitud>37.681965948743134</latitud>
         <longitud>-1.694589571775623</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d0188940-e7f5-48d4-9c0a-85321f3388d6</id>
+    </parking>
+    <parking>
         <direccion>C/Charco, n  12</direccion>
         <latitud>37.681565440918696</latitud>
         <longitud>-1.6945413411044683</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c73c4279-3b40-4d23-abec-4ac333bc3004</id>
+    </parking>
+    <parking>
         <direccion>Puerta principal Colegio San Cristobal (C/Pareja)</direccion>
         <latitud>37.68528892026779</latitud>
         <longitud>-1.6940804296733631</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5358b03f-6c44-4fcc-a13a-0ed59e8223c0</id>
+    </parking>
+    <parking>
         <direccion>Explanada antiguas Lonjas Municipales (C/Carril de Caldereros, 45)</direccion>
         <latitud>37.678794830583854</latitud>
         <longitud>-1.6935298256735223</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0a6c4bf9-a003-426b-b060-5c35919206c9</id>
+    </parking>
+    <parking>
         <direccion>Explanada antiguas Lonjas Municipales (C/Carril de Caldereros, 45)</direccion>
         <latitud>37.6787805014544</latitud>
         <longitud>-1.6935070268968957</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>21ed411e-746d-47e7-aa2b-3c13e3b9848f</id>
+    </parking>
+    <parking>
         <direccion>C/Poeta Para Vico n 15,frente a C/Océano Pacífico</direccion>
         <latitud>37.66739093627948</latitud>
         <longitud>-1.6927277920133292</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>045d20f9-dd65-4279-bb4f-52a32491ecff</id>
+    </parking>
+    <parking>
         <direccion>C/Tercera Edad (C/Miguel Ángel Blanco Garrido, 74), junto a centro de día de personas mayores</direccion>
         <latitud>37.67717813106161</latitud>
         <longitud>-1.6926863226540263</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d5cacaa4-3c07-4b47-a433-ae6f34296a61</id>
+    </parking>
+    <parking>
         <direccion>C/Tercera Edad (C/Miguel Ángel Blanco Garrido, 74),junto a Centro de Día para Personas Mayores</direccion>
         <latitud>37.677230141604866</latitud>
         <longitud>-1.6926494422800715</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>ee84c930-3638-4757-8088-096360f8dd8d</id>
+    </parking>
+    <parking>
         <direccion>C/Tercera Edad (C/Miguel Ángel Blanco Garrido, 74),junto a Centro de día para Personas Mayores</direccion>
         <latitud>37.67724234815571</latitud>
         <longitud>-1.6926373723395045</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>98a281ea-af05-4221-bc2d-6e8f768127e0</id>
+    </parking>
+    <parking>
         <direccion>C/Tercera Edad (C/Miguel Ángel Blanco Garrido, 74),junto a Centro de día para Personas Mayores</direccion>
         <latitud>37.67724924750955</latitud>
         <longitud>-1.6926326784737284</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b3a56025-a48d-40d4-b3eb-20f11068fa8b</id>
+    </parking>
+    <parking>
         <direccion>C/Tercera Edad (C/Miguel Ángel Blanco Garrido, 74),junto a Centro de día para Personas Mayores</direccion>
         <latitud>37.67725030894859</latitud>
         <longitud>-1.6926293257124598</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>9e93683a-b3f8-4075-870b-b67142903379</id>
+    </parking>
+    <parking>
         <direccion>Avda. Rafael Maroto, junto a Parque San Diego</direccion>
         <latitud>37.68021000000002</latitud>
         <longitud>-1.692546914086165</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>1ddcc4b2-481e-48e2-88a9-2399aa872d09</id>
+    </parking>
+    <parking>
         <direccion>C/ Huercal Overa</direccion>
         <latitud>37.68104649307677</latitud>
         <longitud>-1.6923733190143366</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d9cbc475-51f6-4797-bef2-ef48fad62c67</id>
+    </parking>
+    <parking>
         <direccion>C/. HUERCAL OVERA, FRENTE A CENTRO SOCIAL</direccion>
         <latitud>37.68095839809557</latitud>
         <longitud>-1.6923451558196803</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>bc9a9089-05c9-44c8-8151-e20d9dff8022</id>
+    </parking>
+    <parking>
         <direccion>C/Ortega Melgares (C/Caballón)</direccion>
         <latitud>37.68200063504356</latitud>
         <longitud>-1.6923224245889514</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4243bd1b-47fb-48e0-a139-d64276f466f8</id>
+    </parking>
+    <parking>
         <direccion>C/ Huercal Overa</direccion>
         <latitud>37.68052747414991</latitud>
         <longitud>-1.6922325030410548</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f4267829-4244-415a-b36b-a29abef046e2</id>
+    </parking>
+    <parking>
         <direccion>C/Escultor Rodriguez La Rosa</direccion>
         <latitud>37.68086027722533</latitud>
         <longitud>-1.6921190227018315</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>fb001446-e598-406b-b296-9039efd43aa7</id>
+    </parking>
+    <parking>
         <direccion>AVDA. RAFAEL MAROTO, esquina c/. Huercal Overa</direccion>
         <latitud>37.68042652460138</latitud>
         <longitud>-1.6921177606437823</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>726fd818-99f3-4c54-93ec-4dea49eef008</id>
+    </parking>
+    <parking>
         <direccion>C/. ZAMBRANA, PROXIMIDAD N  6</direccion>
         <latitud>37.6835868304269</latitud>
         <longitud>-1.69201249462563</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>8cc6f40e-f047-4aeb-8eae-5182d8c6a9c7</id>
+    </parking>
+    <parking>
         <direccion>C/Mazarrón n 2</direccion>
         <latitud>37.68085517919038</latitud>
         <longitud>-1.6916903650296717</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>a01891c9-c249-4dfb-9f61-8e9f2e6de494</id>
+    </parking>
+    <parking>
         <direccion>C/ lOS VOLUNTARIOS, proximidad con  Maria del Mar Marmol Ferri</direccion>
         <latitud>37.68125269593026</latitud>
         <longitud>-1.6916789490737756</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b53e8af2-527c-4eab-9bba-8fa5a2046e29</id>
+    </parking>
+    <parking>
         <direccion>Avda. Rafael Maroto, junto a Parque San Diego</direccion>
         <latitud>37.6803628409607</latitud>
         <longitud>-1.691675196156325</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f19fafa7-78de-45c5-80e2-ec81c92671b6</id>
+    </parking>
+    <parking>
         <direccion>C/. ORTEGA MELGARES-CABALLON N  32(20) </direccion>
         <latitud>37.68202875470318</latitud>
         <longitud>-1.6916744144235942</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>2f1bf1ce-9c48-4892-93fa-df0f5d332a3b</id>
+    </parking>
+    <parking>
         <direccion>C/ Los Voluntarios</direccion>
         <latitud>37.68129470078461</latitud>
         <longitud>-1.6916127742050548</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>3da25170-a8df-4b37-a304-8949b8ea6c80</id>
+    </parking>
+    <parking>
         <direccion>AVDA. RAFAEL MAROTO, JUNTO A PARQUE SAN DIEGO, DOS PLAZAS RESERVA MINUSVALIDOS</direccion>
         <latitud>37.68037133211595</latitud>
         <longitud>-1.691573272213759</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e1d6bfb1-7621-411d-be76-5145c448e715</id>
+    </parking>
+    <parking>
         <direccion>Avda. Rafael Maroto, junto a Parque San Diego</direccion>
         <latitud>37.68042227902704</latitud>
         <longitud>-1.69155181454164</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>1eb2c2e1-9117-4f8f-bfe4-07e7ae007b1f</id>
+    </parking>
+    <parking>
         <direccion>Centro comercial San Diego</direccion>
         <latitud>37.67892948644071</latitud>
         <longitud>-1.6914015445358928</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>883c4a45-58b4-4e6f-8e53-bad6f049c19c</id>
+    </parking>
+    <parking>
         <direccion>Centro comercial San Diego</direccion>
         <latitud>37.679132997176026</latitud>
         <longitud>-1.6913533955812454</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>6ccc85fc-a905-4132-a8b1-1f2e5df2d939</id>
+    </parking>
+    <parking>
         <direccion>Centro comercial San Diego</direccion>
         <latitud>37.679129032187454</latitud>
         <longitud>-1.6913425359375651</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>debc1591-ac18-4bec-b974-3fb6b1954cde</id>
+    </parking>
+    <parking>
         <direccion>C/Tomás de Arderius Sánchez Fortún, 43,esquina con Vereda Los Reales</direccion>
         <latitud>37.67006981544042</latitud>
         <longitud>-1.6912862834324187</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>04489da5-2f1b-451b-a768-ccf9baf744d8</id>
+    </parking>
+    <parking>
         <direccion>Centro comercial San Diego</direccion>
         <latitud>37.67899051777656</latitud>
         <longitud>-1.6912567052490886</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>a4d6ec38-ecd5-4cae-bb7a-5d1749a14aea</id>
+    </parking>
+    <parking>
         <direccion>C/Luis de Peralta  con esquina C/ Filibertos</direccion>
         <latitud>37.681289827627126</latitud>
         <longitud>-1.6906180122684873</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>457cef75-76f4-4305-9073-906cdad52768</id>
+    </parking>
+    <parking>
         <direccion>C/ Luis de Peralta</direccion>
         <latitud>37.68116564592231</latitud>
         <longitud>-1.6906099656414426</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>76dd8c42-7a56-473d-b0dd-f870772f2e02</id>
+    </parking>
+    <parking>
         <direccion>C/Juan Antonio Dimas, 3,junto a Centro de Salud San Diego</direccion>
         <latitud>37.67968308724482</latitud>
         <longitud>-1.6905834707863505</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5404b366-29c6-487e-903a-1f0e27efb44c</id>
+    </parking>
+    <parking>
         <direccion>PLAZA CEREZUELA, PROXIMIDAD A CALLE SANDOVAL</direccion>
         <latitud>37.68399438706912</latitud>
         <longitud>-1.690462262171062</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>63035f39-1454-479a-bec0-366513e8e531</id>
+    </parking>
+    <parking>
         <direccion>C/. Horno Santa Quiteria, frente n  25.</direccion>
         <latitud>37.67318639961891</latitud>
         <longitud>-1.6902590240814561</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>afe0e409-f087-406e-bdfd-41dda532ccc5</id>
+    </parking>
+    <parking>
         <direccion>AVDA. EUROPA, N  1</direccion>
         <latitud>37.68067634695928</latitud>
         <longitud>-1.6902128068542197</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>bcff85b8-b679-4f0a-8c94-8a148b951e47</id>
+    </parking>
+    <parking>
         <direccion>C/Juan Antonio Dimas, 7, junto a IES Principe de Asturias</direccion>
         <latitud>37.67888278416706</latitud>
         <longitud>-1.690189856613415</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>ad218772-b5fe-4cd5-bc3b-8d608df81e3f</id>
+    </parking>
+    <parking>
         <direccion>C/Juan Antonio Dimas, 7,junto a IES Príncipe de Asturias</direccion>
         <latitud>37.67882387557556</latitud>
         <longitud>-1.690163034523266</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>28e657f8-67d8-4246-aa02-fd00ee3366d7</id>
+    </parking>
+    <parking>
         <direccion>C/. CANAL DE SAN DIEGO, JUNTO A IGLESIA</direccion>
         <latitud>37.6805457240412</latitud>
         <longitud>-1.6901410990196837</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c18320c2-3571-4bed-9e0b-ed86e42e806f</id>
+    </parking>
+    <parking>
         <direccion>C/ Cristo de la Sangre</direccion>
         <latitud>37.68169164504</latitud>
         <longitud>-1.6900546085983</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5bed3d68-b3a2-450e-b850-b6b91f29aa47</id>
+    </parking>
+    <parking>
         <direccion>C/Cristo de la Sangre</direccion>
         <latitud>37.681307956820866</latitud>
         <longitud>-1.6899627429395423</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>44c9f53a-b1df-4c4b-bb54-f46630dad777</id>
+    </parking>
+    <parking>
         <direccion>Avda. Europa, frente C/ Cristo de la Sangre</direccion>
         <latitud>37.680668649198935</latitud>
         <longitud>-1.6898719691337192</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>65fa1531-2c24-40bd-a749-98c9660cec32</id>
+    </parking>
+    <parking>
         <direccion>C/ Canal San Diego, junto a residencia ancianos</direccion>
         <latitud>37.68053234433048</latitud>
         <longitud>-1.689755222506733</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>629d2517-5c82-4be2-be39-550288204f40</id>
+    </parking>
+    <parking>
         <direccion>AVDA. EUROPA, ESQUINA C/. Cristo de la Sangre, junto a BMN</direccion>
         <latitud>37.68076417424566</latitud>
         <longitud>-1.6897190832198703</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f9bd843d-fb48-47d4-aa95-9217e5433bae</id>
+    </parking>
+    <parking>
         <direccion>Avenida Europa,n 6 (obras de remodelación)</direccion>
         <latitud>37.68071317286207</latitud>
         <longitud>-1.6896916362888987</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4a67287d-d454-4daf-bec1-91f9d0ea67c5</id>
+    </parking>
+    <parking>
         <direccion>C/Cañada Morales, 12,frente Colegio Juan González</direccion>
         <latitud>37.6853226440455</latitud>
         <longitud>-1.6895776424057658</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>2c46d112-dacb-4954-8475-436b339c52a3</id>
+    </parking>
+    <parking>
         <direccion>C/Cañada Morales, 12,frente a Colegio Juan González</direccion>
         <latitud>37.68533803323469</latitud>
         <longitud>-1.689564901912945</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4a1e06b0-665b-40b4-8b83-e8b66d70d19f</id>
+    </parking>
+    <parking>
         <direccion>Avda. Europa, altura oficina BMN</direccion>
         <latitud>37.68079813867709</latitud>
         <longitud>-1.6895205997527682</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>6b48aa48-160a-499c-bba0-e6d5a0ef8ec2</id>
+    </parking>
+    <parking>
         <direccion>C/ Canal San Diego, junto a residencia ancianos</direccion>
         <latitud>37.68049413420714</latitud>
         <longitud>-1.6893689844085884</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>02cbd631-e935-43b5-8f41-1b4ae836fc0f</id>
+    </parking>
+    <parking>
         <direccion>C/. CANAL DE SAN DIEGO, JUNTO A RESIDENCIA DE ANCIANOS SAN DIEGO</direccion>
         <latitud>37.6804559240641</latitud>
         <longitud>-1.6892134162857246</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>bc72c22c-4d6d-475f-a3a2-f41cec062636</id>
+    </parking>
+    <parking>
         <direccion>Puerta principal Hureto de la Rueda (C/Lorca 96)</direccion>
         <latitud>37.67374234841194</latitud>
         <longitud>-1.6890986951411833</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>43314024-48a4-4b6c-b0d2-45f07296f42b</id>
+    </parking>
+    <parking>
         <direccion>Puerta principal Huerto de la Rueda (C/Lorca 96)</direccion>
         <latitud>37.673711565219264</latitud>
         <longitud>-1.6890926601708998</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>3a9145a0-d872-4d79-8e5b-664d60cf90f8</id>
+    </parking>
+    <parking>
         <direccion>Carril Vírgen de las Huertas con C/Maestro Tomás</direccion>
         <latitud>37.66508733032237</latitud>
         <longitud>-1.689079173627988</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e47c6595-940b-422c-8308-19de39394fd1</id>
+    </parking>
+    <parking>
         <direccion>Complejo Deportivo Felipe VI</direccion>
         <latitud>37.67713779632947</latitud>
         <longitud>-1.689073387110966</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>fb7181fd-5831-4809-a313-6d22b94c481f</id>
+    </parking>
+    <parking>
         <direccion>Complejo Deportivo Felipe VI</direccion>
         <latitud>37.676679252570054</latitud>
         <longitud>-1.6889821920044596</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>e25224dd-e048-4999-a016-93d39b9bcaf2</id>
+    </parking>
+    <parking>
         <direccion>Complejo Deportivo Felipe VI</direccion>
         <latitud>37.677116567514325</latitud>
         <longitud>-1.6889607343323405</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b51db80f-dc2d-4537-84ef-a53cc91667a8</id>
+    </parking>
+    <parking>
         <direccion>C/ Ministriles</direccion>
         <latitud>37.68199238268193</latitud>
         <longitud>-1.688941102902163</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>3545a1dc-e74c-4e32-88d7-f6706ed7497d</id>
+    </parking>
+    <parking>
         <direccion>Complejo Deportivo Felipe VI</direccion>
         <latitud>37.676624057296806</latitud>
         <longitud>-1.688821259463566</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>aa901a15-ccec-4fc5-9795-ef2768badfb3</id>
+    </parking>
+    <parking>
         <direccion>C/. MINISTRILES, FRENTE EDIF. FRANCIA, B  SAN DIEGO</direccion>
         <latitud>37.68201148736019</latitud>
         <longitud>-1.6887855347792993</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7dad7d64-42f1-4585-bcac-1150ae2be878</id>
+    </parking>
+    <parking>
         <direccion>C/. RAMBLILLA TEJARES, PROXIMIDAD N  34, DOS RESERVAS</direccion>
         <latitud>37.6833392523605</latitud>
         <longitud>-1.68868466270442</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>22baafd0-b322-4b5a-abce-1b7438a219b1</id>
+    </parking>
+    <parking>
         <direccion>Avd. Paso Encarnado</direccion>
         <latitud>37.681464248383136</latitud>
         <longitud>-1.6886210086156552</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>091fa5b5-83fa-4ad4-b079-c539897af91d</id>
+    </parking>
+    <parking>
         <direccion>Avd. Paso Encarnado</direccion>
         <latitud>37.681473270101606</latitud>
         <longitud>-1.6886183264066403</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>b864f86f-031d-4d88-8cec-f763c10e1fef</id>
+    </parking>
+    <parking>
         <direccion>C/Cuesta de Ferrer, altura dúplex frente almazara</direccion>
         <latitud>37.67376658437324</latitud>
         <longitud>-1.6885832134134944</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>987466e3-2e72-4ec5-a622-b4e3514aa5ea</id>
+    </parking>
+    <parking>
         <direccion>c/. GABRIEL GÓMEZ MARTINEZ, (TIO PILLO)</direccion>
         <latitud>37.67050167948156</latitud>
         <longitud>-1.688446324606275</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>96f6a514-4bb1-4954-bc6d-b214d65e7df4</id>
+    </parking>
+    <parking>
         <direccion>Avda. Europa, altura N  21</direccion>
         <latitud>37.68100192493905</latitud>
         <longitud>-1.6881365799010837</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>284a4232-6628-401a-a159-e3fbace60996</id>
+    </parking>
+    <parking>
         <direccion>C/ Asilo de San Diego, próximo N  1</direccion>
         <latitud>37.68051145715437</latitud>
         <longitud>-1.6881276000000298</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>40d1812e-aaaa-4c72-9aa7-2eeae8bd6be2</id>
+    </parking>
+    <parking>
         <direccion>C/. ASILO SAN DIEGO</direccion>
         <latitud>37.680581509015745</latitud>
         <longitud>-1.6881276000000298</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>605c91e2-a7c2-439f-b3c6-3abcec3693d7</id>
+    </parking>
+    <parking>
         <direccion>AVDA. EUROPA, esquina  Avda. Paso Encarnado, junto Edif. Europa</direccion>
         <latitud>37.681014661561846</latitud>
         <longitud>-1.6880507492126071</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>81217bac-714c-4837-9f93-cedde7c32768</id>
+    </parking>
+    <parking>
         <direccion>c/. Rambla Buitrago con rotonda C/. Santa Quiteria.</direccion>
         <latitud>37.67225607842343</latitud>
         <longitud>-1.6873163096481676</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>ba630c1c-4c7d-44e7-87ab-d51426f2a7bd</id>
+    </parking>
+    <parking>
         <direccion>CALLE CANAL DE SAN DIEGO, FRENTE A EDIF. TURQUIA (DOS PLAZAS)</direccion>
         <latitud>37.68051734752703</latitud>
         <longitud>-1.6871309387511824</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>93544381-9f18-4832-b27d-41820098096a</id>
+    </parking>
+    <parking>
         <direccion>C/Teresa de Calcuta, edificio Murcia</direccion>
         <latitud>37.681288691312005</latitud>
         <longitud>-1.6870194828206877</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d08de7fc-2c65-4b3a-a84f-bb2a3d169540</id>
+    </parking>
+    <parking>
         <direccion>AVDA. EUROPA, JUNTO A PLAZA PUEBLO SAHARAGÜI</direccion>
         <latitud>37.681179653338454</latitud>
         <longitud>-1.6869752235868198</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0265f24f-90fa-48b4-ae23-5ab3a6ef8f3c</id>
+    </parking>
+    <parking>
         <direccion>C/Médico Antonio Pelegrín Medina,frente a IES n  6</direccion>
         <latitud>37.68671986327376</latitud>
         <longitud>-1.6867854628212626</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>77411ed3-6c86-42c4-96e2-2dbe1be3cd3d</id>
+    </parking>
+    <parking>
         <direccion>C/Médico Antonio Pelegrín Medina, frente a IES n  6</direccion>
         <latitud>37.68671349545241</latitud>
         <longitud>-1.686774733985203</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5f793952-1a55-4f5f-a5df-340e7751c6f5</id>
+    </parking>
+    <parking>
         <direccion>C/Padre Isidro, frente a Santuario Virgen de las Huertas, AMPLIADA TOTAL DOS PLAZAS</direccion>
         <latitud>37.6670942137798</latitud>
         <longitud>-1.6865911625656054</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>55276eb7-7fd6-4d35-ac8f-5f8fd71aae06</id>
+    </parking>
+    <parking>
         <direccion>Camino Los Chaparros, 15,frente a farmacia Puente La Pía</direccion>
         <latitud>37.665645916050714</latitud>
         <longitud>-1.6865403901956597</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>1fab35f2-24ae-4089-a3ad-88450b5b3cec</id>
+    </parking>
+    <parking>
         <direccion>C/. MEDICO ANTONIO PELEGRIN MEDINA ALTURA CENTRO DE FORMACION PROFESIONAL CAMPUS UNIVERSITARIO</direccion>
         <latitud>37.6832387073551</latitud>
         <longitud>-1.6863396821467</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7862adbd-7b70-4596-9dcb-e6ca7a265516</id>
+    </parking>
+    <parking>
         <direccion>C/Paseo de Guerra, 8</direccion>
         <latitud>37.68244240616959</latitud>
         <longitud>-1.6852989792823792</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>7cd9b88b-a307-4cae-a8a2-2ab657802c67</id>
+    </parking>
+    <parking>
         <direccion>AVDA. EUROPA, JUNTO AL N  42</direccion>
         <latitud>37.6814980674892</latitud>
         <longitud>-1.684985189554278</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>0b591bce-b9f1-455c-b5bd-a929f1f010d2</id>
+    </parking>
+    <parking>
         <direccion>Avda. De los Ángeles, 21</direccion>
         <latitud>37.68451256915446</latitud>
         <longitud>-1.6842220723628998</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c58e04fd-cde0-459c-b990-19279681ac20</id>
+    </parking>
+    <parking>
         <direccion>CAMINO PUENTE CHURRA (C  Molino La Sierra), esquina Avda. Europa</direccion>
         <latitud>37.68187591717483</latitud>
         <longitud>-1.6835040590158816</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>f8e66db0-29ce-4be7-b69e-87a855238cd6</id>
+    </parking>
+    <parking>
         <direccion>C/Paseo de los Ángeles, 6,esquina C/Nicolás Bussy</direccion>
         <latitud>37.68391973865642</latitud>
         <longitud>-1.6832810012233494</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>208dcdbe-4761-4918-aa99-f1664f576221</id>
+    </parking>
+    <parking>
         <direccion>C/Paseo de los Ángeles, 3,esquina C/Nicolás Bussy</direccion>
         <latitud>37.68392292268709</latitud>
         <longitud>-1.6832803306710957</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>4810aca5-eb6b-445b-a3e7-08d0e001bf91</id>
+    </parking>
+    <parking>
         <direccion>C/Jerónimo Quijano, n 2</direccion>
         <latitud>37.68472440666051</latitud>
         <longitud>-1.682543088343209</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>43aeced0-4d78-43c9-aa78-3e049212dd33</id>
+    </parking>
+    <parking>
         <direccion>C/Comunidad Valenciana</direccion>
         <latitud>37.682716519684035</latitud>
         <longitud>-1.6823726975243105</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>c30db629-e040-4c82-b3ac-5ba1b10db5d3</id>
+    </parking>
+    <parking>
         <direccion>C/Transformador, n  5</direccion>
         <latitud>37.6839167110827</latitud>
         <longitud>-1.6821341552080185</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>5318ff77-a49c-4392-be63-273cc0fc6bcd</id>
+    </parking>
+    <parking>
         <direccion>C/Transformador altura del AA.VV. B  Apolonia</direccion>
         <latitud>37.68294121090367</latitud>
         <longitud>-1.6819489228228122</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>29157c12-13d5-4f2d-8c31-5511cea9f381</id>
+    </parking>
+    <parking>
         <direccion>C/Transformador altura del AA.VV. B  Apolonia</direccion>
         <latitud>37.6829369654732</latitud>
         <longitud>-1.681946911166051</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>14264ba8-c522-4a90-aed9-4336853cfa35</id>
+    </parking>
+    <parking>
         <direccion>Avda. Fuerzas Armadas, 55-57,frente C/Fuente del Oro</direccion>
         <latitud>37.68296832841182</latitud>
         <longitud>-1.680671877857776</longitud>
-    </aparcamiento>
-    <aparcamiento>
-        <id>d3525a09-6224-4e41-8484-96d918a906ba</id>
+    </parking>
+    <parking>
         <direccion>Avda.Fuerzas Armadas, 52, frente C/Fuente del Oro</direccion>
         <latitud>37.68297363519758</latitud>
         <longitud>-1.6806410324541048</longitud>
-    </aparcamiento>
+    </parking>
+    <parking>
+        <direccion>C/Santo Domingo,junto a Delegación de Hacienda</direccion>
+        <latitud>37.67801347966294</latitud>
+        <longitud>-1.6969470116741832</longitud>
+        <opinion>
+            <numero_valoraciones>1</numero_valoraciones>
+            <calificacion_media>4.0</calificacion_media>
+            <url_opinion>http://localhost:8081/api/opiniones/api/ciudades/Lorca/parkings/37.67801347966294/-1.6969470116741832</url_opinion>
+        </opinion>
+    </parking>
 </ciudad>
