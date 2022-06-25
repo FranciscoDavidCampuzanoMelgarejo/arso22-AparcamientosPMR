@@ -1,6 +1,6 @@
 package ciudades.servicio;
 
-import org.example.ciudades.Parking;
+import es.um.ciudades.Parking;
 
 public class DistanciaParkingSitio {
 

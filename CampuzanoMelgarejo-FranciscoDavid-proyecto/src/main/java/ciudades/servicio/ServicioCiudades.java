@@ -12,10 +12,10 @@ import java.util.stream.IntStream;
 import javax.json.bind.Jsonb;
 import javax.json.bind.spi.JsonbProvider;
 
-import org.example.ciudades.Ciudad;
-import org.example.ciudades.Opinion;
-import org.example.ciudades.Parking;
-import org.example.ciudades.SitioTuristico;
+import es.um.ciudades.Ciudad;
+import es.um.ciudades.Opinion;
+import es.um.ciudades.Parking;
+import es.um.ciudades.SitioTuristico;
 import org.xml.sax.SAXParseException;
 
 import com.rabbitmq.client.Channel;

@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import org.example.ciudades.Ciudad;
+import es.um.ciudades.Ciudad;
 
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;
@@ -51,7 +51,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		try {
 
-			JAXBContext contexto = JAXBContext.newInstance("org.example.ciudades");
+			JAXBContext contexto = JAXBContext.newInstance("es.um.ciudades");
 			Marshaller marshaller = contexto.createMarshaller();
 
 			marshaller.setProperty("jaxb.formatted.output", true);
@@ -73,7 +73,7 @@ public class RepositorioCiudadesXML implements RepositorioCiudades {
 
 		try {
 
-			JAXBContext contexto = JAXBContext.newInstance("org.example.ciudades");
+			JAXBContext contexto = JAXBContext.newInstance("es.um.ciudades");
 			Unmarshaller unmarshaller = contexto.createUnmarshaller();
 
 			return (Ciudad) unmarshaller.unmarshal(new File(documento));

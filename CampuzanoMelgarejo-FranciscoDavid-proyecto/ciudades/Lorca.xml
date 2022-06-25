@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ciudad xmlns="http://www.example.org/ciudades" nombre="Lorca">
+<ciudad xmlns="http://www.um.es/ciudades" nombre="Lorca">
     <sitio_turistico>
         <titulo>Museo Arqueológico Municipal de Lorca</titulo>
         <resumen>"El museo Arqueológico Municipal de Lorca (Murcia), España, fue fundado en marzo de 1992 y se encuentra en la plaza de Juan Moreno. El Ayuntamiento de Lorca es el encargado de la titularidad y gestión del museo.​ El museo nació con el fin de un mejor desarrollo cultural de Lorca y la comarca."</resumen>
@@ -705,11 +705,6 @@
         <direccion>C/Santo Domingo,junto a Delegación de Hacienda</direccion>
         <latitud>37.67801347966294</latitud>
         <longitud>-1.6969470116741832</longitud>
-        <opinion>
-            <numero_valoraciones>1</numero_valoraciones>
-            <calificacion_media>4.0</calificacion_media>
-            <url_opinion>http://localhost:8081/api/opiniones/api/ciudades/Lorca/parkings/37.67801347966294/-1.6969470116741832</url_opinion>
-        </opinion>
     </parking>
     <parking>
         <direccion>C/Tenor Mario Gabarrón</direccion>
@@ -1295,15 +1290,5 @@
         <direccion>Avda.Fuerzas Armadas, 52, frente C/Fuente del Oro</direccion>
         <latitud>37.68297363519758</latitud>
         <longitud>-1.6806410324541048</longitud>
-    </parking>
-    <parking>
-        <direccion>C/Santo Domingo,junto a Delegación de Hacienda</direccion>
-        <latitud>37.67801347966294</latitud>
-        <longitud>-1.6969470116741832</longitud>
-        <opinion>
-            <numero_valoraciones>1</numero_valoraciones>
-            <calificacion_media>4.0</calificacion_media>
-            <url_opinion>http://localhost:8081/api/opiniones/api/ciudades/Lorca/parkings/37.67801347966294/-1.6969470116741832</url_opinion>
-        </opinion>
     </parking>
 </ciudad>

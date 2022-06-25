@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.example.org/ciudades"
-	xmlns="http://www.example.org/ciudades" elementFormDefault="qualified">
+	targetNamespace="http://www.um.es/ciudades-atom"
+	xmlns="http://www.um.es/ciudades-atom" elementFormDefault="qualified">
 
 	<xs:element name="feed">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="title" type="xs:string"></xs:element>
+				<xs:element name="id" type="xs:anyURI" />
+				<xs:element name="title" type="xs:string" />
+				<xs:element name="subtitle" type="xs:string" />
+				<xs:element name="updated" type="xs:string" />
 				<xs:element name="link">
 					<xs:complexType>
-						<xs:attribute name="href" type="xs:string"></xs:attribute>
+						<xs:attribute name="href" type="xs:anyURI"
+							use="required" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="update" type="xs:string"></xs:element>
-				<xs:element name="author">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="name" type="xs:string"></xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="id" type="xs:string"></xs:element>
-
-
-				<xs:element name="entry" minOccurs="0"
-					maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="title" type="xs:string"></xs:element>
-							<xs:element name="id" type="xs:string"></xs:element>
-							<xs:element name="update" type="xs:string"></xs:element>
-							<xs:element name="summary" type="xs:string"></xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="author" type="autor" maxOccurs="2" />
+				<xs:element name="entry" type="entrada"
+					maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
+
+	<xs:complexType name="autor">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="email" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="entrada">
+		<xs:sequence>
+			<xs:element name="id" type="xs:anyURI" />
+			<xs:element name="title" type="xs:string"></xs:element>
+			<xs:element name="updated" type="xs:string"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>

@@ -1,9 +1,9 @@
 package ciudades.servicio;
 
 import java.util.List;
-import org.example.ciudades.Ciudad;
-import org.example.ciudades.Parking;
-import org.example.ciudades.SitioTuristico;
+import es.um.ciudades.Ciudad;
+import es.um.ciudades.Parking;
+import es.um.ciudades.SitioTuristico;
 
 import repositorio.EntidadNoEncontrada;
 import repositorio.RepositorioException;

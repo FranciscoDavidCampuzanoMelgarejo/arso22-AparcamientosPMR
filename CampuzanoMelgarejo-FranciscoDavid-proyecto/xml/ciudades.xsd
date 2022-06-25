@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.example.org/ciudades"
-	xmlns="http://www.example.org/ciudades" elementFormDefault="qualified">
+	targetNamespace="http://www.um.es/ciudades"
+	xmlns="http://www.um.es/ciudades" elementFormDefault="qualified">
 
 	<xs:element name="ciudad">
 		<xs:complexType>

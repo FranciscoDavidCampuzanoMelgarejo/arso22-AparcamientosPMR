@@ -1,7 +1,7 @@
 package ciudades.repositorio;
 
 
-import org.example.ciudades.Ciudad;
+import es.um.ciudades.Ciudad;
 
 import repositorio.Repositorio;
 

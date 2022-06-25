@@ -8,12 +8,16 @@ import ciudades.servicio.CiudadResumen;
 import ciudades.servicio.DistanciaParkingSitio;
 import ciudades.servicio.IServicioCiudades;
 import ciudades.servicio.ServicioCiudades;
+import es.um.ciudades_atom.Autor;
+import es.um.ciudades_atom.Entrada;
+import es.um.ciudades_atom.Feed;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
+import java.io.File;
 import java.net.URI;
 import java.util.LinkedList;
 import java.util.List;
@@ -34,9 +38,10 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
 
-import org.example.ciudades.Ciudad;
-import org.example.ciudades.Parking;
-import org.example.ciudades.SitioTuristico;
+import es.um.ciudades.Ciudad;
+import es.um.ciudades.Parking;
+import es.um.ciudades.SitioTuristico;
+import org.joda.time.LocalDateTime;
 
 @Api
 @Path("ciudades")
@@ -142,6 +147,45 @@ public class CiudadesControladorRest {
 		listado.setCiudadesResumen(resumenes);
 
 		return Response.status(Response.Status.OK).entity(listado).build();
+	}
+
+	@GET
+	@Path("/atom")
+	@Produces({ MediaType.APPLICATION_ATOM_XML })
+	public Response getCiudadesAtom() throws Exception {
+		Feed feed = new Feed();
+		feed.setId(uriInfo.getBaseUri().toString());
+		feed.setTitle("Servicio ciudades");
+		feed.setSubtitle("Sitios turisticos y aparcamientos para personas con movilidad reducida en varias ciudades");
+
+		File ficheroAtom = new File("/xml/ciudades-atom.xsd");
+		long fechaModificacion = ficheroAtom.lastModified();
+		feed.setUpdated(new LocalDateTime(fechaModificacion).toString());
+
+		Feed.Link enlace = new Feed.Link();
+		enlace.setHref(uriInfo.getAbsolutePath().toString());
+
+		Autor autor1 = new Autor();
+		autor1.setName("Francisco David Campuzano Melgarejo");
+		autor1.setEmail("franciscodavid.campuzanom@um.es");
+		feed.getAuthor().add(autor1);
+
+		List<CiudadResumen> ciudadesResumen = servicio.getCiudades();
+		for (CiudadResumen ciudad : ciudadesResumen) {
+			Entrada entrada = new Entrada();
+
+			URI url = uriInfo.getBaseUriBuilder().path("ciudades").path(ciudad.getNombre()).build();
+			entrada.setId(url.toString());
+			entrada.setTitle(ciudad.getNombre());
+
+			File ficheroCiudad = new File("/ciudades/" + ciudad.getNombre() + ".xml");
+			fechaModificacion = ficheroCiudad.lastModified();
+			entrada.setUpdated(new LocalDateTime(fechaModificacion).toString());
+			feed.getEntry().add(entrada);
+		}
+
+		return Response.status(Response.Status.OK).entity(feed).build();
+
 	}
 
 	// Metodo para obtener todos los sitios turisticos de una determinada ciudad

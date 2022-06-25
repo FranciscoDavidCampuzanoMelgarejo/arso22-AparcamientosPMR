@@ -11,7 +11,7 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
-import org.example.ciudades.Ciudad;
+import es.um.ciudades.Ciudad;
 import org.xml.sax.SAXParseException;
 
 import utils.Validador;
