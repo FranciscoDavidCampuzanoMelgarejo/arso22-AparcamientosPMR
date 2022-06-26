@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<dep.slf4j.version>1.7.30</dep.slf4j.version>
-		<jetty.http.port>8082</jetty.http.port>
+		<jetty.http.port>8081</jetty.http.port>
 	</properties>
 
 
