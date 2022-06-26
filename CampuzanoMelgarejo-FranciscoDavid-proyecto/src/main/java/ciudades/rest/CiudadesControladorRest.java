@@ -51,8 +51,8 @@ public class CiudadesControladorRest {
 	@Context
 	private UriInfo uriInfo;
 
-	// curl -i -X GET -H "Accept: application/xml
-	// http://localhost:8081/api/ciudades/Lorca"
+	// curl -i -X GET -H "Accept: application/xml"
+	// http://localhost:8081/api/ciudades/Lorca
 	@GET
 	@Path("/{nombre}")
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
@@ -228,7 +228,7 @@ public class CiudadesControladorRest {
 	// Metodo para obtener los aparcamientos cercanos a un sitio determinado de una
 	// ciudad
 	// curl -i
-	// http://localhost:8081/api/ciudades/Lorca/sitios/Castillo_de_Lorca/parkings
+	// http://localhost:8081/api/ciudades/Lorca/sitios/Castillo_de_Lorca/parkings?radio=10
 
 	@GET
 	@Path("/{nombre}/sitios/{sitio}/parkings")
