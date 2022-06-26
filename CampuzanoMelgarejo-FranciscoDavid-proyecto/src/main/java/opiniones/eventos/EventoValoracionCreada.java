@@ -1,9 +1,5 @@
 package opiniones.eventos;
 
-import java.time.LocalDateTime;
-
-import javax.json.bind.annotation.JsonbDateFormat;
-
 public class EventoValoracionCreada {
 
 	private String url;
@@ -12,7 +8,7 @@ public class EventoValoracionCreada {
 
 	// Valoracion
 	private String correo;
-	
+
 	private int calificacion;
 	private String comentario;
 

@@ -32,9 +32,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import ciudades.repositorio.FactoriaRepositorioCiudades;
-import ciudades.repositorio.RepositorioCiudades;
-import ciudades.servicio.CiudadResumen;
 import ciudades.servicio.IServicioCiudades;
 import ciudades.servicio.ServicioCiudades;
 import repositorio.EntidadNoEncontrada;
@@ -239,32 +236,6 @@ public class Programa {
 
 		// Crear la ciudad de Malaga
 		servicio.create(construirCiudad(MALAGA));
-
-		/*
-		 * List<CiudadResumen> ciudades = servicio.getCiudades(); for (CiudadResumen cr
-		 * : ciudades) System.out.println(cr.getNombre());
-		 * 
-		 * List<SitioTuristico> sitiosLorca =
-		 * servicio.getSitiosTuristicos(ciudades.get(0).getNombre());
-		 * System.out.println("Lorca"); for (SitioTuristico st : sitiosLorca)
-		 * System.out.println(st.getTitulo());
-		 * 
-		 * System.out.println("Malaga"); List<SitioTuristico> sitiosMalaga =
-		 * servicio.getSitiosTuristicos(ciudades.get(1).getNombre()); for
-		 * (SitioTuristico st : sitiosMalaga) System.out.println(st.getTitulo());
-		 * 
-		 * System.out.println("Aparcamientos cercanos Lorca"); List<Parking>
-		 * parkingsLorca =
-		 * servicio.getAparcamientosCercanos(ciudades.get(0).getNombre(),
-		 * sitiosLorca.get(0).getTitulo(), 30.0); System.out.println("VA"); for (Parking
-		 * p : parkingsLorca) { System.out.println(p.getDireccion()); }
-		 * 
-		 * System.out.println("Aparcamientos cercanos Malaga"); List<Parking>
-		 * parkingsMalaga =
-		 * servicio.getAparcamientosCercanos(ciudades.get(1).getNombre(),
-		 * sitiosMalaga.get(0).getTitulo(), 30.0); for (Parking p : parkingsMalaga) {
-		 * System.out.println(p.getDireccion()); }
-		 */
 
 		System.out.println("FIN");
 

@@ -1,6 +1,5 @@
 package utils;
 
-import java.text.DecimalFormat;
 import java.util.UUID;
 
 public class Utils {
@@ -23,12 +22,12 @@ public class Utils {
 				* Math.cos(Math.toRadians(latParking)) * Math.sin(lonDistancia / 2) * Math.sin(lonDistancia / 2);
 		double c = 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
 		double distanciaFinal = R * c; // Para pasarlo a kilometros
-		
-		//Redondear a 3 decimales
+
+		// Redondear a 3 decimales
 		double parteEntera = Math.floor(distanciaFinal);
-		double decimales = (distanciaFinal - parteEntera)*1000;
+		double decimales = (distanciaFinal - parteEntera) * 1000;
 		decimales = Math.round(decimales);
-		return (parteEntera + (decimales/1000));
+		return (parteEntera + (decimales / 1000));
 	}
 
 	public static void ordenarParkings(double[] distancias, int[] indicesParkings, int izq, int der) {
@@ -62,7 +61,6 @@ public class Utils {
 
 			distancias[der] = auxDistancias;
 			indicesParkings[der] = auxIndices;
-			
 
 			// Llamada recursiva
 			ordenarParkings(distancias, indicesParkings, izq, i - 1);

@@ -288,7 +288,6 @@ public class CiudadesControladorRest {
 		resumen.setLongitud(parking.getLongitud());
 
 		if (parking.getOpinion() != null) {
-			System.out.println("VA");
 			OpinionResumen opinionResumen = new OpinionResumen();
 			opinionResumen.setUrlOpinion(parking.getOpinion().getUrlOpinion());
 			opinionResumen.setValoraciones(parking.getOpinion().getNumeroValoraciones());

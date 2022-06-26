@@ -33,7 +33,7 @@ public class ValidadorCiudades {
 			validador.setErrorHandler(new Validador());
 			
 			//Validacion de los objetos JAXB
-			JAXBContext contexto = JAXBContext.newInstance("org.examples.ciudades");
+			JAXBContext contexto = JAXBContext.newInstance("es.um.ciudades");
 			validador.validate(new JAXBSource(contexto, ciudad));
 			
 			return ((Validador)(validador.getErrorHandler())).getErrores();

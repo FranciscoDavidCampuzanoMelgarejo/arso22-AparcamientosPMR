@@ -24,7 +24,6 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 import com.rabbitmq.client.AMQP;
-import com.rabbitmq.client.AMQP.BasicProperties;
 
 import ciudades.repositorio.FactoriaRepositorioCiudades;
 import ciudades.repositorio.RepositorioCiudades;
@@ -72,12 +71,9 @@ public class ServicioCiudades implements IServicioCiudades {
 			boolean autodelete = false;
 			Map<String, Object> propiedades = null; // sin propiedades
 
-			System.out.println("Declararla cola");
 			canal.queueDeclare(nombreCola, durable, exclusive, autodelete, propiedades);
-
-			System.out.println("Atar la cola");
 			canal.queueBind(nombreCola, nombreExchange, bindingkey);
-			System.out.println("Cola atada");
+
 			// Configuracion del consumidor
 
 			boolean autoAck = false;
@@ -86,16 +82,14 @@ public class ServicioCiudades implements IServicioCiudades {
 
 			// Consumidor push
 
-			System.out.println("Antes de consumir");
 			canal.basicConsume(cola, autoAck, etiquetaConsumidor, new DefaultConsumer(canal) {
 
 				@Override
 				public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties,
 						byte[] body) throws IOException {
 
-					System.out.println("CONSUMIENDO");
-					String routingKey = envelope.getRoutingKey();
-					String contentType = properties.getContentType();
+					// String routingKey = envelope.getRoutingKey();
+					// String contentType = properties.getContentType();
 					long deliveryTag = envelope.getDeliveryTag();
 
 					String contenido = new String(body);
@@ -277,7 +271,6 @@ public class ServicioCiudades implements IServicioCiudades {
 		}
 
 		if (!parkingsCercanos.containsKey(sitio)) {
-			System.out.println("DENTRO");
 			calcularAparcamientosCercanos(ciudad, ciudad.getSitioTuristico().get(i));
 		}
 
