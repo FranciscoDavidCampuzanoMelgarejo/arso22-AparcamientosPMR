@@ -210,7 +210,7 @@
 				<configuration>
 					<httpConnector>
 						<host>localhost</host>
-						<port>8082</port>
+						<port>8081</port>
 					</httpConnector>
 				</configuration>
 			</plugin>

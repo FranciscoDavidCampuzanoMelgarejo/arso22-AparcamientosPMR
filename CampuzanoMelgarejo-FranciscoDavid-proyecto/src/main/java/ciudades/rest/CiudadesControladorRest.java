@@ -51,11 +51,8 @@ public class CiudadesControladorRest {
 	@Context
 	private UriInfo uriInfo;
 
-	// Ciudad getCiudad(String nombre) throws RepositorioException,
-	// EntidadNoEncontrada
-
-	// curl -i -X GET -H "Accept: application/xml"
-	// http://localhost:8080/api/ciudades/1
+	// curl -i -X GET -H "Accept: application/xml
+	// http://localhost:8081/api/ciudades/Lorca"
 	@GET
 	@Path("/{nombre}")
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
@@ -72,7 +69,7 @@ public class CiudadesControladorRest {
 	// String create(Ciudad ciudad) throws RepositorioException
 
 	// curl -i -X POST -H "Accept: application/xml" -d @ruta_fichero/fichero.xml
-	// http://localhost:8080/api/ciudades
+	// http://localhost:8081/api/ciudades
 	@POST
 	@Consumes(MediaType.APPLICATION_XML)
 	@ApiOperation(value = "Crear una nueva ciudad", notes = "No devuelve nada")
@@ -86,8 +83,8 @@ public class CiudadesControladorRest {
 
 	// void update(Ciudad ciudad) throws RepositorioException, EntidadNoEncontrada
 
-	// curl -i -X PUT -H "Content-type: application/xml" -d @test-files/1.xml
-	// http://localhost:8080/api/ciudades/4f562997-520b-4b30-9f92-0b842490ed5a
+	// curl -i -X PUT -H "Content-type: application/xml" -d @test-files/fichero.xml
+	// http://localhost:8081/api/ciudades/Lorca
 
 	@PUT
 	@Path("/{nombre}")
@@ -106,7 +103,7 @@ public class CiudadesControladorRest {
 	// void delete(String id) throws RepositorioException, EntidadNoEncontrada
 
 	// curl -i -X DELETE
-	// http://localhost:8080/api/ciudades/4f562997-520b-4b30-9f92-0b842490ed5a
+	// http://localhost:8081/api/ciudades/Lorca
 	@DELETE
 	@Path("/{nombre}")
 	@ApiOperation(value = "Eliminar una ciudad", notes = "No devuelve nada")
@@ -122,7 +119,7 @@ public class CiudadesControladorRest {
 	}
 
 	// Metodo para obtener un resumen de cada ciudad disponible
-	// curl -i http://localhost:8082/api/ciudades
+	// curl -i http://localhost:8081/api/ciudades
 
 	@GET
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
@@ -148,6 +145,8 @@ public class CiudadesControladorRest {
 
 		return Response.status(Response.Status.OK).entity(listado).build();
 	}
+
+	// curl -i http://localhost:8081/api/ciudades/atom
 
 	@GET
 	@Path("/atom")
@@ -189,7 +188,7 @@ public class CiudadesControladorRest {
 	}
 
 	// Metodo para obtener todos los sitios turisticos de una determinada ciudad
-	// curl -i http://localhost:8082/api/ciudades/Lorca/sitios
+	// curl -i http://localhost:8081/api/ciudades/Lorca/sitios
 
 	@GET
 	@Path("/{nombre}/sitios")
@@ -229,7 +228,7 @@ public class CiudadesControladorRest {
 	// Metodo para obtener los aparcamientos cercanos a un sitio determinado de una
 	// ciudad
 	// curl -i
-	// http://localhost:8082/api/ciudades/Lorca/sitios/Castillo_de_Lorca/parkings
+	// http://localhost:8081/api/ciudades/Lorca/sitios/Castillo_de_Lorca/parkings
 
 	@GET
 	@Path("/{nombre}/sitios/{sitio}/parkings")
@@ -268,6 +267,9 @@ public class CiudadesControladorRest {
 		return Response.status(Response.Status.OK).entity(listado).build();
 	}
 
+	// curl -i
+	// http://localhost:8081/api/ciudades/Lorca/parkings/37.65498859455905/-1.7114953133709605
+
 	@GET
 	@Path("/{nombre}/parkings/{lat}/{lng}")
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
@@ -297,10 +299,5 @@ public class CiudadesControladorRest {
 
 		return Response.status(Response.Status.OK).entity(resumen).build();
 	}
-
-	// curl -i -X GET -H "Accept: application/xml" http:localhost:8080/api/ciudades
-
-	// curl -i -X GET -H "Accept: application/xml"
-	// http:localhost:8080/api/ciudades/4f562997-520b-4b30-9f92-0b842490ed5a/sitios_turisticos
 
 }
