@@ -12,7 +12,6 @@ public class RegistroCola extends HttpServlet implements Serializable {
 	private IServicioCiudades servicio = null;
 
 	public RegistroCola() {
-		System.out.println("Servlet creado");
 		servicio = ServicioCiudades.getServicio();
 	}
 

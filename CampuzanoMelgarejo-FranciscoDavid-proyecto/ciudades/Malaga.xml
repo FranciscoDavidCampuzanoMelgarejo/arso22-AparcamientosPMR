@@ -15,20 +15,6 @@
         <wikipedia>https://es.wikipedia.org/wiki/Museo_Revello_de_Toro</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Plaza de la Constitución (Málaga)</titulo>
-        <resumen>"La plaza de la Constitución es una vía pública del centro de la ciudad de Málaga, España. Se trata de la antigua plaza mayor, situada en el corazón del centro histórico de la ciudad, que desde el siglo XV ha sido el espacio público y político de la ciudad por excelencia."</resumen>
-        <latitud>36.7211</latitud>
-        <longitud>-4.422</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Plaza_de_la_Constituci%C3%B3n_%28M%C3%A1laga%29</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Abadía del Císter</titulo>
-        <resumen>"La antigua Abadía de Santa Ana de Recoletas Bernardas del Císter, más conocida como la Abadía del Císter, es un edificio situado en el centro histórico de la ciudad española de Málaga."</resumen>
-        <latitud>36.7206</latitud>
-        <longitud>-4.4178</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Abad%C3%ADa_del_C%C3%ADster</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
         <titulo>Palacio de los Condes de Buenavista</titulo>
         <resumen>"El palacio de los Condes de Buenavista de la Victoria, sito en la calle San Agustín de la ciudad española de Málaga, fue declarado Monumento Nacional en 1939. Se trata de un edificio de la arquitectura civil española del siglo XVI, construido hacia 1530-1540 por  y sede del Museo Picasso Málaga. Originalmente fue el palacio residencial de los Condes de Buenavista de la Victoria, de ahí su denominación. Es el más importante ejemplo de arquitectura civil realizada tras la conquista de Málaga por los Reyes Católicos. Su arquitectura es renacentista, con fachada plateresca y soluciones mudéjares. Consta de sótano, baja y primera planta, con una fachada plateresca maciza de aparejo de sillares, donde se trabajan con sencillez pero de forma rotunda los elementos decorativos que enmarcan los huecos, de grandes dimensiones y asimétricos. La puerta principal de acceso fue diseñada junto con el balcón superior y el interior se organiza en torno a un patio con doble galería. A través de la escalera, al fondo a la derecha se accede a la planta primera que repite el esquema de planta baja. La torre del edificio posee guardapolvo y arcas bajo alfiz en su parte superior, con aparejo de sillares de grandes dimensiones. El Palacio se convirtió durante el siglo XX en la sede del Museo de Bellas Artes de Málaga, a raíz del Real Decreto de 1913 que reorganizaba este tipo de museos. Alquilado durante años por su propietario al Estado, en 1996 fue designado como sede del Museo Picasso Málaga y, tras la inauguración de éste en 2003, en 2009 se aprobó la cesión del edificio, que era propiedad de la administración autonómica, a la fundación resultante de la fusión de la Fundación Picasso y la \"Fundación Paul, Christine y Bernard Ruiz-Picasso\".​"</resumen>
         <latitud>36.7217</latitud>
@@ -64,13 +50,6 @@
         <wikipedia>https://es.wikipedia.org/wiki/Palacio_de_la_Aduana_%28M%C3%A1laga%29</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Museo Interactivo de la Música de Málaga</titulo>
-        <resumen>"El Museo Interactivo de la Música Málaga (MIMMA) fue creado en 2003 y consta de más de 1.000 instrumentos de diferentes épocas, países y culturas; lo que lo convierte en una de las colecciones privadas más completas de España, por su variedad además de por su dimensión. El museo se encuentra en el Palacio del Conde de las Navas de la Calle Beatas, en pleno centro histórico de la ciudad.​​ Esta nueva instalación inaugurada en 2013 sustituye al anterior emplazamiento subterráneo de la Plaza de la Marina cuando se abrió en 2002."</resumen>
-        <latitud>36.7232</latitud>
-        <longitud>-4.4198</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Museo_Interactivo_de_la_M%C3%BAsica_de_M%C3%A1laga</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
         <titulo>Calle Camas</titulo>
         <resumen>"La Calle de Camas es una vía ubicada en el Centro Histórico de la ciudad española de Málaga. Es una de las más antiguas de Málaga​ y discurre a lo largo de 120 metros en dirección Norte-Sur partiendo de la Calle Cisneros y desembocando en la Calle Marqués. Por el lado Este se encuentran los accesos a las calles Castillo de Sohail y Calderón de la Barca.​"</resumen>
         <latitud>36.7203</latitud>
@@ -78,16 +57,9 @@
         <wikipedia>https://es.wikipedia.org/wiki/Calle_Camas</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Plaza de la Merced</titulo>
-        <resumen>"La plaza de la Merced es una plaza situada en el barrio homónimo de la ciudad española de Málaga. Se trata de una de las principales plazas del centro de la ciudad, donde se desarrollan habitualmente actos y festivales. En la plaza están situados el obelisco en homenaje al General Torrijos y la casa natal de Picasso, sede de la Fundación Picasso Museo Casa Natal."</resumen>
-        <latitud>36.7234</latitud>
-        <longitud>-4.4175</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Plaza_de_la_Merced</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
         <titulo>Puente de los Alemanes</titulo>
         <resumen>"El Puente de los Alemanes (o de Santo Domingo) es un pequeño puente que Alemania donó a la ciudad española de Málaga y que fue construido en 1909."</resumen>
-        <latitud>36.7193</latitud>
+        <latitud>36.7194</latitud>
         <longitud>-4.4256</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Puente_de_los_Alemanes</wikipedia>
     </sitio_turistico>
@@ -106,25 +78,18 @@
         <wikipedia>https://es.wikipedia.org/wiki/Fundaci%C3%B3n_Picasso_Museo_Casa_Natal</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
+        <titulo>Calle de los Mármoles</titulo>
+        <resumen>"La Calle de los Mármoles o, simplemente, Calle Mármoles es una conocida vía de la ciudad española de Málaga. Se encuentra, según la delimitación oficial del ayuntamiento, en el barrio homónimo, aunque según la división tradicional es la calle que separa los barrios de El Perchel y La Trinidad; en el Centro."</resumen>
+        <latitud>36.7218</latitud>
+        <longitud>-4.426</longitud>
+        <wikipedia>https://es.wikipedia.org/wiki/Calle_de_los_M%C3%A1rmoles</wikipedia>
+    </sitio_turistico>
+    <sitio_turistico>
         <titulo>Puerto de Málaga</titulo>
         <resumen>"El puerto de Málaga es un puerto marítimo español que se encuentra en la Bahía de Málaga, en el sur de la península ibérica, en el Mediterráneo occidental. Gestionado por la Autoridad Portuaria de Málaga, es un puerto comercial, de pasajeros, de cruceros, deportivo y pesquero. La temperatura media anual es de 19 °C. Con precipitaciones bajas (469,2 mm de promedio anual), produciéndose principalmente entre noviembre y marzo, ambos inclusive. Los vientos reinantes son SE y SO y dominante SE, de velocidad poco elevada en general. La presión media anual es de 760,6 mm. Desde 1998 se encuentra en un profundo proceso de remodelación, enmarcado dentro del proyecto denominado Plan Especial del Puerto de Málaga.​ Dicho proyecto le ha permitido dar un uso ciudadano al puerto creando un profuso palmeral, una extensa superficie comercial y de restauración incluyendo comercios de todo tipo, albergar el museo Centro Pompidou de Málaga y una avanzada terminal de cruceros que han situado a Málaga como un puerto líder de España en recepción de cruceristas en el Mediterráneo, situándose en tercer lugar después del puerto de Barcelona y Baleares. Su nueva terminal ha permitido el atraque de los cruceros más grandes del mundo pertenecientes a la compañía Royal Caribbean. Actualmente hay planeada la construcción de un hotel rascacielos de lujo que presidiría el dique de levante.​"</resumen>
         <latitud>36.7167</latitud>
         <longitud>-4.4161</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Puerto_de_M%C3%A1laga</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Centro Pompidou de Málaga</titulo>
-        <resumen>"El Centre Pompidou Málaga es una sede del Centro Nacional de Arte y Cultura Georges Pompidou de Francia ubicada en el espacio denominado El Cubo en la ciudad española de Málaga. Se trata de la primera sede internacional del Centre Pompidou París. Fue inaugurado el 28 de marzo de 2015 por el Presidente del Gobierno de España, Mariano Rajoy, y la Ministra de Cultura de Francia, Fleur Pellerin.​​ ​ ​"</resumen>
-        <latitud>36.7189</latitud>
-        <longitud>-4.4125</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Centro_Pompidou_de_M%C3%A1laga</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Centro de Arte Contemporáneo de Málaga</titulo>
-        <resumen>"El Centro de Arte Contemporáneo de Málaga (CAC Málaga) es una iniciativa cultural del Ayuntamiento de Málaga que tiene como objetivo la difusión de las artes plásticas del siglo XX y XXI. El antiguo Mercado de Mayoristas de Málaga, edificio declarado Bien de interés cultural y sede del centro, cuenta con 6000 m² de superficie total, de los cuales 2400 están destinados a exposiciones. El CAC Málaga fue oficialmente inaugurado el 17 de febrero de 2003 y abierto al público el 23 de febrero de 2003.​"</resumen>
-        <latitud>36.7144</latitud>
-        <longitud>-4.4256</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Centro_de_Arte_Contempor%C3%A1neo_de_M%C3%A1laga</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
         <titulo>Museum Jorge Rando</titulo>
@@ -150,22 +115,15 @@
     <sitio_turistico>
         <titulo>Estación de Málaga-María Zambrano</titulo>
         <resumen>"Málaga-María Zambrano es la principal estación de ferrocarril de la ciudad española de Málaga, en la comunidad autónoma de Andalucía. La estación lleva el nombre de la filósofa y ensayista María Zambrano desde 2007, pues antes se llamaba Málaga-Término. Se encuentra situada en el distrito de Cruz de Humilladero, a 2 km del Puerto de Málaga y a 9 km del Aeropuerto de Málaga-Costa del Sol, con el que conecta a través de la Línea C-1 de Cercanías. Es servida por las dos líneas de Cercanías Málaga, situada en la zona 0 de la red, parada de trenes de Media Distancia Renfe y de trenes de largo recorrido AVE, Trenhotel y AVE City. Con 4.671.515 usuarios durante 2009,​ es la estación ferroviaria con más tránsito de pasajeros de la provincia y segunda de Andalucía, tras Sevilla-Santa Justa. Desde la llegada de la alta velocidad a Málaga, el número de usuarios de la estación se ha duplicado y ha superado a la de Córdoba-Central como segunda terminal de pasajeros más activa de la región.​"</resumen>
-        <latitud>36.7118</latitud>
-        <longitud>-4.4321</longitud>
+        <latitud>36.7117</latitud>
+        <longitud>-4.4319</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_M%C3%A1laga-Mar%C3%ADa_Zambrano</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Mezquita de al-Ándalus</titulo>
-        <resumen>"La Mezquita de al-Ándalus (árabe: مسجد الأندلس), también conocida como Mezquita de Málaga, es un templo islámico situado en el barrio de Arroyo del Cuarto de la ciudad de Málaga, en España. Depende junto a la mezquita de Fuengirola y la Centro Cultural Islámico y Mezquita de Madrid de la Fundación Suhail, fundada por el fallecido rey Fahd de Arabia Saudí y ahora presidida por su hermano el príncipe . El templo cuenta con 4.000 metros cuadrados y dos entradas: una para hombres y otra mujeres. Tiene una guardería, un auditorio para 200 personas, tres salas de rezos, salón de actos, aulas, biblioteca o se imparten clases de árabe, entre otros servicios. Tiene una capacidad para 1.000 personas,​ lo que la convierte en una de las mezquitas más grandes de Europa.​ La construcción de la mezquita fue impulsada por el Consulado de Arabia Saudí, que aportó 22 millones de euros en su construcción aunque rechaza ser representante del Islam más conservador que predomina en Arabia Saudí, el wahhabismo.​ Se estima que la comunidad musulmana en Málaga está integrada por 50.000 y 60.000 fieles, la más numerosa de Andalucía, que cuentan ya con cuatro mezquitas en la capital, dos en Marbella y Benalmádena y una en Torre del Mar, Torremolinos y Fuengirola. La mezquita de Málaga está ubicada en calle Ingeniero de la Torre Acosta y tiene un minarete de 25 metros de alto (aunque erróneamente en alguna ocasión se hizo referencia a que medía 50 metros).​"</resumen>
-        <latitud>36.7192</latitud>
-        <longitud>-4.4383</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Mezquita_de_al-%C3%81ndalus</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
         <titulo>Estadio La Rosaleda</titulo>
         <resumen>"El Estadio La Rosaleda es un estadio de fútbol que se encuentra en la ciudad española de Málaga, donde disputa sus encuentros el Málaga Club de Fútbol. Fue inaugurado el 14 de septiembre de 1941, y desde 1961 es sede del Trofeo Costa del Sol. Durante la Copa Mundial de Fútbol de 1982 albergó tres encuentros de la primera fase."</resumen>
-        <latitud>36.7342</latitud>
-        <longitud>-4.4266</longitud>
+        <latitud>36.7341</latitud>
+        <longitud>-4.4264</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Estadio_La_Rosaleda</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
@@ -176,6 +134,13 @@
         <wikipedia>https://es.wikipedia.org/wiki/Museo_Automovil%C3%ADstico_de_M%C3%A1laga</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
+        <titulo>Cementerio de San Rafael (Málaga)</titulo>
+        <resumen>"El Cementerio de San Rafael fue un antiguo cementerio de la ciudad española de Málaga, clausurado en 1987, cuyos terrenos actualmente se están habilitando para el nuevo Parque de San Rafael. Está situado en el distrito Cruz de Humilladero, en el oeste de la ciudad, siendo transformado en un parque funerario en memoria de los funestos hechos acaecidos en él durante la Guerra Civil Española. Es Lugar de la Memoria Histórica."</resumen>
+        <latitud>36.7064</latitud>
+        <longitud>-4.4523</longitud>
+        <wikipedia>https://es.wikipedia.org/wiki/Cementerio_de_San_Rafael_%28M%C3%A1laga%29</wikipedia>
+    </sitio_turistico>
+    <sitio_turistico>
         <titulo>Palacio de Deportes José María Martín Carpena</titulo>
         <resumen>"El Palacio de Deportes José María Martín Carpena es un pabellón deportivo multiusos localizado en Málaga, España. Es la principal instalación deportiva cubierta de la ciudad de Málaga y uno de los principales complejos deportivos de la Costa del Sol. Es conocido por ser la cancha del Unicaja Málaga. Anteriormente conocido como Palacio de los Deportes Ciudad de Málaga, cambió su nombre en honor a José María Martín Carpena, concejal del Partido Popular en el Ayuntamiento de Málaga asesinado en 2000 por la banda terrorista ETA."</resumen>
         <latitud>36.6825</latitud>
@@ -183,17 +148,10 @@
         <wikipedia>https://es.wikipedia.org/wiki/Palacio_de_Deportes_Jos%C3%A9_Mar%C3%ADa_Mart%C3%ADn_Carpena</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Ciudad Deportiva de El Viso</titulo>
-        <resumen>"La Ciudad Deportiva El Viso fue un complejo deportivo perteneciente al Málaga Club de Fútbol y lugar de entrenamiento del Atlético Malagueño (filial malaguista que militaba en Tercera División), como del Club Atlético Málaga (equipo femenino que militaba en la Superliga) y las demás categorías del Málaga Club de Fútbol. Se encontraba ubicado en el distrito Teatinos-Universidad de la ciudad española de Málaga."</resumen>
-        <latitud>36.7158</latitud>
-        <longitud>-4.4844</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Ciudad_Deportiva_de_El_Viso</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
         <titulo>Aeropuerto de Málaga-Costa del Sol</titulo>
         <resumen>"El Aeropuerto de Málaga (IATA: AGP, OACI: LEMG), desde el 6 de junio de 2011 llamado oficialmente aeropuerto de Málaga-Costa del Sol,​​ es un aeropuerto español situado en Málaga, en el distrito de Churriana, a ocho kilómetros del centro de la ciudad. De los tres que participaron en la primera ruta aérea (Toulouse-Barcelona-Alicante-Málaga-Casablanca), establecida en España en 1919 por la empresa francesa fundada por Pierre Latécoère, Lignes Aeriennes Latécoère, es el único que ha seguido operando de forma continuada, convirtiéndose por tanto, en el decano de los aeropuertos españoles.​ En la actualidad ocupa el cuarto lugar en cuanto a volumen de tráfico entre los aeropuertos de España, tercero de la península ibérica, y el puesto veinte en la Unión Europea. En 2019 alcanzó los 19.856.299 pasajeros (16.851.281 en vuelos internacionales) y 144.920 operaciones de despegue y aterrizaje, cifras que lo sitúan como la gran puerta de entrada del turismo no solo para la Costa del Sol sino para toda Andalucía ya que representa en torno al 85% de todo el tráfico internacional de la comunidad y sobre todo el único que puede ofrecer un amplio abanico de destinos.​ Debido al gran incremento del tráfico aéreo en el aeropuerto, recientemente se ha construido una nueva terminal y una nueva pista de aterrizaje (pista 12/30). De esta forma el aeropuerto de Málaga ya cuenta con dos pistas de aterrizajes/despegue, lo que permite que se le pueda asignar a cada una solo una función (o pista solo para despegues, o pista solo para aterrizajes), agilizando el tráfico. En el aeropuerto operan más de sesenta compañías aéreas que enlazan diariamente con veinte ciudades españolas y más de cien ciudades de Europa, fundamentalmente con Reino Unido, centro Europa y los países nórdicos pero también las principales ciudades de Europa del Este: Moscú, San Petersburgo, Budapest, Sofía, Varsovia, Riga o Bucarest; el Norte de África, Oriente Medio: Riad, Yida y Ciudad de Kuwait; y Norteamérica: Nueva York y Montreal.​"</resumen>
-        <latitud>36.677</latitud>
-        <longitud>-4.498</longitud>
+        <latitud>36.6749</latitud>
+        <longitud>-4.4991</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Aeropuerto_de_M%C3%A1laga-Costa_del_Sol</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
@@ -204,32 +162,18 @@
         <wikipedia>https://es.wikipedia.org/wiki/Castillo_de_Bentomiz</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
-        <titulo>Iglesia de San Juan Bautista (Vélez-Málaga)</titulo>
-        <resumen>"La Iglesia de San Juan Bautista es un templo católico situado en Vélez-Málaga, en la provincia de Málaga, España. Se representa como un documento histórico-artístico que sintetiza, a partir de las intervenciones realizadas en su fábrica a lo largo del tiempo, las distintas evoluciones estilísticas del momento. La primitiva Iglesia data de 1487, construida bajo los postulados gótico-mudéjares. En el mismo siglo sufrió una remodelación en su fábrica y entre 1541 y 1564, siendo obispo Fray Bernardo Manrique, se llevó a cabo una nueva ampliación, construyéndose en esta época la torre. Significativas son las reformas que se producen durante el barroco, de las que conserva algunos elementos y otras, de finales del siglo XVIII, en la que se realizó la decoración de la sacristía, pieza extraordinaria construida en 1789, obra atribuida a José Martín de Aldehuela. Su magnífica portada, que comunica a través de un vestíbulo con la nave del Evangelio, presenta finísima decoración a base de estucos con elementos vegetales y símbolos apocalípticos, que destaca en el ámbito más clásico y austero de la iglesia. No obstante, la mayor transformación que sufrió la primitiva iglesia fue con las obras ejecutadas entre 1853 y 1860, por el obispo Juan Nepomuceno Castellana, adquiriendo entonces su actual impronta neoclásica."</resumen>
-        <latitud>36.7826</latitud>
-        <longitud>-4.1023</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Iglesia_de_San_Juan_Bautista_%28V%C3%A9lez-M%C3%A1laga%29</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Vélez Club de Fútbol</titulo>
-        <resumen>"El Vélez Club de Fútbol es un club de fútbol de España, de la ciudad de Vélez-Málaga, en la Provincia de Málaga. Fundado en 1922 e inscrito en la Federación Regional Sur en 1941, debutó en categoría nacional en 1960 al ascender a la tercera categoría del fútbol español, la antigua Tercera División. Actualmente juega en el Grupo IX de la actual Tercera División (cuarta categoría). El club cuenta, además del primer equipo, con un equipo juvenil que actualmente milita en 3ª juvenil andaluza."</resumen>
-        <latitud>36.7834</latitud>
-        <longitud>-4.1086</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/V%C3%A9lez_Club_de_F%C3%BAtbol</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
-        <titulo>Iglesia de San José (Vélez-Málaga)</titulo>
-        <resumen>"La iglesia de San José es un templo cristiano católico, en Vélez-Málaga (provincia de Málaga, España)."</resumen>
-        <latitud>36.776</latitud>
-        <longitud>-4.0951</longitud>
-        <wikipedia>https://es.wikipedia.org/wiki/Iglesia_de_San_Jos%C3%A9_%28V%C3%A9lez-M%C3%A1laga%29</wikipedia>
-    </sitio_turistico>
-    <sitio_turistico>
         <titulo>Aeródromo de La Axarquía</titulo>
         <resumen>"El Aeródromo de La Axarquía - Leoni Benabu, (OACI: LEAX) es un aeródromo privado español situado en el municipio de Vélez-Málaga (provincia de Málaga). El aeródromo es propiedad del Real Aeroclub de Málaga. El nombre de Leoni Benabú se debe al deportista aéreo fallecido en 1993 y miembro destacado del Real Aeroclub de Málaga y del Real Aero Club de España. El aeródromo dispone de una pista de aterrizaje de asfalto.​"</resumen>
         <latitud>36.8022</latitud>
         <longitud>-4.1369</longitud>
         <wikipedia>https://es.wikipedia.org/wiki/Aer%C3%B3dromo_de_La_Axarqu%C3%ADa</wikipedia>
+    </sitio_turistico>
+    <sitio_turistico>
+        <titulo>Torre Molinos</titulo>
+        <resumen>"La torre Molinos o torre de los Molinos es una torre de defensa situada en el municipio de Torremolinos, en la provincia de Málaga, Andalucía, España. La torre Molinos fue levantada por los nazaríes hacia 1300, siendo una de las piezas de la cadena de torres defensivas que se erigieron a lo largo de la costa del antiguo Reino de Granada. Aparece con este nombre ya en las Ordenazas de 1497, si bien más adelante se le llamó torre de Pimentel, en recuerdo de un militar que asistió a los Reyes Católicos en la toma de Málaga. Construida en adobe, tiene 12 metros de altura, dos plantas, ventanas al mar y una terraza. Declarada Bien de Interés Cultural, su interior está prácticamente derruido."</resumen>
+        <latitud>36.6217</latitud>
+        <longitud>-4.4969</longitud>
+        <wikipedia>https://es.wikipedia.org/wiki/Torre_Molinos</wikipedia>
     </sitio_turistico>
     <sitio_turistico>
         <titulo>Hotel Pez Espada</titulo>

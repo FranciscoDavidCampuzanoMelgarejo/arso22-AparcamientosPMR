@@ -93,7 +93,6 @@ public class ServicioCiudades implements IServicioCiudades {
 					long deliveryTag = envelope.getDeliveryTag();
 
 					String contenido = new String(body);
-					System.out.println(contenido);
 
 					Jsonb contexto = JsonbProvider.provider().create().build();
 
@@ -132,7 +131,6 @@ public class ServicioCiudades implements IServicioCiudades {
 								opinion.setCalificacionMedia(evento.getCalificacionMedia());
 								opinion.setNumeroValoraciones(evento.getValoraciones());
 								p.setOpinion(opinion);
-								ciudad.getParking().add(p);
 								break;
 							}
 						}
@@ -151,7 +149,6 @@ public class ServicioCiudades implements IServicioCiudades {
 				}
 			});
 
-			System.out.println("Final consumidor");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

@@ -30,7 +30,7 @@
 			<xs:element name="direccion" type="xs:string"></xs:element>
 			<xs:element name="latitud" type="xs:double"></xs:element>
 			<xs:element name="longitud" type="xs:double"></xs:element>
-			<xs:element name="opinion" type="opinion"></xs:element>
+			<xs:element name="opinion" type="opinion" minOccurs="0"></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	
